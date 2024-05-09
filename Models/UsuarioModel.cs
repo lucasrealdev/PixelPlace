@@ -6,7 +6,7 @@ namespace ProjetoPixelPlace.Models
 {
     public class UsuarioModel
     {
-
+        //REMODELAR ESSA CLASSE TA HORRIVEL....
 
         public List<Usuario> getAllUser()
         {
@@ -74,5 +74,45 @@ namespace ProjetoPixelPlace.Models
             }
             return mensagem;
         }
-    }
+        public Object ValidaUser(string email, string password)
+        {
+            Usuario user;
+
+            MySqlConnection con;
+            try
+            {
+                con = CriadorConexao.getConexao("ConexaoPadrao");
+                con.Open();
+                con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                con = CriadorConexao.getConexao("casa");
+                con.Open();
+            }
+
+
+
+            MySqlCommand command = new MySqlCommand("SELECT * FROM USUARIO WHERE email = @email AND senha = @senha", con);
+            command.Parameters.AddWithValue("@email", 123);
+            command.Parameters.AddWithValue("@senha", 123);
+            MySqlDataReader reader = command.ExecuteReader();
+
+            //caso encontre algo
+            while (reader.Read())
+            {
+                int idUsuario = (int)reader["idUsuario"];
+                string NomeUsuario = (string)reader["nomeUser"];
+                string urlImage = (string)reader["urlImage"];
+                string emailUser = (string)reader["email"];
+                string senha = (string)reader["senha"];
+
+                user = new Usuario(idUsuario, NomeUsuario, urlImage, emailUser, senha);
+
+                return user;
+            }
+            return "Usuario não encontrado!";
+        }
+    }  
 }
