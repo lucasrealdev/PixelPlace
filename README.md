@@ -1,4 +1,4 @@
-﻿# PixelPlace
+﻿﻿# PixelPlace
 
 Projeto Web sobre uma loja digital de jogos de navegador utilizando C# .NET Framework, MySQL, Design Patterns, API RestFull, e Metodologia Scrum & Um aplicativo desenvolvido em Android - Java.
 
