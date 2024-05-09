@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 using Newtonsoft.Json;
@@ -11,6 +11,7 @@ namespace ProjetoPixelPlace.Controllers
     public class UsuarioController : Controller
     {
         //Oi lucas, ana ou samuel
+        //oi kaio deus te abençoe (ana)
 
 
         //Injeção do nosso repositorio de dados
@@ -28,13 +29,20 @@ namespace ProjetoPixelPlace.Controllers
         {
             //verifico se existe, caso n, devolvo null
             var user = model.ValidaUser(email, senha);
-            if (user!=null)
+            if (user.IsADM == "sim")
             {
                 //caso tiver eu coloco na session
+                HttpContext.Session.SetString("adm", JsonConvert.SerializeObject(user));
+
+                return RedirectToAction(nameof(ListagemADM));
+            }
+            else
+            {
                 HttpContext.Session.SetString("user", JsonConvert.SerializeObject(user));
+
                 return RedirectToAction("Listagem");
             }
-            return View();           
+                     
         }
 
         public ActionResult Create()
@@ -43,18 +51,30 @@ namespace ProjetoPixelPlace.Controllers
         }
 
         [ServiceFilter(typeof(Autenticao))]
-        public ActionResult Listagem()
+        public ActionResult ListagemADM()
         {
             //aqui eu vejo se ele realmente pode estar aqui...
-            if (HttpContext.Session.GetString("user") != null)
+            if (HttpContext.Session.GetString("adm") != null)
             {
                 //caso puder, eu disponibilizo a lista
                 List<Usuario> users = model.getAllUser();
+            
                 return View(users);
             }
             //caso nao tiver, eu devolvo a lista vazia *(fazer um validacao no index, caso a lista estiver vazia,
             //retornar a tela de erro
             return View();
+        }
+
+        //aqui eu vejo se ele realmente pode estar aqui...
+
+        [ServiceFilter(typeof(Autenticao))]
+        public ActionResult Listagem()
+        {
+          
+            //caso puder, eu disponibilizo a lista
+            return RedirectToAction("Index","Jogo");
+            
         }
 
         // GET: UsuarioController/Details/5
@@ -76,7 +96,7 @@ namespace ProjetoPixelPlace.Controllers
                 var msg = "";
 
                 //crio um user
-                Usuario u = new Usuario(null, nomeUsuario, imagem, email, senha);
+                Usuario u = new Usuario(null,nomeUsuario,email,senha,null,"");
                 //insiro o user e guardo a resposta..
                 msg = model.inserirUsuario(u);
 
@@ -127,6 +147,38 @@ namespace ProjetoPixelPlace.Controllers
         {
             return View();
         }
+
+        //GET: kaio viado isso da o inicial pra tela 
+        public ActionResult Inicial()
+        {
+            return View();
+        }
+
+        // GET: é pra tela de transações, precisa fazer funcionar ainda, quase todas precisa fazer funcionar :D
+        public ActionResult Transacoes()
+        {
+            return View();
+        }
+
+        //GET: tela da biblioteca
+        public ActionResult Biblioteca()
+        {
+            return View();
+        }
+
+        //GET: tela da lista de desejo
+        public ActionResult ListaDesejo()
+        {
+            return View();
+        }
+
+        //Get sla o q é esse get mas to colocando
+        //GET: tela do carrinho
+        public ActionResult Carrinho()
+        {
+            return View();
+        }
+
 
         // POST: UsuarioController/Delete/5
         [HttpPost]

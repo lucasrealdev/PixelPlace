@@ -6,15 +6,11 @@
 
 <h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.IdJogo)
-            </th>
+          
             <th>
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
@@ -45,9 +41,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.Desenvolvedora)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Jogo_destaque)
-            </th>
             <th></th>
         </tr>
     </thead>
@@ -55,19 +48,16 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.IdJogo)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Nome)
             </td>
             <td>
-                    @{
-                        
-                    string imagem = Convert.ToBase64String(item.Imagem);
-                    string formato = "data:image/jpeg;base64," + imagem;
-                    <img src="@formato" />
-                        
-                    }
+            @{
+
+                string imagem = Convert.ToBase64String(item.Imagem);
+                string formato = "data:image/jpeg;base64," + imagem;
+                <img src="@formato" />
+
+            }
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Descricao)
@@ -94,12 +84,8 @@
                 @Html.DisplayFor(modelItem => item.Desenvolvedora)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Jogo_destaque)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Comprar", "Comprar", new { /* id=item.PrimaryKey */ }) |
+                
             </td>
         </tr>
 }

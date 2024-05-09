@@ -41,9 +41,10 @@ namespace ProjetoPixelPlace.Models
                 
                 Usuario usuario = new Usuario(int.Parse(reader["idUsuario"].ToString()),
                 reader["nomeUser"].ToString(),
-                imagem,
                 reader["Email"].ToString(),
-                reader["Senha"].ToString());
+                reader["Senha"].ToString(),
+                 imagem,
+                 reader["isADM"].ToString());
 
                 users.Add(usuario);
                
@@ -103,8 +104,9 @@ namespace ProjetoPixelPlace.Models
                 string NomeUsuario = (string)reader["nomeUser"];
                 string emailUser = (string)reader["email"];
                 string senhaU = (string)reader["senha"];
+                string isAdm = (string)reader["isAdm"];
 
-                user = new Usuario(idUsuario, NomeUsuario, imagem, emailUser, senhaU);
+                user = new Usuario(idUsuario, NomeUsuario, emailUser, senhaU, imagem, isAdm);
 
                 return user;
             }

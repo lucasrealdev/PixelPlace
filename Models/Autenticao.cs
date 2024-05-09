@@ -12,7 +12,7 @@ namespace ProjetoPixelPlace.Models
 
         public void OnActionExecuting(ActionExecutingContext context)
         {
-            if(context.HttpContext.Session.GetString("user") == null)
+            if(context.HttpContext.Session.GetString("user") == null && context.HttpContext.Session.GetString("adm") == null)
             {
                 context.Result = new RedirectResult("~/Usuario/Logar");
             }

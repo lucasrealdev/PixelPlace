@@ -1,0 +1,107 @@
+﻿@model IEnumerable<ProjetoPixelPlace.Entities.Jogo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdJogo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Imagem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Categoria)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Preco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Desconto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data_lancamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Numero_avaliacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Numero_estrelas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Desenvolvedora)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Jogo_destaque)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdJogo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                    @{
+                        
+                    string imagem = Convert.ToBase64String(item.Imagem);
+                    string formato = "data:image/jpeg;base64," + imagem;
+                    <img src="@formato" />
+                        
+                    }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Categoria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Preco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Desconto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data_lancamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero_avaliacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero_estrelas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Desenvolvedora)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Jogo_destaque)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

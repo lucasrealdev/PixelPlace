@@ -1,0 +1,127 @@
+/* COMECO RENDER BODY */
+.imagePoster,
+.card1,
+.card2 {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10.4px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.imagePoster {
+    height: 603px;
+    background-image: url("../img/planetOfLana.jpg");
+}
+
+.imagePoster:hover,
+.card1:hover,
+.card2:hover {
+    transition: 0.1s ease-in;
+    scale: 1.01;
+}
+
+.containerSombra {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 35px 30px 35px;
+    border: 0px;
+    background: rgb(0, 0, 0);
+    background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
+    border-radius: 10.4px;
+}
+
+.containerSombra p {
+    font-size: 31.2px;
+    font-weight: 600;
+}
+
+.containerPreco,
+.containerPreco2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.containerPreco p,
+.containerPreco2 p {
+    font-weight: 500;
+    font-size: 20.8px;
+    white-space: nowrap;
+}
+
+.containerPreco2 {
+    justify-content: start;
+}
+
+.containerCategoria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.cardCategoria {
+    min-width: min-content;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 12px;
+    background-color: rgba(254, 254, 254, 0.3);
+    border-radius: 3.12px;
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    color: #FEFEFE;
+    font-size: 12.48px;
+}
+
+.containerAdicionados {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.containerSectionAdcionados {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.containerSectionAdcionados img {
+    margin-bottom: -3px;
+}
+
+.containerSectionAdcionados a {
+    white-space: nowrap; /* Substituído text-wrap por white-space */
+}
+
+.containerSectionAdcionados a:hover {
+    transition: 0.7s ease;
+    color: #2596BE;
+}
+
+.containerSectionCards {
+    display: flex;
+    flex-wrap: wrap; /* Removida a direção da linha */
+    gap: 30px;
+}
+
+.card1,
+.card2 {
+    flex-basis: calc(50% - 15px); /* Calculado com gap */
+    height: 338px;
+    background-image: url("../img/planetOfLana.jpg");
+}
+
+/* FIM RENDER BODY */
+

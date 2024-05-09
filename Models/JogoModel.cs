@@ -26,7 +26,39 @@ namespace ProjetoPixelPlace.Models
             }
         }
 
+        public Jogo getJogo(int id)
+        { 
+            Jogo jogo = null;
+            conexaoBD = abreConexao();
 
+            MySqlCommand query = new MySqlCommand("Select * from jogo where idJogo = @id", conexaoBD);
+            query.Parameters.AddWithValue("@id", id);
+            MySqlDataReader reader = query.ExecuteReader();
+
+            while (reader.Read())
+            {
+                jogo = new Jogo(
+                    idJogo: Convert.ToInt32(reader["idJogo"]),
+                    nome: reader["nome"].ToString(),
+                    imagem: (byte[])reader["imagem"],
+                    descricao: reader["descricao"].ToString(),
+                    categoria: reader["categoria"].ToString(),
+                    preco: Convert.ToDouble(reader["preco"]),
+                    desconto: Convert.ToDouble(reader["desconto"]),
+                    data_lancamento: Convert.ToDateTime(reader["data_lancamento"]),
+                    numero_avaliacao: Convert.ToInt32(reader["numero_avaliacao"]),
+                    numero_estrelas: Convert.ToInt32(reader["numero_estrelas"]),
+                    desenvolvedora: reader["desenvolvedora"].ToString(),
+                    jogo_destaque: Convert.ToInt32(reader["jogo_destaque"])
+                );
+            }
+
+            reader.Close();
+            conexaoBD.Close();
+
+            return jogo;
+
+        }
         public List<Jogo> getAllJogos()
         {
             List<Jogo> jogoList = new List<Jogo>();
@@ -64,9 +96,6 @@ namespace ProjetoPixelPlace.Models
         public string inserirJogo(Jogo jogo) {
             string mensagem = "";
 
-            
-            
-            
             
 
             conexaoBD = abreConexao();

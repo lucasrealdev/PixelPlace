@@ -14,11 +14,23 @@ namespace ProjetoPixelPlace.Controllers
         
 
         [ServiceFilter(typeof(Autenticao))]
+        public ActionResult IndexADM()
+        {
+            if (HttpContext.Session.GetString("adm") != null)
+            {
+                return View(jogoModel.getAllJogos());
+            }
+            //no index retorna todos os jogos.
+            return RedirectToAction("Index");
+        }
+
+        [ServiceFilter(typeof(Autenticao))]
         public ActionResult Index()
         {
             //no index retorna todos os jogos.
             return View(jogoModel.getAllJogos());
         }
+
 
         // GET: JogoController/Details/5
         public ActionResult Details(int id)
@@ -29,16 +41,22 @@ namespace ProjetoPixelPlace.Controllers
         // GET: JogoController/Create
         public ActionResult Create()
         {
+            if (HttpContext.Session.GetString("adm") == null)
+            {
+                return RedirectToAction("Logar", "Usuario");
+            }
             //aqui retorna a view pela primeira vez
             return View();
         }
 
         // POST: JogoController/Create
         //quando clickar no submit, entrara nesse metodo, aonde realizara o cadastro.
+        [ServiceFilter(typeof(Autenticao))]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(string nome, string descricao, string categoria, double preco, double desconto, DateTime data_lancamento, int numero_estrelas, int numero_avaliacao, string desenvolvedora, int jogo_destaque)
         {
+           
             //aqui eu crio a vario result, a qual mostrar a mensagem de retorno no metodo create jogo
             string result = "";
             //crio uma imagem, talvez possa ser que não estou usando...
@@ -85,7 +103,7 @@ namespace ProjetoPixelPlace.Controllers
         }
 
         // GET: JogoController/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Comprar(int id)
         {
             return View();
         }
@@ -93,7 +111,8 @@ namespace ProjetoPixelPlace.Controllers
         // POST: JogoController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        [ServiceFilter(typeof(Autenticao))]
+        public ActionResult Comprar(int idJogo, int idUsuario)
         {
             try
             {
@@ -114,7 +133,7 @@ namespace ProjetoPixelPlace.Controllers
         // POST: JogoController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(int idJogo, IFormCollection collection)
         {
             try
             {

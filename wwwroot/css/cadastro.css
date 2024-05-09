@@ -1,0 +1,181 @@
+.containerCadastro{
+    width: 100%;
+    min-height: 100%;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerItens{
+    min-height: 100%;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0px 30px;
+    align-items: center;
+    justify-content: start;
+}
+
+.cadastro{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 10px;
+}
+
+.cadastro p{
+    font-size: 37px;
+    font-weight: 300;
+}
+
+.conjuntoInput{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    align-items: start;
+    justify-content: center;
+}
+
+.conjuntoInput p{
+    font-size: 17px;
+}
+
+input{
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #6E6F74;
+    color: white;
+    font-size: 22px;
+    outline: none;
+    padding: 0px 5px;
+
+}
+
+.conjuntoInput2{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    align-items: start;
+    justify-content: center;
+}
+
+.conjuntoInput2 p{
+    font-size: 17px;
+}
+
+.inputSenha{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    padding-right: 15px;
+    align-items: center;
+    justify-content: center;
+    background-color: #6E6F74;
+    border-radius: 4px;
+
+}
+
+.inputSenha label, 
+.inputSenha label img{
+    height: 25px;
+}
+
+.inputSenha input{
+    font-size: 22px;
+    color: white;
+    outline: none;
+    padding: 0px 5px;
+}
+
+.inputSenha input::placeholder{
+    color: rgba(254, 254, 254, 0.7);
+}
+
+.olho{
+    cursor: pointer;
+}
+
+.containerBCadastro{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px 10px;
+    align-items: center;
+    justify-content: start;
+}
+
+.botaoCadastro{
+    width: 100%;
+    height: 39px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background: linear-gradient(94deg, rgba(37,150,190,1) 0%, rgba(37,150,190,0.5) 100%);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.botaoCadastro p{
+    font-size: 17px;
+}
+
+.containerConta{
+    width: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+.cornormal{
+font-size: 20px;
+}
+
+.corazul{
+    font-size: 14px;
+    color: #1992FE;
+    text-decoration: underline;
+}
+
+.headerCelphone{
+    display: none;
+    justify-content: start;
+    width: 100%;
+    padding: 18px 0px 18px 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.headerCelphone p{
+    position: absolute;
+    left: 50%;
+    font-size: 28px !important;
+    transform: translatex(-50%)
+}
+
+.mainBody{
+    padding: 0 !important;
+}
+
+@media only screen and (max-width: 1191px) {
+    .headerCelphone{
+        display: flex;
+    }
+}

@@ -14,13 +14,13 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema mydb
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
-USE `mydb` ;'
+CREATE SCHEMA IF NOT EXISTS `pixelplace_01` DEFAULT CHARACTER SET utf8 ;
+USE `pixelplace_01` ;
 
 -- -----------------------------------------------------
 -- Table `mydb`.`Usuario`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Usuario` (
+CREATE TABLE IF NOT EXISTS `pixelplace_01`.`Usuario` (
   `idUsuario` INT NOT NULL AUTO_INCREMENT,
   `nomeUser` VARCHAR(45) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
@@ -33,7 +33,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`Jogo`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Jogo` (
+CREATE TABLE IF NOT EXISTS `pixelplace_01`.`Jogo` (
   `idJogo` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `imagem` VARCHAR(45) NOT NULL,
@@ -53,7 +53,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`Biblioteca`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Biblioteca` (
+CREATE TABLE IF NOT EXISTS `pixelplace_01`.`Biblioteca` (
   `Usuario_idUsuario` INT NOT NULL,
   `Jogo_idJogo` INT NOT NULL,
   PRIMARY KEY (`Usuario_idUsuario`, `Jogo_idJogo`),
@@ -61,12 +61,12 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Biblioteca` (
   INDEX `fk_Usuario_has_Jogo_Usuario_idx` (`Usuario_idUsuario` ASC) VISIBLE,
   CONSTRAINT `fk_Usuario_has_Jogo_Usuario`
     FOREIGN KEY (`Usuario_idUsuario`)
-    REFERENCES `mydb`.`Usuario` (`idUsuario`)
+    REFERENCES `pixelplace_01`.`Usuario` (`idUsuario`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Usuario_has_Jogo_Jogo1`
     FOREIGN KEY (`Jogo_idJogo`)
-    REFERENCES `mydb`.`Jogo` (`idJogo`)
+    REFERENCES `pixelplace_01`.`Jogo` (`idJogo`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -75,7 +75,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`Favoritos`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Favoritos` (
+CREATE TABLE IF NOT EXISTS `pixelplace_01`.`Favoritos` (
   `Usuario_idUsuario` INT NOT NULL,
   `Jogo_idJogo` INT NOT NULL,
   PRIMARY KEY (`Usuario_idUsuario`, `Jogo_idJogo`),
@@ -83,12 +83,12 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Favoritos` (
   INDEX `fk_Usuario_has_Jogo_Usuario1_idx` (`Usuario_idUsuario` ASC) VISIBLE,
   CONSTRAINT `fk_Usuario_has_Jogo_Usuario1`
     FOREIGN KEY (`Usuario_idUsuario`)
-    REFERENCES `mydb`.`Usuario` (`idUsuario`)
+    REFERENCES `pixelplace_01`.`Usuario` (`idUsuario`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Usuario_has_Jogo_Jogo2`
     FOREIGN KEY (`Jogo_idJogo`)
-    REFERENCES `mydb`.`Jogo` (`idJogo`)
+    REFERENCES `pixelplace_01`.`Jogo` (`idJogo`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -97,7 +97,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`Transacao`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Transacao` (
+CREATE TABLE IF NOT EXISTS `pixelplace_01`.`Transacao` (
   `Usuario_idUsuario` INT NOT NULL,
   `Jogo_idJogo` INT NOT NULL,
   `data_transacao` DATETIME NOT NULL,
@@ -109,12 +109,12 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Transacao` (
   INDEX `fk_Usuario_has_Jogo_Usuario2_idx` (`Usuario_idUsuario` ASC) VISIBLE,
   CONSTRAINT `fk_Usuario_has_Jogo_Usuario2`
     FOREIGN KEY (`Usuario_idUsuario`)
-    REFERENCES `mydb`.`Usuario` (`idUsuario`)
+    REFERENCES `pixelplace_01`.`Usuario` (`idUsuario`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Usuario_has_Jogo_Jogo3`
     FOREIGN KEY (`Jogo_idJogo`)
-    REFERENCES `mydb`.`Jogo` (`idJogo`)
+    REFERENCES `pixelplace_01`.`Jogo` (`idJogo`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -123,7 +123,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`Cupons_Desconto`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Cupons_Desconto` (
+CREATE TABLE IF NOT EXISTS `pixelplace_01`.`Cupons_Desconto` (
   `cupom` INT NOT NULL,
   `porcertagem_desconto` INT NOT NULL,
   PRIMARY KEY (`cupom`))
@@ -133,7 +133,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`Carrinho`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Carrinho` (
+CREATE TABLE IF NOT EXISTS `pixelplace_01`.`Carrinho` (
   `Usuario_idUsuario` INT NOT NULL,
   `Jogo_idJogo` INT NOT NULL,
   `Cupons_Desconto_cupom` INT NULL,
@@ -143,17 +143,17 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Carrinho` (
   INDEX `fk_Carrinho_Cupons_Desconto1_idx` (`Cupons_Desconto_cupom` ASC) VISIBLE,
   CONSTRAINT `fk_Usuario_has_Jogo_Usuario3`
     FOREIGN KEY (`Usuario_idUsuario`)
-    REFERENCES `mydb`.`Usuario` (`idUsuario`)
+    REFERENCES `pixelplace_01`.`Usuario` (`idUsuario`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Usuario_has_Jogo_Jogo4`
     FOREIGN KEY (`Jogo_idJogo`)
-    REFERENCES `mydb`.`Jogo` (`idJogo`)
+    REFERENCES `pixelplace_01`.`Jogo` (`idJogo`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Carrinho_Cupons_Desconto1`
     FOREIGN KEY (`Cupons_Desconto_cupom`)
-    REFERENCES `mydb`.`Cupons_Desconto` (`cupom`)
+    REFERENCES `pixelplace_01`.`Cupons_Desconto` (`cupom`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -162,14 +162,14 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`Notificacao`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Notificacao` (
+CREATE TABLE IF NOT EXISTS `pixelplace_01`.`Notificacao` (
   `mensagem` INT NOT NULL,
   `Usuario_idUsuario` INT NOT NULL,
   PRIMARY KEY (`mensagem`, `Usuario_idUsuario`),
   INDEX `fk_Notificacao_Usuario1_idx` (`Usuario_idUsuario` ASC) VISIBLE,
   CONSTRAINT `fk_Notificacao_Usuario1`
     FOREIGN KEY (`Usuario_idUsuario`)
-    REFERENCES `mydb`.`Usuario` (`idUsuario`)
+    REFERENCES `pixelplace_01`.`Usuario` (`idUsuario`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

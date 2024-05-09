@@ -1,0 +1,167 @@
+.vectorVoltar{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    cursor: pointer;
+}
+
+.vectorVoltar:hover svg path {
+    fill: #2596BE; 
+    transition: 0.45s ease-out;
+    color: #2596BE;
+}
+
+
+/* COMEÇO ESTILIZAÇÃO BANNER COM INFORMAÇÕES DO JOGO */
+.containerCarrinho{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    gap: 20px;
+    
+}
+
+.jogoPrincipal {
+    width: 100%;
+    height: 100%;
+    background-image: url(img/jogoalgum.png);
+    background-size: 100%; 
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 8px;
+    padding: 15px 0px 15px 30px;
+    overflow: hidden; 
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5); 
+}
+
+
+
+/* COMEÇO ESTILIZAÇÃO DOS BOTÕES */
+
+.botoes{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: start;
+    gap: 20px;
+    cursor: pointer;
+    padding-top: 90px;
+    padding-bottom: 140px;
+  
+}
+
+.precoJogo{
+    width: 190px;
+    height: 96px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 12px 24px;
+    background-color: #2C2E30;
+    border: 2px solid;
+    border-color: #FFFF;
+    cursor: pointer;
+    font-weight: 500 ;
+
+}
+
+.btn1{
+    width: 100%;
+    height: auto;
+    background-color: #2C2E30;
+    cursor: pointer;
+    width: 96px;
+    height: 96px;
+    border-radius: 8px;
+
+}
+
+.btn{
+    width: 100%;
+    height: auto;
+    background-color: #2C2E30;
+    color: #FFFF;
+    cursor: pointer;
+}
+
+.pBtn{
+    width: 100%;
+    height: auto;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* FIM ESTILIZAÇÃO DOS BOTÕES/ COMEÇO ESTILIZAÇÃO TRAILER EM CIMA */
+
+.trailer{
+    width: 100%;
+    height: auto;
+    font-size: 25px;
+    color: #8F8F8F;
+    padding: 0px 0px 40px 0px;
+    font-weight: 500 ;
+    cursor: pointer;
+
+}
+
+/* FIM ESTILIZAÇÃO TRAILER / COMEÇO INFORMAÇÕES ESCRITAS DO JOGO */
+
+.mainInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+    justify-content: start;
+}
+
+.nomeJogo{
+    width: 100%;
+    height: auto;
+    font-size: 50px;
+    font-weight: 300 ;
+}
+
+.subHead{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: start;
+    font-size: 25px;
+    color: #8F8F8F;
+    font-weight: 300 ;
+
+}
+
+.subsub{
+    color: #C6C6C6;
+}
+
+.rating{
+    width: 177px;
+    height: 40px;
+    gap: 3px;
+    display: flex;
+    flex-direction: row;
+    color: #8F8F8F;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300 ;
+
+}
+
+.descricao{
+    width: 60%;
+    height: auto;
+    font-size: 20px;
+    font-weight: 500 ;
+
+}
+
+/* FIM DE TUDO */
