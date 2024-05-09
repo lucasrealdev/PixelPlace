@@ -19,7 +19,7 @@
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ImagemCapa)
+                @Html.DisplayNameFor(model => model.Imagem)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Descricao)
@@ -34,7 +34,19 @@
                 @Html.DisplayNameFor(model => model.Desconto)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Data)
+                @Html.DisplayNameFor(model => model.Data_lancamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Numero_avaliacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Numero_estrelas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Desenvolvedora)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Jogo_destaque)
             </th>
             <th></th>
         </tr>
@@ -48,11 +60,13 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Nome)
             </td>
-            <td>               
+            <td>
                     @{
-                        string imagem = Convert.ToBase64String(item.ImagemCapa);
-                        string formato = "data:image/jpeg;base64," + imagem;    
-                        <img src="@formato"/>
+                        
+                    string imagem = Convert.ToBase64String(item.Imagem);
+                    string formato = "data:image/jpeg;base64," + imagem;
+                    <img src="@formato" />
+                        
                     }
             </td>
             <td>
@@ -68,7 +82,19 @@
                 @Html.DisplayFor(modelItem => item.Desconto)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Data)
+                @Html.DisplayFor(modelItem => item.Data_lancamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero_avaliacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero_estrelas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Desenvolvedora)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Jogo_destaque)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |

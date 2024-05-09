@@ -1,22 +1,28 @@
 ﻿@model IEnumerable<ProjetoPixelPlace.Entities.Usuario>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Listagem";
 }
 
-<h1>Index</h1>
+<h1>Listagem</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
+</p>
+<p>
+    <a asp-controller="Jogo" asp-action="Create">Adicionar Jogo</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.IdUsuario)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.NomeUsuario)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.UrlImage)
+                @Html.DisplayNameFor(model => model.Imagem)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Email)
@@ -24,9 +30,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Senha)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdUsuario)
-            </th>
+            
             <th></th>
         </tr>
     </thead>
@@ -34,10 +38,13 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.IdUsuario)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.NomeUsuario)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.UrlImage)
+                @Html.DisplayFor(modelItem => item.Imagem)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Email)
@@ -45,9 +52,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Senha)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdUsuario)
-            </td>
+            
             <td>
                 @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
                 @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |

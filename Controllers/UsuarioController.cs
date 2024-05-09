@@ -7,38 +7,43 @@ using ProjetoPixelPlace.Models;
 
 namespace ProjetoPixelPlace.Controllers
 {
+ 
     public class UsuarioController : Controller
     {
-        //Oi pra quem tiver lendo, espero que voce não entenda nada, e q eu esteja r.i.p
+        //Oi lucas, ana ou samuel
 
 
-        //model do banco de dados
+        //Injeção do nosso repositorio de dados
         UsuarioModel model = new UsuarioModel();
 
 
-        
-        //colocar como parametrom, email e senha, ver se existe esse usuario, caso existir, coloca ele em uma session
         public ActionResult Logar()
         {
-            
-            // era pra ser model.ValidaUser(), mas criei usuario de teste
-            //criei um usuario teste
-            Usuario user = new Usuario(null,"Joao","1234","kaio","1234");
-            
-            //coloquei ele numa session
-            HttpContext.Session.SetString("user",JsonConvert.SerializeObject(user));
-
-            //e retornei a index de listar, mas deveria validar se ele realmente esta logado;
-            return RedirectToAction("Index");
+            return View();
         }
 
-        //index cadastrar, aqui vira o model.inserirUsuario...
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Logar(string email, string senha)   //colocar como parametro, email e senha, ver se existe esse usuario, caso existir, coloca ele em uma session
+        {
+            //verifico se existe, caso n, devolvo null
+            var user = model.ValidaUser(email, senha);
+            if (user!=null)
+            {
+                //caso tiver eu coloco na session
+                HttpContext.Session.SetString("user", JsonConvert.SerializeObject(user));
+                return RedirectToAction("Listagem");
+            }
+            return View();           
+        }
+
         public ActionResult Create()
         {
             return View();
         }
-        
-        public ActionResult Index()
+
+        [ServiceFilter(typeof(Autenticao))]
+        public ActionResult Listagem()
         {
             //aqui eu vejo se ele realmente pode estar aqui...
             if (HttpContext.Session.GetString("user") != null)
@@ -56,28 +61,42 @@ namespace ProjetoPixelPlace.Controllers
         public ActionResult Details()
         {
             return View();
-            
+
         }
 
         // POST: UsuarioController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         //aqui é o create do usuario...
-        public ActionResult Create(string nomeUsuario, string UrlImage, string email, string senha)
-        {  
+        public ActionResult Create(string nomeUsuario, string email, string senha)
+        {
             try
             {
-                Usuario u = new Usuario(null, nomeUsuario, UrlImage, email, senha);
+                byte[] imagem = null;
+                var msg = "";
 
-                var msg = model.inserirUsuario(u);
+                //crio um user
+                Usuario u = new Usuario(null, nomeUsuario, imagem, email, senha);
+                //insiro o user e guardo a resposta..
+                msg = model.inserirUsuario(u);
 
+                //se a mensagem for sucedida, mando pro index, caso nao retorno a mensagem de erro pra mesma view, criar um dialogo sobre isso
                 if (msg == "Usuário cadastrado com sucesso")
-                return RedirectToAction(nameof(Index));
+                {
 
+                    //coloquei ele numa session
+                    HttpContext.Session.SetString("user", JsonConvert.SerializeObject(u));
+
+                    // e retorno a imagem
+                    return RedirectToAction(nameof(Listagem));
+                }
+
+                //para parar de dar erro, somente produzir uma mensagem de erro 
+                //utilizo assim por debug somente
                 return View(msg);
             }
             catch
-            { 
+            {
                 return View();
             }
         }
@@ -95,7 +114,7 @@ namespace ProjetoPixelPlace.Controllers
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Listagem));
             }
             catch
             {
@@ -116,7 +135,7 @@ namespace ProjetoPixelPlace.Controllers
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Listagem));
             }
             catch
             {

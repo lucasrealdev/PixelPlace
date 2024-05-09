@@ -8,10 +8,15 @@ namespace ProjetoPixelPlace.Controllers
 {
     public class JogoController : Controller
     {
+
+        //injecao da classe model
         private JogoModel jogoModel = new JogoModel();
-        // GET: JogoController
+        
+
+        [ServiceFilter(typeof(Autenticao))]
         public ActionResult Index()
         {
+            //no index retorna todos os jogos.
             return View(jogoModel.getAllJogos());
         }
 
@@ -24,31 +29,49 @@ namespace ProjetoPixelPlace.Controllers
         // GET: JogoController/Create
         public ActionResult Create()
         {
+            //aqui retorna a view pela primeira vez
             return View();
         }
 
         // POST: JogoController/Create
+        //quando clickar no submit, entrara nesse metodo, aonde realizara o cadastro.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(string nome, string descricao, string categoria, double preco, double desconto, DateTime data)
+        public ActionResult Create(string nome, string descricao, string categoria, double preco, double desconto, DateTime data_lancamento, int numero_estrelas, int numero_avaliacao, string desenvolvedora, int jogo_destaque)
         {
+            //aqui eu crio a vario result, a qual mostrar a mensagem de retorno no metodo create jogo
             string result = "";
-            byte[] image = null;
+            //crio uma imagem, talvez possa ser que não estou usando...
+            
             try
             {
+                //aqui eu pego a imagem enviada no corpo do request
                 foreach (IFormFile arq in Request.Form.Files)
                 {
+                    //se o arquivo for do tipo imagem, eu deixo salvar, caso for de outro tipo, ele retorna um erro, ja que a imagem será null...
                     if (arq.ContentType.Contains("image"))
                     {
+                        //crio um arquivo de memoria para a imagem
                         MemoryStream memoryStream = new MemoryStream();
+                        //transfiro a imagem para essa memory
                         arq.CopyTo(memoryStream);
-                        image = memoryStream.ToArray();
+                        //depois deixo em array de bytes
+                        byte[] imagem = memoryStream.ToArray();
 
-                        var jogoAdd = new Jogo(null, nome, image, descricao, categoria, preco, desconto, data);
+                        //crio um jogo que sera adicionado com os campos
+                        var jogoAdd = new Jogo(null, nome, imagem, descricao, categoria, preco, desconto, data_lancamento, numero_avaliacao, numero_estrelas, desenvolvedora, jogo_destaque);
+                        //passo para o resultado o return do jogoADD (cadastrado com sucesso ou erro)
                         result = jogoModel.inserirJogo(jogoAdd);
+                    }
+                    else
+                    {
+                        result = "Imagem com erro"; 
                     }
                 }
                 
+                //caso o resultado for sucesso, eu retorno para a pagina que lista, caso não eu retorno para mesma, porem com o erro na chamada,
+                //precisa colocar esse erro, em um span que apareca, como erro ao cadastrar.
+
                 if (result == "Jogo cadastrado com sucesso")
                 {
                     return RedirectToAction(nameof(Index));

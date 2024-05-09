@@ -4,10 +4,9 @@ namespace ProjetoPixelPlace.Models
 {
     public class CriadorConexao
     {
-        public CriadorConexao()
-        {
-        }
+       
 
+        //metodo que cria pega a conexao a partir do nome dado
         public static MySqlConnection getConexao(string nomeConexao)
         {
             
@@ -16,6 +15,7 @@ namespace ProjetoPixelPlace.Models
             return conexao;
         }
 
+        //metodo que pega do appsetings
         private static IConfigurationRoot Configuration()
         {
             IConfigurationBuilder builder =

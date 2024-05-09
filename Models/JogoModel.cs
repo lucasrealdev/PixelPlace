@@ -1,88 +1,102 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Microsoft.AspNetCore.Mvc;
+using MySql.Data.MySqlClient;
 using ProjetoPixelPlace.Entities;
 
 namespace ProjetoPixelPlace.Models
 {
     public class JogoModel
     {
-        private MySqlConnection con;
-        public List<Jogo> getAllJogos()
+        
+        private MySqlConnection conexaoBD;
+
+        public MySqlConnection abreConexao()
         {
-            List<Jogo> jogoList = new List<Jogo>(); 
+            MySqlConnection conexao;
             try
             {
-                con = CriadorConexao.getConexao("ConexaoPadrao");
-                con.Open();
+                conexao = CriadorConexao.getConexao("ConexaoPadrao");
+                conexao.Open();
+                return conexao;
             }
-            catch (Exception ex) {
-                con = CriadorConexao.getConexao("casa");
-                con.Open();
+            catch (Exception ex)
+            {
+                conexao = CriadorConexao.getConexao("casa");
+                conexao.Open();
+                return conexao;
             }
+        }
 
-            MySqlCommand query = new MySqlCommand("Select * from jogo", con);
+
+        public List<Jogo> getAllJogos()
+        {
+            List<Jogo> jogoList = new List<Jogo>();
+            byte[] imagem = null;
+            conexaoBD = abreConexao();
+
+            MySqlCommand query = new MySqlCommand("Select * from jogo", conexaoBD);
             MySqlDataReader reader = query.ExecuteReader();
+            
 
             while(reader.Read()) {
+
+                if (!reader.IsDBNull(reader.GetOrdinal("imagem"))){
+                    imagem = (byte[])reader["imagem"];
+                }
                 Jogo jogo = new Jogo(int.Parse(reader["idJogo"].ToString()),
                     reader["nome"].ToString(),
-                    (byte[])reader["imagemCapa"],
+                    imagem,
                     reader["descricao"].ToString(),
                     reader["categoria"].ToString(),
                     Double.Parse(reader["preco"].ToString()),
                     Double.Parse(reader["desconto"].ToString()),
-                    DateTime.Parse(reader["data"].ToString()));
+                    DateTime.Parse(reader["data_lancamento"].ToString()),
+                    int.Parse(reader["num_avaliacao"].ToString()),
+                    int.Parse(reader["num_estrelas"].ToString()),
+                    reader["desenvolvedora"].ToString(),
+                    int.Parse(reader["jogo_destaque"].ToString())); ;
                  
                 jogoList.Add(jogo);
                 
             }
-            con.Close();
+            conexaoBD.Close();
             return jogoList;
         }
-        public string inserirJogo(Jogo jogo)
-        {
+        public string inserirJogo(Jogo jogo) {
             string mensagem = "";
-           
+
             
-            try
-            {
-                using (MySqlConnection con = CriadorConexao.getConexao("ConexaoPadrao"))
+            
+            
+            
+
+            conexaoBD = abreConexao();
+            MySqlCommand mySqlCommand = new MySqlCommand("INSERT INTO Jogo(nome, imagem, descricao, categoria,preco,desconto,data_lancamento,num_avaliacao, num_estrelas,desenvolvedora,jogo_destaque) VALUES (@nome, @imagem, @descricao, @categoria,@preco,@desconto,@data_lancamento,@num_avaliacao, @num_estrelas, @desenvolvedora,@jogo_destaque)", conexaoBD);        
+            mySqlCommand.Parameters.AddWithValue("@nome", jogo.Nome);
+            mySqlCommand.Parameters.AddWithValue("@imagem", jogo.Imagem);
+            mySqlCommand.Parameters.AddWithValue("@descricao", jogo.Descricao);
+            mySqlCommand.Parameters.AddWithValue("@categoria", jogo.Categoria);
+            mySqlCommand.Parameters.AddWithValue("@preco", jogo.Preco);
+            mySqlCommand.Parameters.AddWithValue("@desconto", jogo.Desconto);
+            //validacao para enviar a data certa para o BD;
+            mySqlCommand.Parameters.AddWithValue("@data_lancamento", jogo.Data_lancamento.ToString("yyyy-MM-dd HH:mm"));
+            mySqlCommand.Parameters.AddWithValue("@num_avaliacao", jogo.Numero_avaliacao);
+            mySqlCommand.Parameters.AddWithValue("@num_estrelas", jogo.Numero_estrelas);
+            mySqlCommand.Parameters.AddWithValue("@desenvolvedora", jogo.Desenvolvedora);
+            mySqlCommand.Parameters.AddWithValue("@jogo_destaque", jogo.Jogo_destaque);
+
+
+            int rowsAffected = mySqlCommand.ExecuteNonQuery();
+                if (rowsAffected > 0)
                 {
-                    con.Open();
-                    using (MySqlCommand mySqlCommand = new MySqlCommand("INSERT INTO Jogo(nome, imagemCapa, descricao, categoria,preco,desconto,data) VALUES (@nome, @imagemCapa, @descricao,@categoria,@preco,@desconto,@data)", con))
-                    {
-                        mySqlCommand.Parameters.AddWithValue("@nome", jogo.Nome);
-
-
-
-                        mySqlCommand.Parameters.AddWithValue("@imagemCapa", jogo.ImagemCapa);
-                        mySqlCommand.Parameters.AddWithValue("@descricao", jogo.Descricao);
-                        mySqlCommand.Parameters.AddWithValue("@categoria", jogo.Categoria);
-                        mySqlCommand.Parameters.AddWithValue("@preco", jogo.Preco);
-                        mySqlCommand.Parameters.AddWithValue("@desconto", jogo.Desconto);
-                        //validacao para enviar a data certa para o BD;
-                        mySqlCommand.Parameters.AddWithValue("@data", jogo.Data.ToString("yyyy-MM-dd HH:mm"));
-
-                       
-                        int rowsAffected = mySqlCommand.ExecuteNonQuery();
-                        if (rowsAffected > 0)
-                        {
-                            mensagem = "Jogo cadastrado com sucesso";
-                        }
-                        else
-                        {
-                            mensagem = "Falha ao cadastrar jogo";
-                        }
-                        con.Close();
-                    }
+                    mensagem = "Jogo cadastrado com sucesso";
                 }
-            }
-            catch (Exception ex)
-            {
-                mensagem = "Ocorreu um erro ao cadastrar o jogo: " + ex.Message;
-            }
-            
-            return mensagem;
-
+                else
+                {
+                    mensagem = "Falha ao cadastrar jogo ";
+                }
+                conexaoBD.Close();
+           return mensagem;
         }
     }
 }
+
