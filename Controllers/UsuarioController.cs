@@ -29,6 +29,8 @@ namespace ProjetoPixelPlace.Controllers
         {
             //verifico se existe, caso n, devolvo null
             var user = model.ValidaUser(email, senha);
+
+
             if (user.IsADM == "sim")
             {
                 //caso tiver eu coloco na session
@@ -43,11 +45,6 @@ namespace ProjetoPixelPlace.Controllers
                 return RedirectToAction("Listagem");
             }
                      
-        }
-
-        public ActionResult Create()
-        {
-            return View();
         }
 
         [ServiceFilter(typeof(Autenticao))]
@@ -83,6 +80,13 @@ namespace ProjetoPixelPlace.Controllers
             return View();
 
         }
+
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
 
         // POST: UsuarioController/Create
         [HttpPost]

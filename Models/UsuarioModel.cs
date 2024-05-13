@@ -93,7 +93,7 @@ namespace ProjetoPixelPlace.Models
 
             //caso encontre algo
             while (reader.Read())
-            {
+            {   
 
                 if (!reader.IsDBNull(reader.GetOrdinal("imagem")))
                 {
