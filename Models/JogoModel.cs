@@ -46,8 +46,8 @@ namespace ProjetoPixelPlace.Models
                     preco: Convert.ToDouble(reader["preco"]),
                     desconto: Convert.ToDouble(reader["desconto"]),
                     data_lancamento: Convert.ToDateTime(reader["data_lancamento"]),
-                    numero_avaliacao: Convert.ToInt32(reader["numero_avaliacao"]),
-                    numero_estrelas: Convert.ToInt32(reader["numero_estrelas"]),
+                    numero_avaliacao: Convert.ToInt32(reader["num_avaliacao"]),
+                    numero_estrelas: Convert.ToInt32(reader["num_estrelas"]),
                     desenvolvedora: reader["desenvolvedora"].ToString(),
                     jogo_destaque: Convert.ToInt32(reader["jogo_destaque"])
                 );

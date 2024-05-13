@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QVsvrUmYhoA9jxQSIeXI9Vf+xwLlQm8R8za3EBvtu8SpiDM1FM+gTgI0HPwBlAJmHG/d2meTkFf2N9RcYGNH5Q==",
+  "dgSpecHash": "6t/eokWRnh/l9NdgXm+JWfVID+XkLEoqtADYeEPimfPl2Nnp5zbI/EXmg5EEPitNvRWLm9aRDcb1aUFfJh3M2w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aluno\\Source\\Repos\\PixelPlace\\ProjetoPixelPlace.csproj",
+  "projectFilePath": "C:\\Users\\aluno\\Documents\\PixelPlace1305\\ProjetoPixelPlace.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aluno\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\aluno\\.nuget\\packages\\google.protobuf\\3.25.1\\google.protobuf.3.25.1.nupkg.sha512",
