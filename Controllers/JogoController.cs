@@ -28,7 +28,7 @@ namespace ProjetoPixelPlace.Controllers
         public ActionResult Index()
         {
             //no index retorna todos os jogos.
-            return View(jogoModel.getAllJogos());
+            return View(jogoModel.getJogo(1));
         }
 
 
