@@ -1,4 +1,4 @@
-﻿@model ProjetoPixelPlace.Entities.Jogo
+﻿@model IEnumerable<ProjetoPixelPlace.Entities.Jogo>
 
 @{
     ViewData["Title"] = "Index";
@@ -8,58 +8,80 @@
     <link rel="stylesheet" href="~/css/inicial.css">
     <script src="~/js/script.js"></script>
 
-                <div class="mainBody">
-                    <div class="imagePoster">
-                        <div class="containerSombra">
-                            <div>
-                                <p>@Model.Nome</p>
+    <div class="mainBody">
+
+    @{
+        foreach(var item in Model)
+        {
+            if (item.Jogo_destaque == 1)
+        {
+                string imagem = Convert.ToBase64String(item.Imagem);
+                string formato = "data:image/jpeg;base64," + imagem;
+
+                <div class="imagePoster" style="background-image: url('@formato')">
+                    <div class="containerSombra">
+                        <div>
+                            <p>@item.Nome</p>
+                        </div>
+                        <div class="containerPreco">
+                            <div class="containerCategoria">
+                                <div class="cardCategoria">adventure</div>
+                                <div class="cardCategoria">puzzle</div>
+                                <div class="cardCategoria">Platform</div>
                             </div>
-                            <div class="containerPreco">
-                                <div class="containerCategoria">
-                                    <div class="cardCategoria">adventure</div>
-                                    <div class="cardCategoria">puzzle</div>
-                                    <div class="cardCategoria">Platform</div>
-                                </div>
-                                <p>R$ 1000</p>
-                            </div>
+                            <p>R$ 1000</p>
                         </div>
                     </div>
-                    <div class="containerAdicionados">
-                        <div class="containerSectionAdcionados">
-                            <p>Jogos Recentemente Adicionados <img src="img/fogo.png" alt=""></p>
-                            <a href="">View All</a>
-                        </div>
-                        <div class="containerSectionCards">
-                            <div class="card1">
-                                <div class="containerSombra">
-                                    <div>
-                                        <p>Planet Of Lana</p>
+                </div>
+            }
+        }
+
+        foreach (var item in Model)
+        {
+            if (item.Categoria.Contains("destaque"))
+            {
+                string imagem = Convert.ToBase64String(item.Imagem);
+                string formato = "data:image/jpeg;base64," + imagem;
+
+                <div class="containerAdicionados">
+                    <div class="containerSectionAdcionados">
+                        <p>Jogos Recentemente Adicionados <img src="img/fogo.png" alt=""></p>
+                        <a href="">View All</a>
+                    </div>
+                    <div class="containerSectionCards">
+                        <div class="card1" style="background-image: url('@formato')">
+                            <div class="containerSombra">
+                                <div>
+                                    <p>Planet Of Lana</p>
+                                </div>
+                                <div class="containerPreco2">
+                                    <div class="containerCategoria">
+                                        <div class="cardCategoria">adventure</div>
+                                        <div class="cardCategoria">puzzle</div>
+                                        <div class="cardCategoria">Platform</div>
                                     </div>
-                                    <div class="containerPreco2">
-                                        <div class="containerCategoria">
-                                            <div class="cardCategoria">adventure</div>
-                                            <div class="cardCategoria">puzzle</div>
-                                            <div class="cardCategoria">Platform</div>
-                                        </div>
-                                        <p>R$ 1000</p>
-                                    </div>
+                                    <p>R$ 1000</p>
                                 </div>
                             </div>
-                            <div class="card2">
-                                <div class="containerSombra">
-                                    <div>
-                                        <p>Planet Of Lana</p>
+                        </div>
+                        <div class="card2" style="background-image: url('@formato')">
+                            <div class="containerSombra">
+                                <div>
+                                    <p>Planet Of Lana</p>
+                                </div>
+                                <div class="containerPreco2">
+                                    <div class="containerCategoria">
+                                        <div class="cardCategoria">adventure</div>
+                                        <div class="cardCategoria">puzzle</div>
+                                        <div class="cardCategoria">Platform</div>
                                     </div>
-                                    <div class="containerPreco2">
-                                        <div class="containerCategoria">
-                                            <div class="cardCategoria">adventure</div>
-                                            <div class="cardCategoria">puzzle</div>
-                                            <div class="cardCategoria">Platform</div>
-                                        </div>
-                                        <p>R$ 1000</p>
-                                    </div>
+                                    <p>R$ 1000</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            }
+        }
+    }
+    </div>

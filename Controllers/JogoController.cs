@@ -24,11 +24,11 @@ namespace ProjetoPixelPlace.Controllers
             return RedirectToAction("Index");
         }
 
-        [ServiceFilter(typeof(Autenticao))]
+        
         public ActionResult Index()
         {
             //no index retorna todos os jogos.
-            return View(jogoModel.getJogo(1));
+            return View(jogoModel.getAllJogos());
         }
 
 

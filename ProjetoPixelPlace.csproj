@@ -11,6 +11,7 @@
     <Content Remove="Views\Usuario\Carrinho.cshtml" />
     <Content Remove="Views\Usuario\ListaDesejo.cshtml" />
     <Content Remove="Views\Usuario\Transacoes.cshtml" />
+    <Content Remove="wwwroot\css\index.css" />
   </ItemGroup>
 
   <ItemGroup>

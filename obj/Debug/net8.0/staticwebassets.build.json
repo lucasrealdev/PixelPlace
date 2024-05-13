@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9UqDfMSHQ5PdRdNQomKCVYp5ww8zM0TMm+gm7r/R5PA=",
+  "Hash": "TUAWhjWp7jMUvNgPxALASJbzJiUmHIUJJmsQJkp5P+s=",
   "Source": "ProjetoPixelPlace",
   "BasePath": "_content/ProjetoPixelPlace",
   "Mode": "Default",
@@ -148,25 +148,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Carrinho.css"
-    },
-    {
-      "Identity": "C:\\Users\\aluno\\Documents\\PixelPlace1305\\wwwroot\\css\\index.css",
-      "SourceId": "ProjetoPixelPlace",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\aluno\\Documents\\PixelPlace1305\\wwwroot\\",
-      "BasePath": "_content/ProjetoPixelPlace",
-      "RelativePath": "css/index.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\index.css"
     },
     {
       "Identity": "C:\\Users\\aluno\\Documents\\PixelPlace1305\\wwwroot\\css\\inicial.css",
