@@ -16,7 +16,7 @@ namespace ProjetoPixelPlace.Controllers
 
         //Injeção do nosso repositorio de dados
         UsuarioModel model = new UsuarioModel();
-
+        JogoModel jogomodel = new JogoModel();
 
         public ActionResult Logar()
         {
@@ -160,12 +160,6 @@ namespace ProjetoPixelPlace.Controllers
 
         // GET: é pra tela de transações, precisa fazer funcionar ainda, quase todas precisa fazer funcionar :D
         public ActionResult Transacoes()
-        {
-            return View();
-        }
-
-        //GET: tela da biblioteca
-        public ActionResult Biblioteca()
         {
             return View();
         }

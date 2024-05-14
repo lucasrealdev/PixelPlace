@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using ProjetoPixelPlace.Entities;
 using ProjetoPixelPlace.Models;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -101,6 +102,22 @@ namespace ProjetoPixelPlace.Controllers
                 return View();
             }
         }
+        //GET: tela da biblioteca
+        [ServiceFilter(typeof(Autenticao))]
+        public ActionResult Biblioteca()
+        {
+            
+            string usuarioJson = HttpContext.Session.GetString("user");
+
+            Usuario u = JsonConvert.DeserializeObject<Usuario>(usuarioJson);
+
+            //uma alternativa pra pegar diretamente o valor do id, ja que ele dava erro 
+            string id = u.IdUsuario.ToString();
+
+            return View(jogoModel.getBibliotecaUser(int.Parse(id)));
+
+        }
+
 
         // GET: JogoController/Edit/5
         public ActionResult Comprar(int id)

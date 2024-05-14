@@ -93,10 +93,9 @@ namespace ProjetoPixelPlace.Models
             conexaoBD.Close();
             return jogoList;
         }
-        public string inserirJogo(Jogo jogo) {
-            string mensagem = "";
-
-            
+        public string inserirJogo(Jogo jogo) 
+        {
+            string mensagem;
 
             conexaoBD = abreConexao();
             MySqlCommand mySqlCommand = new MySqlCommand("INSERT INTO Jogo(nome, imagem, descricao, categoria,preco,desconto,data_lancamento,num_avaliacao, num_estrelas,desenvolvedora,jogo_destaque) VALUES (@nome, @imagem, @descricao, @categoria,@preco,@desconto,@data_lancamento,@num_avaliacao, @num_estrelas, @desenvolvedora,@jogo_destaque)", conexaoBD);        
@@ -125,6 +124,34 @@ namespace ProjetoPixelPlace.Models
                 }
                 conexaoBD.Close();
            return mensagem;
+        }
+        public List<Jogo> getBibliotecaUser(int idUser)
+        {
+            List<int> idJogos = new List<int>();
+            List<Jogo> jogoList = new List<Jogo>();
+
+            conexaoBD = abreConexao();
+
+            MySqlCommand query = new MySqlCommand("Select Jogo_idJogo from Biblioteca where Usuario_idUsuario = @idUser", conexaoBD);
+            query.Parameters.AddWithValue("@idUser", idUser);
+
+            MySqlDataReader reader = query.ExecuteReader();
+
+            while (reader.Read())
+            {
+                int idJogo =  int.Parse(reader["Jogo_idJogo"].ToString());
+
+                idJogos.Add(idJogo);
+            }
+
+
+            foreach (var id in idJogos)
+            {
+                jogoList.Add(getJogo(id));
+            }
+    
+            conexaoBD.Close();
+            return jogoList;
         }
     }
 }
