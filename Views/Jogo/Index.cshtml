@@ -10,78 +10,75 @@
 
     <div class="mainBody">
 
-    @{
-        foreach(var item in Model)
-        {
-            if (item.Jogo_destaque == 1)
-        {
-                string imagem = Convert.ToBase64String(item.Imagem);
-                string formato = "data:image/jpeg;base64," + imagem;
+        @{
+            foreach(var item in Model)
+            {
+                if (item.Categoria.Contains("Jogo Destaque"))
+            {
+                    string imagem = Convert.ToBase64String(item.Imagem);
+                    string formato = "data:image/jpeg;base64," + imagem;
 
-                <div class="imagePoster" style="background-image: url('@formato')">
-                    <div class="containerSombra">
-                        <div>
-                            <p>@item.Nome</p>
-                        </div>
-                        <div class="containerPreco">
-                            <div class="containerCategoria">
-                                <div class="cardCategoria">adventure</div>
-                                <div class="cardCategoria">puzzle</div>
-                                <div class="cardCategoria">Platform</div>
+                    <div class="imagePoster" style="background-image: url('@formato')">
+                        <div class="containerSombra">
+                            <div>
+                                <p>@item.Nome</p>
                             </div>
-                            <p>R$ 1000</p>
+                            <div class="containerPreco">
+                                <div class="containerCategoria">
+                                    @foreach (var categoria in item.Categoria.Split(','))
+                                    {
+                                        <div class="cardCategoria">@categoria.Trim()</div>
+                                    }
+                                </div>
+                                <p>R$ @item.Preco</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    break;      
+                }
             }
         }
 
-        foreach (var item in Model)
-        {
-            if (item.Categoria.Contains("destaque"))
-            {
-                string imagem = Convert.ToBase64String(item.Imagem);
-                string formato = "data:image/jpeg;base64," + imagem;
+        <div class="containerAdicionados">
+            <div class="containerSectionAdcionados">
+                <p>Jogos Recentemente Adicionados <img src="img/fogo.png" alt=""></p>
+                <a href="">View All</a>
+            </div>
+            <div class="containerSectionCards">
+            @{
+                int contador = 0;
+                foreach (var item in Model)
+                {
+                    if (item.Categoria.Contains("Adicionado Recentemente"))
+                    {
+                        string imagem = Convert.ToBase64String(item.Imagem);
+                        string formato = "data:image/jpeg;base64," + imagem;
 
-                <div class="containerAdicionados">
-                    <div class="containerSectionAdcionados">
-                        <p>Jogos Recentemente Adicionados <img src="img/fogo.png" alt=""></p>
-                        <a href="">View All</a>
-                    </div>
-                    <div class="containerSectionCards">
+                        if (contador == 2)
+                        {
+                            break;
+                        }
+                        contador++;
+
                         <div class="card1" style="background-image: url('@formato')">
                             <div class="containerSombra">
                                 <div>
-                                    <p>Planet Of Lana</p>
+                                    <p>@item.Nome</p>
                                 </div>
                                 <div class="containerPreco2">
                                     <div class="containerCategoria">
-                                        <div class="cardCategoria">adventure</div>
-                                        <div class="cardCategoria">puzzle</div>
-                                        <div class="cardCategoria">Platform</div>
+                                        @foreach (var categoria in item.Categoria.Split(','))
+                                        {
+                                            <div class="cardCategoria">@categoria.Trim()</div>
+                                        }
                                     </div>
-                                    <p>R$ 1000</p>
+                                    <p>R$ @item.Preco</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="card2" style="background-image: url('@formato')">
-                            <div class="containerSombra">
-                                <div>
-                                    <p>Planet Of Lana</p>
-                                </div>
-                                <div class="containerPreco2">
-                                    <div class="containerCategoria">
-                                        <div class="cardCategoria">adventure</div>
-                                        <div class="cardCategoria">puzzle</div>
-                                        <div class="cardCategoria">Platform</div>
-                                    </div>
-                                    <p>R$ 1000</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    }
+                }
             }
-        }
-    }
+            </div>
+        </div>
     </div>

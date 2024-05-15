@@ -48,8 +48,7 @@ namespace ProjetoPixelPlace.Models
                     data_lancamento: Convert.ToDateTime(reader["data_lancamento"]),
                     numero_avaliacao: Convert.ToInt32(reader["num_avaliacao"]),
                     numero_estrelas: Convert.ToInt32(reader["num_estrelas"]),
-                    desenvolvedora: reader["desenvolvedora"].ToString(),
-                    jogo_destaque: Convert.ToInt32(reader["jogo_destaque"])
+                    desenvolvedora: reader["desenvolvedora"].ToString()
                 );
             }
 
@@ -84,8 +83,7 @@ namespace ProjetoPixelPlace.Models
                     DateTime.Parse(reader["data_lancamento"].ToString()),
                     int.Parse(reader["num_avaliacao"].ToString()),
                     int.Parse(reader["num_estrelas"].ToString()),
-                    reader["desenvolvedora"].ToString(),
-                    int.Parse(reader["jogo_destaque"].ToString())); ;
+                    reader["desenvolvedora"].ToString());
                  
                 jogoList.Add(jogo);
                 
@@ -98,7 +96,7 @@ namespace ProjetoPixelPlace.Models
             string mensagem;
 
             conexaoBD = abreConexao();
-            MySqlCommand mySqlCommand = new MySqlCommand("INSERT INTO Jogo(nome, imagem, descricao, categoria,preco,desconto,data_lancamento,num_avaliacao, num_estrelas,desenvolvedora,jogo_destaque) VALUES (@nome, @imagem, @descricao, @categoria,@preco,@desconto,@data_lancamento,@num_avaliacao, @num_estrelas, @desenvolvedora,@jogo_destaque)", conexaoBD);        
+            MySqlCommand mySqlCommand = new MySqlCommand("INSERT INTO Jogo(nome, imagem, descricao, categoria,preco,desconto,data_lancamento,num_avaliacao, num_estrelas,desenvolvedora) VALUES (@nome, @imagem, @descricao, @categoria,@preco,@desconto,@data_lancamento,@num_avaliacao, @num_estrelas, @desenvolvedora)", conexaoBD);        
             mySqlCommand.Parameters.AddWithValue("@nome", jogo.Nome);
             mySqlCommand.Parameters.AddWithValue("@imagem", jogo.Imagem);
             mySqlCommand.Parameters.AddWithValue("@descricao", jogo.Descricao);
@@ -110,7 +108,6 @@ namespace ProjetoPixelPlace.Models
             mySqlCommand.Parameters.AddWithValue("@num_avaliacao", jogo.Numero_avaliacao);
             mySqlCommand.Parameters.AddWithValue("@num_estrelas", jogo.Numero_estrelas);
             mySqlCommand.Parameters.AddWithValue("@desenvolvedora", jogo.Desenvolvedora);
-            mySqlCommand.Parameters.AddWithValue("@jogo_destaque", jogo.Jogo_destaque);
 
 
             int rowsAffected = mySqlCommand.ExecuteNonQuery();
