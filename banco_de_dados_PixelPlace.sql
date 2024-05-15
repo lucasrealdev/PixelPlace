@@ -21,12 +21,13 @@ USE `pixelplace_01` ;
 -- Table `mydb`.`Usuario`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `pixelplace_01`.`Usuario` (
-  `idUsuario` INT NOT NULL AUTO_INCREMENT,
-  `nomeUser` VARCHAR(45) NOT NULL,
-  `email` VARCHAR(45) NOT NULL,
-  `senha` VARCHAR(45) NOT NULL,
-  `imagem` BLOB NULL,
-  PRIMARY KEY (`idUsuario`))
+  `idUsuario` int(11) NOT NULL AUTO_INCREMENT,
+  `nomeUser` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `senha` varchar(45) NOT NULL,
+  `imagem` blob,
+  `isAdm` varchar(3) DEFAULT 'nao',
+  PRIMARY KEY (`idUsuario`)
 ENGINE = InnoDB;
 
 
@@ -34,19 +35,18 @@ ENGINE = InnoDB;
 -- Table `mydb`.`Jogo`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `pixelplace_01`.`Jogo` (
-  `idJogo` INT NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(45) NOT NULL,
-  `imagem` VARCHAR(45) NOT NULL,
-  `descricao` VARCHAR(45) NOT NULL,
-  `categoria` VARCHAR(45) NOT NULL,
-  `preco` DOUBLE NOT NULL,
-  `desconto` DOUBLE NULL DEFAULT 0,
-  `data_lancamento` DATETIME NOT NULL,
-  `num_avaliacao` INT NULL DEFAULT 0,
-  `num_estrelas` VARCHAR(45) NULL DEFAULT 0,
-  `desenvolvedora` VARCHAR(45) NOT NULL,
-  `jogo_destaque` INT NULL DEFAULT 0,
-  PRIMARY KEY (`idJogo`))
+  `idJogo` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(80) NOT NULL,
+  `imagem` longblob NOT NULL,
+  `descricao` varchar(400) NOT NULL,
+  `categoria` varchar(150) NOT NULL,
+  `preco` double NOT NULL,
+  `desconto` double DEFAULT '0',
+  `data_lancamento` datetime NOT NULL,
+  `num_avaliacao` int(11) DEFAULT '0',
+  `num_estrelas` varchar(45) DEFAULT '0',
+  `desenvolvedora` varchar(45) NOT NULL,
+  PRIMARY KEY (`idJogo`)
 ENGINE = InnoDB;
 
 
