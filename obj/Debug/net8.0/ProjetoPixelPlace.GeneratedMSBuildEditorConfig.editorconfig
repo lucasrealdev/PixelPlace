@@ -17,71 +17,71 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ProjetoPixelPlace
 build_property.RootNamespace = ProjetoPixelPlace
-build_property.ProjectDir = C:\Users\Aluno.ESCOLAR509\Source\Repos\PixelPlace\
+build_property.ProjectDir = C:\Users\Lucas\Downloads\PixelPlace\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Aluno.ESCOLAR509\Source\Repos\PixelPlace
+build_property.MSBuildProjectDirectory = C:\Users\Lucas\Downloads\PixelPlace
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Aluno.ESCOLAR509/Source/Repos/PixelPlace/Views/Home/Index.cshtml]
+[C:/Users/Lucas/Downloads/PixelPlace/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Aluno.ESCOLAR509/Source/Repos/PixelPlace/Views/Home/Privacy.cshtml]
+[C:/Users/Lucas/Downloads/PixelPlace/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Aluno.ESCOLAR509/Source/Repos/PixelPlace/Views/Jogo/Biblioteca.cshtml]
+[C:/Users/Lucas/Downloads/PixelPlace/Views/Jogo/Biblioteca.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9nb1xCaWJsaW90ZWNhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Aluno.ESCOLAR509/Source/Repos/PixelPlace/Views/Jogo/Comprar.cshtml]
+[C:/Users/Lucas/Downloads/PixelPlace/Views/Jogo/Comprar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9nb1xDb21wcmFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Aluno.ESCOLAR509/Source/Repos/PixelPlace/Views/Jogo/Create.cshtml]
+[C:/Users/Lucas/Downloads/PixelPlace/Views/Jogo/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9nb1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Aluno.ESCOLAR509/Source/Repos/PixelPlace/Views/Jogo/Index.cshtml]
+[C:/Users/Lucas/Downloads/PixelPlace/Views/Jogo/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9nb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Aluno.ESCOLAR509/Source/Repos/PixelPlace/Views/Jogo/IndexADM.cshtml]
+[C:/Users/Lucas/Downloads/PixelPlace/Views/Jogo/IndexADM.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9nb1xJbmRleEFETS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Aluno.ESCOLAR509/Source/Repos/PixelPlace/Views/Shared/Error.cshtml]
+[C:/Users/Lucas/Downloads/PixelPlace/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Aluno.ESCOLAR509/Source/Repos/PixelPlace/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Lucas/Downloads/PixelPlace/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Aluno.ESCOLAR509/Source/Repos/PixelPlace/Views/Usuario/Create.cshtml]
+[C:/Users/Lucas/Downloads/PixelPlace/Views/Usuario/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Aluno.ESCOLAR509/Source/Repos/PixelPlace/Views/Usuario/ListagemADM.cshtml]
+[C:/Users/Lucas/Downloads/PixelPlace/Views/Usuario/ListagemADM.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xMaXN0YWdlbUFETS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Aluno.ESCOLAR509/Source/Repos/PixelPlace/Views/Usuario/Logar.cshtml]
+[C:/Users/Lucas/Downloads/PixelPlace/Views/Usuario/Logar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xMb2dhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Aluno.ESCOLAR509/Source/Repos/PixelPlace/Views/_ViewImports.cshtml]
+[C:/Users/Lucas/Downloads/PixelPlace/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Aluno.ESCOLAR509/Source/Repos/PixelPlace/Views/_ViewStart.cshtml]
+[C:/Users/Lucas/Downloads/PixelPlace/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Aluno.ESCOLAR509/Source/Repos/PixelPlace/Views/Shared/_Layout.cshtml]
+[C:/Users/Lucas/Downloads/PixelPlace/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-c185w4jlvt

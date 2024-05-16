@@ -28,7 +28,8 @@ CREATE TABLE IF NOT EXISTS `pixelplace_01`.`Usuario` (
   `imagem` blob,
   `isAdm` varchar(3) DEFAULT 'nao',
   PRIMARY KEY (`idUsuario`)
-ENGINE = InnoDB;
+) ENGINE=InnoDB;
+
 
 
 -- -----------------------------------------------------
@@ -47,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `pixelplace_01`.`Jogo` (
   `num_estrelas` varchar(45) DEFAULT '0',
   `desenvolvedora` varchar(45) NOT NULL,
   PRIMARY KEY (`idJogo`)
-ENGINE = InnoDB;
+)ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
