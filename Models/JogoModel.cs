@@ -22,8 +22,10 @@ namespace ProjetoPixelPlace.Models
             {
                 conexao = CriadorConexao.getConexao("casa");
                 conexao.Open();
-                return conexao;
+                
             }
+            conexao.Close();
+            return conexao;
         }
 
         public Jogo getJogo(int id)

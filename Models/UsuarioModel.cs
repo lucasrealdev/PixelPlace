@@ -21,8 +21,10 @@ namespace ProjetoPixelPlace.Models
             {
                 con = CriadorConexao.getConexao("casa");
                 con.Open();
-                return con;
-            }         
+               
+            }
+            con.Close();
+            return con;
         }
 
         public List<Usuario> getAllUser()
