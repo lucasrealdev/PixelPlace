@@ -22,9 +22,9 @@ namespace ProjetoPixelPlace.Models
             {
                 conexao = CriadorConexao.getConexao("casa");
                 conexao.Open();
-                
+                conexao.Close();
             }
-            conexao.Close();
+           
             return conexao;
         }
 

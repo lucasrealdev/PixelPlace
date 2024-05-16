@@ -27,7 +27,37 @@ namespace ProjetoPixelPlace.Models
             return con;
         }
 
-        public List<Usuario> getAllUser()
+        public Usuario getUser(int id)
+        {
+
+            byte[] imagem = null;
+
+            MySqlCommand comando = new MySqlCommand("Select * from usuario where idUsuario = @id", conexaoBD = abreConexao());
+            comando.Parameters.AddWithValue("@id", id);
+            MySqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+
+                if (!reader.IsDBNull(reader.GetOrdinal("imagem")))
+                {
+                    imagem = (byte[])reader["imagem"];
+                }
+
+                Usuario usuario = new Usuario(int.Parse(reader["idUsuario"].ToString()),
+                reader["nomeUser"].ToString(),
+                reader["Email"].ToString(),
+                reader["Senha"].ToString(),
+                 imagem,
+                 reader["isADM"].ToString());
+
+                return usuario;
+
+            }
+            conexaoBD.Close();
+            return null;
+        }
+    
+    public List<Usuario> getAllUser()
         {
             List<Usuario> users = new List<Usuario>();          
             byte[] imagem = null; 
@@ -115,6 +145,10 @@ namespace ProjetoPixelPlace.Models
             conexaoBD.Close();
             return null;
         }
-        
+
+        internal string getUser()
+        {
+            throw new NotImplementedException();
+        }
     }  
 }
