@@ -6,7 +6,7 @@ namespace ProjetoPixelPlace.Models
 {
     public class UsuarioModel
     {
-        private MySqlConnection conexaoBD = null;
+        private MySqlConnection conexaoBD;
 
         public MySqlConnection abreConexao()
         {
@@ -23,7 +23,7 @@ namespace ProjetoPixelPlace.Models
                 con.Open();
                
             }
-            con.Close();
+          
             return con;
         }
 

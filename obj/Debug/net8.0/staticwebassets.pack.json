@@ -1,403 +1,403 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ProjetoPixelPlace.bundle.scp.css",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ProjetoPixelPlace.bundle.scp.css",
       "PackagePath": "staticwebassets\\ProjetoPixelPlace.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\css\\Carrinho.css",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\css\\Carrinho.css",
       "PackagePath": "staticwebassets\\css\\Carrinho.css"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\css\\biblioteca.css",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\css\\biblioteca.css",
       "PackagePath": "staticwebassets\\css\\biblioteca.css"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\css\\cadastro.css",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\css\\cadastro.css",
       "PackagePath": "staticwebassets\\css\\cadastro.css"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\css\\inicial.css",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\css\\inicial.css",
       "PackagePath": "staticwebassets\\css\\inicial.css"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\css\\listaDesejo.css",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\css\\listaDesejo.css",
       "PackagePath": "staticwebassets\\css\\listaDesejo.css"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\css\\loja.css",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\css\\loja.css",
       "PackagePath": "staticwebassets\\css\\loja.css"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\css\\style.css",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\css\\telaLoja.css",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\css\\telaLoja.css",
       "PackagePath": "staticwebassets\\css\\telaLoja.css"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\css\\transcoes.css",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\css\\transcoes.css",
       "PackagePath": "staticwebassets\\css\\transcoes.css"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\ButtonIcon.svg",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\ButtonIcon.svg",
       "PackagePath": "staticwebassets\\img\\ButtonIcon.svg"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\PerfilImg.png",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\PerfilImg.png",
       "PackagePath": "staticwebassets\\img\\PerfilImg.png"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\Rating.svg",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\Rating.svg",
       "PackagePath": "staticwebassets\\img\\Rating.svg"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\Square.svg",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\Square.svg",
       "PackagePath": "staticwebassets\\img\\Square.svg"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\Vector.svg",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\Vector.svg",
       "PackagePath": "staticwebassets\\img\\Vector.svg"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\bibliotecaBranco.svg",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\bibliotecaBranco.svg",
       "PackagePath": "staticwebassets\\img\\bibliotecaBranco.svg"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\carrinho.svg",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\carrinho.svg",
       "PackagePath": "staticwebassets\\img\\carrinho.svg"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\cart.svg",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\cart.svg",
       "PackagePath": "staticwebassets\\img\\cart.svg"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\cartao.svg",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\cartao.svg",
       "PackagePath": "staticwebassets\\img\\cartao.svg"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\chat.svg",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\chat.svg",
       "PackagePath": "staticwebassets\\img\\chat.svg"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\contasBranco.svg",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\contasBranco.svg",
       "PackagePath": "staticwebassets\\img\\contasBranco.svg"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\coracao.svg",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\coracao.svg",
       "PackagePath": "staticwebassets\\img\\coracao.svg"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\desejoCinza.svg",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\desejoCinza.svg",
       "PackagePath": "staticwebassets\\img\\desejoCinza.svg"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\favoritosBranco.svg",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\favoritosBranco.svg",
       "PackagePath": "staticwebassets\\img\\favoritosBranco.svg"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\fogo.png",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\fogo.png",
       "PackagePath": "staticwebassets\\img\\fogo.png"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\hollowknight.jpg",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\hollowknight.jpg",
       "PackagePath": "staticwebassets\\img\\hollowknight.jpg"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\imagemJogo.png",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\imagemJogo.png",
       "PackagePath": "staticwebassets\\img\\imagemJogo.png"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\inicialBranco.svg",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\inicialBranco.svg",
       "PackagePath": "staticwebassets\\img\\inicialBranco.svg"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\jogoalgum.png",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\jogoalgum.png",
       "PackagePath": "staticwebassets\\img\\jogoalgum.png"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\lista.png",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\lista.png",
       "PackagePath": "staticwebassets\\img\\lista.png"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\lista.svg",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\lista.svg",
       "PackagePath": "staticwebassets\\img\\lista.svg"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\lojaBranco.svg",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\lojaBranco.svg",
       "PackagePath": "staticwebassets\\img\\lojaBranco.svg"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\notification.svg",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\notification.svg",
       "PackagePath": "staticwebassets\\img\\notification.svg"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\olho.svg",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\olho.svg",
       "PackagePath": "staticwebassets\\img\\olho.svg"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\planetOfLana.jpg",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\planetOfLana.jpg",
       "PackagePath": "staticwebassets\\img\\planetOfLana.jpg"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\search.svg",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\search.svg",
       "PackagePath": "staticwebassets\\img\\search.svg"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\starcheia.png",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\starcheia.png",
       "PackagePath": "staticwebassets\\img\\starcheia.png"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\starmeia.png",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\starmeia.png",
       "PackagePath": "staticwebassets\\img\\starmeia.png"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\transacoesBranco.svg",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\transacoesBranco.svg",
       "PackagePath": "staticwebassets\\img\\transacoesBranco.svg"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\img\\vectorbaixo.svg",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\img\\vectorbaixo.svg",
       "PackagePath": "staticwebassets\\img\\vectorbaixo.svg"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\js\\script.js",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\js\\script.js",
       "PackagePath": "staticwebassets\\js\\script.js"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\Aluno.ESCOLAR509\\Source\\Repos\\PixelPlace\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\Administrador\\Documents\\PixelPLace\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
