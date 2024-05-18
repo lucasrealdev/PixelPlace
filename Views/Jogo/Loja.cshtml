@@ -1,0 +1,65 @@
+﻿@model IEnumerable<ProjetoPixelPlace.Entities.Jogo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<link rel="stylesheet" href="~/css/style.css">
+<link rel="stylesheet" href="~/css/loja.css">
+<script src="~/js/script.js"></script>
+
+<div class="imagePoster" id="imagePoster">
+    <div class="containerSombra">
+        <div>
+            <p id="NomeJogoDestaque"></p> <!-- Nome do jogo -->
+        </div>
+        <div class="containerPreco">
+            <div class="containerCategoria" id="CategoriaJogoDestaque"></div>
+        <p id="PrecoJogoDestaque"></p> <!-- Preço do jogo -->
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const imagePoster = document.getElementById("imagePoster");
+        const nomeJogoDestaque = document.getElementById("NomeJogoDestaque");
+        const precoJogoDestaque = document.getElementById("PrecoJogoDestaque");
+        const CategoriaJogoDestaque = document.getElementById("CategoriaJogoDestaque");
+        const mainBody = document.getElementById("body");
+
+        // Dynamically generated images array
+        const images = @Html.Raw(Json.Serialize(Model.Select(item => $"url('data:image/jpeg;base64,{Convert.ToBase64String(item.Imagem)}')").ToList()));
+        const nomes = @Html.Raw(Json.Serialize(Model.Select(item => item.Nome).ToList()));
+        const precos = @Html.Raw(Json.Serialize(Model.Select(item => item.Preco).ToList()));
+        const categorias = @Html.Raw(Json.Serialize(Model.Select(item => item.Categoria).ToList()));
+
+        let currentIndex = 0;
+
+        function changeBackground() {
+            imagePoster.style.backgroundImage = images[currentIndex];
+            mainBody.style.backgroundImage = images[currentIndex];
+            nomeJogoDestaque.innerHTML = nomes[currentIndex];
+            precoJogoDestaque.innerHTML = "R$ " + precos[currentIndex];
+            CategoriaJogoDestaque.innerHTML = ""; // Limpa o conteúdo anterior
+
+            let categoriaCount = 0;
+            categorias[currentIndex].split(',').forEach(categoria => {
+                if (categoriaCount >= 3) {
+                    return; // Equivalente a 'break' em um loop forEach
+                }
+                const divCategoria = document.createElement("div");
+                divCategoria.className = "cardCategoria";
+                divCategoria.innerText = categoria.trim();
+                CategoriaJogoDestaque.appendChild(divCategoria); // Adiciona a div de categoria ao elemento CategoriaJogoDestaque
+                categoriaCount++;
+            });
+
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+
+        changeBackground();
+        setInterval(changeBackground, 10000);
+    });
+</script>
+

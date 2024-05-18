@@ -15,14 +15,22 @@ a {
     color: #FEFEFE;
 }
 
-main {
+body {
     background-color: #3E3E3E;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: background-image 0.5s ease;
+}
+
+main {
     min-height: 100vh;
     display: flex;
     justify-content: start;
     align-items: start;
     flex-direction: row;
 }
+
 
 b {
     color: #2596BE;
@@ -39,14 +47,14 @@ b {
 /* FIM ESTILIZACOES PADRAO */
 
 /* ESTILIZACAO FIM */
-.mainBody{
+.mainBody {
     width: 100%;
-    padding: 0 20px 10px 20px;
+    padding: 0 20px 10px;
 }
 
 .containerAlinhar {
     display: flex;
-    flex: 1;
+    width: 100%;
     height: 100%;
     justify-content: center;
     align-items: center;
@@ -60,20 +68,18 @@ b {
 }
 
 .linha {
-    background-color: #DDDDDD;
+    background-color: #DDD;
     height: 1px;
     border-radius: 10px;
 }
 
 .containerLinha {
-    margin-top: 43px;
-    margin-bottom: 23px;
+    margin: 43px 0 23px;
 }
 
 .containerLinha2 {
-    margin: 23px 0px;
+    margin: 23px 0;
 }
-
 
 /* ESTILIZACAO ITEMS MENU */
 .menu1 {
@@ -86,9 +92,7 @@ b {
 
 .containerMenuItem {
     width: 100%;
-    height: auto;
     display: flex;
-    flex-direction: row;
     justify-content: start;
     align-items: center;
     gap: 10px;
@@ -98,13 +102,14 @@ b {
 
 .containerMenuItem p {
     font-weight: 500;
-    color: #DDDDDD;
+    color: #DDD;
 }
 
 .containerLinha3 {
     margin: 23px 0;
     flex: 1;
 }
+
 
 
 /* FIM ESTILiZACAO ITEMS MENU */
@@ -114,7 +119,7 @@ b {
 
 .containerMain {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     flex: 1;
@@ -128,7 +133,7 @@ header {
     height: auto;
     display: flex;
     flex-direction: row;
-    padding: 20px 50px;
+    padding: 20px 20px;
     gap: 23px;
 }
 
@@ -136,12 +141,12 @@ header {
     display: none;
 }
 
-.menu {
+.menu, .separa {
     flex: 1;
     height: auto;
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     gap: 23px;
 }
@@ -155,18 +160,17 @@ header {
     padding-left: 15px;
     background-color: rgba(254, 254, 254, 0.3);
     border-radius: 23.4px;
-    gap: 10px
+    gap: 10px;
 }
 
-.procurar label,
-.procurar label img {
+.procurar label, .procurar label img {
     height: 25px;
 }
 
 .procurar input {
     font-size: 22px;
     background-color: transparent;
-    border: 0px;
+    border: 0;
     color: white;
     outline: none;
 }
@@ -175,14 +179,8 @@ header {
     color: rgba(254, 254, 254, 0.7);
 }
 
-.separa {
-    flex: 1;
-    height: auto;
+.notificacoes, .carrinho, .profile {
     display: flex;
-    flex-direction: row;
-    justify-content: end;
-    align-items: center;
-    gap: 23px;
 }
 
 #pesquisar {
@@ -202,21 +200,18 @@ nav p {
 
 nav {
     position: sticky;
-    top: 0px;
+    top: 0;
     background-color: rgba(0, 0, 0, 0.3);
     width: 389px;
     min-height: 100vh;
     padding: 60px 50px;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     z-index: 1;
 }
 
-
-
-#menu-hamburguer,
-.menuBotao {
+#menu-hamburguer, .menuBotao {
     display: none;
 }
 
@@ -238,9 +233,8 @@ nav {
     z-index: 2;
 }
 
-.hamburguer:before,
-.hamburguer:after {
-    background: #ffff;
+.hamburguer:before, .hamburguer:after {
+    background: #fff;
     content: '';
     display: block;
     width: 100%;
@@ -295,9 +289,7 @@ nav {
         width: 100%;
     }
 
-    .gridLancamentos,
-    .card1,
-    .card2 {
+    .gridLancamentos, .card1, .card2 {
         flex-basis: 100%;
         max-width: 100%;
     }
@@ -325,14 +317,17 @@ nav {
         gap: 5px;
     }
 
+    .separa a {
+        display: none;
+    }
+
     .procurar {
         gap: 3px;
         align-items: center;
         padding-left: 10px;
     }
 
-    .procurar img,
-    .procurar label {
+    .procurar img, .procurar label {
         width: 25px;
         height: 25px;
     }
@@ -341,10 +336,9 @@ nav {
         gap: 8px;
     }
 
-    .profile img,
-    .profile {
-        width: 40px;
-        height: 40px;
+    .profile img, .profile {
+        width: 45px;
+        height: 45px;
     }
 
     header {
@@ -355,4 +349,3 @@ nav {
         padding: 0 10px 20px;
     }
 }
-

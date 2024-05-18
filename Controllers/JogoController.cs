@@ -32,6 +32,12 @@ namespace ProjetoPixelPlace.Controllers
             return View(jogoModel.getAllJogos());
         }
 
+        public ActionResult Loja()
+        {
+            //no index retorna todos os jogos.
+            return View(jogoModel.getAllJogos());
+        }
+
 
         // GET: JogoController/Details/5
         public ActionResult Details(int id)

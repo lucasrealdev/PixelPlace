@@ -3259,3 +3259,4 @@ C:\Users\Administrador\Documents\PixelPLace\obj\Debug\net8.0\refint\ProjetoPixel
 C:\Users\Administrador\Documents\PixelPLace\obj\Debug\net8.0\ProjetoPixelPlace.pdb
 C:\Users\Administrador\Documents\PixelPLace\obj\Debug\net8.0\ProjetoPixelPlace.genruntimeconfig.cache
 C:\Users\Administrador\Documents\PixelPLace\obj\Debug\net8.0\ref\ProjetoPixelPlace.dll
+C:\Users\Lucas\Downloads\PixelPlace\obj\Debug\net8.0\ProjetoPixelPlace.sourcelink.json

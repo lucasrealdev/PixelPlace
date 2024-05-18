@@ -4,81 +4,96 @@
     ViewData["Title"] = "Index";
 }
 
-    <link rel="stylesheet" href="~/css/style.css">
-    <link rel="stylesheet" href="~/css/inicial.css">
-    <script src="~/js/script.js"></script>
+<link rel="stylesheet" href="~/css/style.css">
+<link rel="stylesheet" href="~/css/inicial.css">
+<script src="~/js/script.js"></script>
 
-    <div class="mainBody">
+@{
+    foreach(var item in Model)
+    {
+        if (item.Categoria.Contains("Jogo Destaque"))
+    {
+            string imagem = Convert.ToBase64String(item.Imagem);
+            string formato = "data:image/jpeg;base64," + imagem;
 
-        @{
-            foreach(var item in Model)
-            {
-                if (item.Categoria.Contains("Jogo Destaque"))
-            {
-                    string imagem = Convert.ToBase64String(item.Imagem);
-                    string formato = "data:image/jpeg;base64," + imagem;
-
-                    <div class="imagePoster" style="background-image: url('@formato')">
-                        <div class="containerSombra">
-                            <div>
-                                <p>@item.Nome</p>
-                            </div>
-                            <div class="containerPreco">
-                                <div class="containerCategoria">
-                                    @foreach (var categoria in item.Categoria.Split(','))
+            <div class="imagePoster" style="background-image: url('@formato')">
+                <div class="containerSombra">
+                    <div>
+                        <p>@item.Nome</p>
+                    </div>
+                    <div class="containerPreco">
+                        <div class="containerCategoria">
+                            <!-- Mostrar Categorias Limita em 3 -->
+                            @{
+                                int categoriaCount = 0;
+                                foreach (var categoria in item.Categoria.Split(','))
+                                {
+                                    if (categoriaCount >= 3)
                                     {
-                                        <div class="cardCategoria">@categoria.Trim()</div>
+                                        break;
                                     }
-                                </div>
-                                <p>R$ @item.Preco</p>
+                                    <div class="cardCategoria">@categoria.Trim()</div>
+                                    categoriaCount++;
+                                }
+                            }
+                        </div>
+                        <p>R$ @item.Preco</p>
+                    </div>
+                </div>
+            </div>
+            break;      
+        }
+    }
+}
+
+<div class="containerAdicionados">
+    <div class="containerSectionAdcionados">
+        <p>Jogos Recentemente Adicionados <img src="img/fogo.png" alt=""></p>
+        <a href="">View All</a>
+    </div>
+    <div class="containerSectionCards">
+    @{
+        int contador = 0;
+        foreach (var item in Model)
+        {
+            if (item.Categoria.Contains("Adicionado Recentemente"))
+            {
+                string imagem = Convert.ToBase64String(item.Imagem);
+                string formato = "data:image/jpeg;base64," + imagem;
+
+                if (contador == 2)
+                {
+                    break;
+                }
+                contador++;
+
+                <div class="card1" style="background-image: url('@formato')">
+                    <div class="containerSombra">
+                        <div>
+                            <p>@item.Nome</p>
+                        </div>
+                        <div class="containerPreco2">
+                            <div class="containerCategoria">
+                                <!-- Mostrar Categorias Limita em 3 -->
+                                @{
+                                    int categoriaCount = 0;
+                                    foreach (var categoria in item.Categoria.Split(','))
+                                    {
+                                        if (categoriaCount >= 3)
+                                        {
+                                            break;
+                                        }
+                                        <div class="cardCategoria">@categoria.Trim()</div>
+                                        categoriaCount++;
+                                    }
+                                }
                             </div>
+                            <p>R$ @item.Preco</p>
                         </div>
                     </div>
-                    break;      
-                }
+                </div>
             }
         }
-
-        <div class="containerAdicionados">
-            <div class="containerSectionAdcionados">
-                <p>Jogos Recentemente Adicionados <img src="img/fogo.png" alt=""></p>
-                <a href="">View All</a>
-            </div>
-            <div class="containerSectionCards">
-            @{
-                int contador = 0;
-                foreach (var item in Model)
-                {
-                    if (item.Categoria.Contains("Adicionado Recentemente"))
-                    {
-                        string imagem = Convert.ToBase64String(item.Imagem);
-                        string formato = "data:image/jpeg;base64," + imagem;
-
-                        if (contador == 2)
-                        {
-                            break;
-                        }
-                        contador++;
-
-                        <div class="card1" style="background-image: url('@formato')">
-                            <div class="containerSombra">
-                                <div>
-                                    <p>@item.Nome</p>
-                                </div>
-                                <div class="containerPreco2">
-                                    <div class="containerCategoria">
-                                        @foreach (var categoria in item.Categoria.Split(','))
-                                        {
-                                            <div class="cardCategoria">@categoria.Trim()</div>
-                                        }
-                                    </div>
-                                    <p>R$ @item.Preco</p>
-                                </div>
-                            </div>
-                        </div>
-                    }
-                }
-            }
-            </div>
-        </div>
+    }
     </div>
+</div>
