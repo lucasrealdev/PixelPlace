@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ProjetoPixelPlace.Entities.Transacao>
+
+@{
+    ViewData["Title"] = "Transacao";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/css/transcoes.css">
+
+
+
+
+<div class="containerAlinhar">
+    <div class="containerMain">
+        <div class="mainBody">
+            <div class="containerTittle">
+                <p class="transacoes">Transações</p>
+                <img src="~/img/Vector.svg" class="vector">
+            </div>
+
+            <ul class="responsive-table">
+                <li class="table-header">
+                    <div class="col col-1"><p>Data</p></div>
+                    <div class="col col-2"><p>Itens</p></div>
+                    <div class="col col-3"><p>Tipo</p></div>
+                    <div class="col col-4"><p>Total</p></div>
+                </li>
+                    @{
+                    JogoModel jogoComprado = new JogoModel();
+                    foreach(var transacao in Model)
+                    {
+                        <li class="table-row">
+                    <div class="col col-1" data-label="Data:"><p>@transacao.Data_venda</p></div>
+                    <div class="col col-2" data-label="Itens:"><p>@jogoComprado.getJogo(transacao.Jogo_id).Nome</p></div>
+                    <div class="col col-3" data-label="Tipo:" style="gap: 3px;">
+                        <p>Compra</p>
+                        <p class="pix">@transacao.Tipo_compra</p>
+                    </div>
+                    <div class="col col-4" data-label="Total:"><p class="preco">@transacao.Valor_total </p></div>
+                        </li>
+                    }
+                   }
+                               
+            </ul>   
+        </div>
+    </div>
+</div>

@@ -23,6 +23,13 @@ namespace ProjetoPixelPlace.Controllers
             return View();
         }
 
+        public ActionResult Sair()
+        {
+            HttpContext.Session.Remove("user");
+            return RedirectToAction(nameof(Listagem));
+        }
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Logar(string email, string senha)   //colocar como parametro, email e senha, ver se existe esse usuario, caso existir, coloca ele em uma session

@@ -11,6 +11,7 @@
 @{
     foreach(var item in Model)
     {
+       
         if (item.Categoria.Contains("Jogo Destaque"))
     {
             string imagem = Convert.ToBase64String(item.Imagem);

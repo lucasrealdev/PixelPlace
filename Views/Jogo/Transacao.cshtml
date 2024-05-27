@@ -1,0 +1,64 @@
+﻿@model IEnumerable<ProjetoPixelPlace.Entities.Transacao>
+
+@{
+    ViewData["Title"] = "Transacao";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Transacao</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.User_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Jogo_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data_venda)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Valor_total)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Metodo_pagamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo_compra)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.User_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Jogo_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data_venda)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Valor_total)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Metodo_pagamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo_compra)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -32,7 +32,9 @@ namespace ProjetoPixelPlace.Controllers
             return View(jogoModel.getAllJogos());
         }
 
-        public ActionResult Loja()
+       
+
+            public ActionResult Loja()
         {
             //no index retorna todos os jogos.
             return View(jogoModel.getAllJogos());
@@ -112,16 +114,18 @@ namespace ProjetoPixelPlace.Controllers
         [ServiceFilter(typeof(Autenticao))]
         public ActionResult Biblioteca()
         {
-            
+            Usuario u;
             string usuarioJson = HttpContext.Session.GetString("user");
+            if (!string.IsNullOrEmpty(usuarioJson))
+            {
+                u = JsonConvert.DeserializeObject<Usuario>(usuarioJson);
 
-            Usuario u = JsonConvert.DeserializeObject<Usuario>(usuarioJson);
+                //uma alternativa pra pegar diretamente o valor do id, ja que ele dava erro 
+                string id = u.IdUsuario.ToString();
 
-            //uma alternativa pra pegar diretamente o valor do id, ja que ele dava erro 
-            string id = u.IdUsuario.ToString();
-
-            return View(jogoModel.getBibliotecaUser(int.Parse(id)));
-
+                return View(jogoModel.getBibliotecaUser(int.Parse(id)));
+            }
+            return View();
         }
 
 

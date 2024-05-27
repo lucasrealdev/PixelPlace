@@ -1,107 +1,101 @@
-
-
-
-
 /* COMEÇO DO CSS DA TRANSAÇÕES  */
-
 .containerTittle {
-    display: flex;
-    width: 100%;
-    height: auto;
-    padding-bottom: 40px;
-    gap: 12px;
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding-bottom: 40px;
+  gap: 12px;
 }
 
 .transacoes {
-    line-height: auto;
-    width: auto;
-    height: auto;
-    color: #FEFEFE;
-    font-size: 50px;
-    font-weight: 700;
+  line-height: auto;
+  width: auto;
+  height: auto;
+  color: #fefefe;
+  font-size: 50px;
+  font-weight: 700;
 }
 
 /* COMEÇO DA TABELA */
 .containerTransacoes {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-
-.table {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-    border: 1px solid;
-    border-radius: 6px;
-    border-color: #CBD5E1;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-
-.tread {
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    background-color: #2c2c2c;
-    border: 1px solid;
-    border-color: #CBD5E1;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-}
-
-.th {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 32px 16px;
-    border: 1px solid;
-    border-color: #CBD5E1;
-}
-
-.tbody {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-
-.tr {
-    width: 100%;
-    display: flex;
-    align-items: start;
-    justify-content: start;
-}
-
-.td {
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 32px 16px;
-    border: 1px solid;
-    border-color: #CBD5E1;
-    align-items: start;
-    justify-content: start;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .preco {
-    color: #2596BE;
+  color: #2596be !important;
 }
 
 .pix {
-    color: #808080;
+  color: #808080 !important;
 }
 
-/* FIM DE TUDO */
+.responsive-table {
+  li {
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  .table-header {
+    background-color: #2c2c2c;
+    border: 1px #cbd5e1 solid;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .table-row {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+    gap: 10px;
+  }
+  .table-row p{
+    color: black;
+  }
+  .col-1 {
+    flex-basis: 10%;
+  }
+  .col-2 {
+    flex-basis: 40%;
+  }
+  .col-3 {
+    flex-basis: 25%;
+  }
+  .col-4 {
+    flex-basis: 25%;
+  }
+
+  @media all and (max-width: 767px) {
+    .table-header {
+      display: none;
+    }
+    .table-row {
+    }
+    li {
+      display: block;
+    }
+    .col {
+      flex-basis: 100%;
+    }
+    .col {
+      display: flex;
+      padding: 10px 0;
+      &:before {
+        color: #6c7a89;
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+        font-style: normal;
+      }
+    }
+  }
+}
