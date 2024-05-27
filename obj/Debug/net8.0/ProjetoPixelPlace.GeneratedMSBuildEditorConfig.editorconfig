@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\aluno\source\repos\PixelPlace
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/aluno/source/repos/PixelPlace/Views/Carrinho/Carrinho.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FycmluaG9cQ2FycmluaG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/aluno/source/repos/PixelPlace/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

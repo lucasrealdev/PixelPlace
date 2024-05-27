@@ -1,0 +1,94 @@
+﻿@model IEnumerable<ProjetoPixelPlace.Entities.Carrinho>
+
+@{
+    ViewData["Title"] = "Carrinho";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/css/carrinho.css">
+
+
+<div class="mainBody">
+    <div class="containerTittle">
+        <p class="listaDesejo">Lista de Desejo <img src="img/Vector.svg"></p>
+    </div>
+    <div class="containerCart">
+        <div class="containerJogos">
+
+            @{
+
+                foreach(var jogo in Model){
+                    JogoModel jogoRepository = new();
+
+            <div class="posterJogo">
+                <div class="containerImg"></div>
+                <div class="containerSombra">
+                    <div class="informacoesJogo">
+                        <div class="tituloJogo">
+                            <p>@jogoRepository.getJogo(jogo.IdJogo)</p>
+                        </div>
+
+                        <div class="containerCategoria">
+                            <p>WEB</p>
+                        </div>
+                        <div class="containerTipo">
+                            <div class="containerCategoriadois">
+                                <p>Plataform</p>
+                            </div>
+                            <div class="containerTipo">
+                                <div class="containerCategoriadois">
+                                    <p>Puzzle</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="containerPreco">
+                        <div class="containerValor">
+                            <div class="desconto">
+                                <p>-85%</p>
+                            </div>
+                            <div class="ospreco">
+                                <p class="precoAntigo">R$20.90</p>
+                                <p>R$20.90</p>
+                            </div>
+                            <img src="img/lixo.svg">
+                        </div>
+                        <p class="adicionarListaDesejo">Adicionar lista de desejo</p>
+                    </div>
+                </div>
+            </div>
+                }
+            }
+        </div>
+
+        <!-- RESUMO DE JOGOS -->
+        <div class="ContainerComprar">
+            <p>Resumo de jogos<br> e aplicativos</p>
+
+            <div class="containerBotao">
+                <input type="text" class="inputDesconto" placeholder="Desconto" />
+            </div>
+
+            <div class="precos">
+                <p>Preço</p>
+                <p>R$393.90</p>
+            </div>
+
+            <div class="precos">
+                <p>Descontos</p>
+                <p>R$0.00</p>
+            </div>
+
+            <div class="containerLinha">
+                <div class="linha"></div>
+            </div>
+
+            <div class="total">
+                <p>Total</p>
+                <p>R$393.90</p>
+            </div>
+
+            <button class="finalizarCompra">FINALIZAR COMPRA</button>
+        </div>
+
+    </div>
+</div>
