@@ -9,7 +9,7 @@
 
 <div class="mainBody">
     <div class="containerTittle">
-        <p class="listaDesejo">Lista de Desejo <img src="img/Vector.svg"></p>
+        <p class="listaDesejo">Lista de Desejo <img src="~/img/Vector.svg"></p>
     </div>
     <div class="containerCart">
         <div class="containerJogos">
@@ -20,46 +20,80 @@
                 {
                     var jogo = repository.getJogo(item.IdJogo);
                     <div class="posterJogo">
-                        <div class="containerImg"></div>
+                        <div class="containerImg">
+                        </div>
                         <div class="containerSombra">
                             <div class="informacoesJogo">
                                 <div class="tituloJogo">
                                     <p>@jogo.Nome</p>
                                 </div>
                                 <div class="containerCategoria">
-                                    <p>@jogo.Categoria</p>
+                                    @{
+                                        if (jogo.Categoria.Contains("Desktop"))
+                                        {
+                                            <p>Desktop</p>
+                                        }
+                                        else
+                                        {
+                                            <p>Mobile</p>
+                                        }
+                                    }
+
                                 </div>
+
                                 <div class="containerTipo">
-                                    <div class="containerCategoriadois">
-                                        <p>@jogo.Categoria</p>
-                                    </div>
-                                    <div class="containerTipo">
-                                        <div class="containerCategoriadois">
-                                            <p>@jogo.Categoria</p>
-                                        </div>
-                                    </div>
+                                    @{
+                                        int categoriaCount = 0;
+                                        foreach (var categoria in jogo.Categoria.Split(','))
+                                        {
+                                            if (categoriaCount >= 5)
+                                            {
+                                                break;
+                                            }
+                                            <div class="containerCategoriadois">@categoria.Trim()</div>
+                                            categoriaCount++;
+                                        }
+                                    }
+
                                 </div>
                             </div>
                             <div class="containerPreco">
                                 <div class="containerValor">
-                                    <div class="desconto">
-                                        <p>-@jogo.Desconto%</p>
-                                    </div>
-                                    <div class="ospreco">
-                                        <p class="precoAntigo">R$@jogo.Preco</p>
-                                        @{
-                                            var desconto = jogo.Desconto;
-                                            var precoOriginal = jogo.Preco;
+                                    @{
+                                        var desconto = jogo.Desconto;
+                                        var precoOriginal = jogo.Preco;
+                                        var precoComDesconto = precoOriginal;
+
+                                        if (desconto > 0)
+                                        {
                                             var valorDesconto = precoOriginal * (desconto / 100.0);
-                                            var precoComDesconto = precoOriginal - valorDesconto;
+                                            precoComDesconto = precoOriginal - valorDesconto;
                                             totalPreco += precoComDesconto;
                                         }
+                                        else
+                                        {
+                                            totalPreco += precoOriginal;
+                                        }
+                                    }
+
+                                    @if (desconto > 0)
+                                    {
+                                        <div class="desconto">
+                                            <p>-@desconto%</p>
+                                        </div>
+                                        <div class="ospreco">
+                                            <p class="precoAntigo">R$@precoOriginal.ToString("0.00")</p>
+                                        </div>
+                                    }
+
+                                    <div class="ospreco">
                                         <p>R$@precoComDesconto.ToString("0.00")</p>
                                     </div>
-                                    <img src="img/lixo.svg">
+                                    <img src="~/img/lixo.svg">
                                 </div>
                                 <p class="adicionarListaDesejo">Adicionar lista de desejo</p>
                             </div>
+
                         </div>
                     </div>
                 }
@@ -82,7 +116,7 @@
             @{
                 // Instância do cupom e obtenção do desconto
                 Cupom cupom = new Cupom();
-                int descontos = cupom.GetCupom(1)?.PorcentagemDesconto ?? 0;
+                int descontos = cupom.GetCupom(1).PorcentagemDesconto;
 
                 // Calcular o valor total com desconto aplicado
                 decimal descontoFinal = (decimal)totalPreco * descontos / 100;

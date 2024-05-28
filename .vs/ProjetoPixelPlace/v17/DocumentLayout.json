@@ -1,34 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Administrador\\Documents\\PixelPLace\\",
+  "WorkspaceRootPath": "C:\\Users\\Aluno.ESCOLAR509\\source\\repos\\PixelPlace\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|c:\\users\\administrador\\documents\\pixelplace\\views\\carrinho\\carrinho.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|c:\\users\\aluno.escolar509\\source\\repos\\pixelplace\\views\\carrinho\\carrinho.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|solutionrelative:views\\carrinho\\carrinho.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|c:\\users\\administrador\\documents\\pixelplace\\models\\cupom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|solutionrelative:models\\cupom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|c:\\users\\administrador\\documents\\pixelplace\\models\\jogomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|solutionrelative:models\\jogomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|C:\\Users\\Administrador\\Documents\\PixelPLace\\controllers\\carrinhocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|solutionrelative:controllers\\carrinhocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|C:\\Users\\Administrador\\Documents\\PixelPLace\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|solutionrelative:controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|C:\\Users\\Administrador\\Documents\\PixelPLace\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|C:\\Users\\Administrador\\Documents\\PixelPLace\\models\\criadorconexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|solutionrelative:models\\criadorconexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,8 +14,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Carrinho.cshtml",
+              "DocumentMoniker": "C:\\Users\\Aluno.ESCOLAR509\\source\\repos\\PixelPlace\\Views\\Carrinho\\Carrinho.cshtml",
+              "RelativeDocumentMoniker": "Views\\Carrinho\\Carrinho.cshtml",
+              "ToolTip": "C:\\Users\\Aluno.ESCOLAR509\\source\\repos\\PixelPlace\\Views\\Carrinho\\Carrinho.cshtml*",
+              "RelativeToolTip": "Views\\Carrinho\\Carrinho.cshtml*",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAswI8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-28T19:09:52.603Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -51,94 +40,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "JogoModel.cs",
-              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\PixelPLace\\Models\\JogoModel.cs",
-              "RelativeDocumentMoniker": "Models\\JogoModel.cs",
-              "ToolTip": "C:\\Users\\Administrador\\Documents\\PixelPLace\\Models\\JogoModel.cs",
-              "RelativeToolTip": "Models\\JogoModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T01:23:04.921Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Cupom.cs",
-              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\PixelPLace\\Models\\Cupom.cs",
-              "RelativeDocumentMoniker": "Models\\Cupom.cs",
-              "ToolTip": "C:\\Users\\Administrador\\Documents\\PixelPLace\\Models\\Cupom.cs",
-              "RelativeToolTip": "Models\\Cupom.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T01:16:22.007Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Carrinho.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\PixelPLace\\Views\\Carrinho\\Carrinho.cshtml",
-              "RelativeDocumentMoniker": "Views\\Carrinho\\Carrinho.cshtml",
-              "ToolTip": "C:\\Users\\Administrador\\Documents\\PixelPLace\\Views\\Carrinho\\Carrinho.cshtml*",
-              "RelativeToolTip": "Views\\Carrinho\\Carrinho.cshtml*",
-              "ViewState": "AQIAAEkAAAAAAAAAAAAgwG0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-28T00:24:45.853Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CarrinhoController.cs",
-              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\PixelPLace\\Controllers\\CarrinhoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CarrinhoController.cs",
-              "ToolTip": "C:\\Users\\Administrador\\Documents\\PixelPLace\\Controllers\\CarrinhoController.cs",
-              "RelativeToolTip": "Controllers\\CarrinhoController.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAADwvxkAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T00:23:48.686Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\PixelPLace\\Controllers\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UsuarioController.cs",
-              "ToolTip": "C:\\Users\\Administrador\\Documents\\PixelPLace\\Controllers\\UsuarioController.cs",
-              "RelativeToolTip": "Controllers\\UsuarioController.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAADwvzAAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T00:14:11.348Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\PixelPLace\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\Administrador\\Documents\\PixelPLace\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABRAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-28T00:13:29.702Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CriadorConexao.cs",
-              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\PixelPLace\\Models\\CriadorConexao.cs",
-              "RelativeDocumentMoniker": "Models\\CriadorConexao.cs",
-              "ToolTip": "C:\\Users\\Administrador\\Documents\\PixelPLace\\Models\\CriadorConexao.cs",
-              "RelativeToolTip": "Models\\CriadorConexao.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T00:13:24.6Z"
             }
           ]
         },
