@@ -1,13 +1,12 @@
 ﻿using MySql.Data.MySqlClient;
-using ProjetoPixelPlace.Models;
 
-namespace ProjetoPixelPlace.Entities
+namespace ProjetoPixelPlace.Models
 {
     public class Carrinho
     {
         private int idUser;
         private int idJogo;
-        
+
 
         public Carrinho()
         {
@@ -21,7 +20,7 @@ namespace ProjetoPixelPlace.Entities
 
         public int IdUser { get => idUser; set => idUser = value; }
         public int IdJogo { get => idJogo; set => idJogo = value; }
-        
+
 
 
         public MySqlConnection abreConexao()
@@ -51,11 +50,12 @@ namespace ProjetoPixelPlace.Entities
             MySqlCommand comando = new MySqlCommand("Insert into carrinho(Usuario_idUsuario, Jogo_idJogo) values(@Usuario_idUsuario, @Jogo_idJogo)", mySqlConnection);
             comando.Parameters.AddWithValue("@Usuario_idUsuario", IdUser);
             comando.Parameters.AddWithValue("@Jogo_idJogo", IdJogo);
-            
+
             try
             {
                 comando.ExecuteNonQuery();
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 return $"Não foi possivel inserir no carrinho {ex.Message}";
             }
@@ -69,16 +69,17 @@ namespace ProjetoPixelPlace.Entities
 
             MySqlConnection mySqlConnection = abreConexao();
 
-            MySqlCommand comando = new MySqlCommand("Select * from transacao where Usuario_idUsuario = @id ", mySqlConnection);
+            MySqlCommand comando = new MySqlCommand("Select * from carrinho where Usuario_idUsuario = @id ", mySqlConnection);
             comando.Parameters.AddWithValue("@id", IdUser);
 
             MySqlDataReader comandoDataReader = comando.ExecuteReader();
+
             while (comandoDataReader.Read())
             {
                 IdUser = comandoDataReader.GetInt32("Usuario_idUsuario");
                 IdJogo = comandoDataReader.GetInt32("Jogo_idJogo");
 
-                carrinhos.Add(new Carrinho(IdUser,IdJogo));
+                carrinhos.Add(new Carrinho(IdUser, IdJogo));
             }
 
             return carrinhos;
@@ -94,11 +95,13 @@ namespace ProjetoPixelPlace.Entities
             {
                 comando.ExecuteNonQuery();
 
-            }catch (Exception ex) {
+            }
+            catch (Exception ex)
+            {
 
                 return $"Não foi possivel retirar do carrinho {ex.Message}";
             }
-      
+
             return "Retirado do carrinho com sucesso";
         }
     }

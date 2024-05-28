@@ -1,11 +1,11 @@
-﻿@model IEnumerable<ProjetoPixelPlace.Entities.Carrinho>
+﻿@model IEnumerable<Carrinho>
 
 @{
     ViewData["Title"] = "Carrinho";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<link rel="stylesheet" href="~/css/carrinho.css">
 
+<link rel="stylesheet" href="~/css/carrinho.css">
 
 <div class="mainBody">
     <div class="containerTittle">
@@ -13,49 +13,55 @@
     </div>
     <div class="containerCart">
         <div class="containerJogos">
-
             @{
-
-                foreach(var jogo in Model){
-                    JogoModel jogoRepository = new();
-
-            <div class="posterJogo">
-                <div class="containerImg"></div>
-                <div class="containerSombra">
-                    <div class="informacoesJogo">
-                        <div class="tituloJogo">
-                            <p>@jogoRepository.getJogo(jogo.IdJogo)</p>
-                        </div>
-
-                        <div class="containerCategoria">
-                            <p>WEB</p>
-                        </div>
-                        <div class="containerTipo">
-                            <div class="containerCategoriadois">
-                                <p>Plataform</p>
-                            </div>
-                            <div class="containerTipo">
-                                <div class="containerCategoriadois">
-                                    <p>Puzzle</p>
+                double totalPreco = 0;
+                JogoModel repository = new JogoModel();
+                foreach (var item in Model)
+                {
+                    var jogo = repository.getJogo(item.IdJogo);
+                    <div class="posterJogo">
+                        <div class="containerImg"></div>
+                        <div class="containerSombra">
+                            <div class="informacoesJogo">
+                                <div class="tituloJogo">
+                                    <p>@jogo.Nome</p>
+                                </div>
+                                <div class="containerCategoria">
+                                    <p>@jogo.Categoria</p>
+                                </div>
+                                <div class="containerTipo">
+                                    <div class="containerCategoriadois">
+                                        <p>@jogo.Categoria</p>
+                                    </div>
+                                    <div class="containerTipo">
+                                        <div class="containerCategoriadois">
+                                            <p>@jogo.Categoria</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="containerPreco">
+                                <div class="containerValor">
+                                    <div class="desconto">
+                                        <p>-@jogo.Desconto%</p>
+                                    </div>
+                                    <div class="ospreco">
+                                        <p class="precoAntigo">R$@jogo.Preco</p>
+                                        @{
+                                            var desconto = jogo.Desconto;
+                                            var precoOriginal = jogo.Preco;
+                                            var valorDesconto = precoOriginal * (desconto / 100.0);
+                                            var precoComDesconto = precoOriginal - valorDesconto;
+                                            totalPreco += precoComDesconto;
+                                        }
+                                        <p>R$@precoComDesconto.ToString("0.00")</p>
+                                    </div>
+                                    <img src="img/lixo.svg">
+                                </div>
+                                <p class="adicionarListaDesejo">Adicionar lista de desejo</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="containerPreco">
-                        <div class="containerValor">
-                            <div class="desconto">
-                                <p>-85%</p>
-                            </div>
-                            <div class="ospreco">
-                                <p class="precoAntigo">R$20.90</p>
-                                <p>R$20.90</p>
-                            </div>
-                            <img src="img/lixo.svg">
-                        </div>
-                        <p class="adicionarListaDesejo">Adicionar lista de desejo</p>
-                    </div>
-                </div>
-            </div>
                 }
             }
         </div>
@@ -70,12 +76,22 @@
 
             <div class="precos">
                 <p>Preço</p>
-                <p>R$393.90</p>
+                <p>R$@totalPreco.ToString("0.00")</p>
             </div>
+
+            @{
+                // Instância do cupom e obtenção do desconto
+                Cupom cupom = new Cupom();
+                int descontos = cupom.GetCupom(1)?.PorcentagemDesconto ?? 0;
+
+                // Calcular o valor total com desconto aplicado
+                decimal descontoFinal = (decimal)totalPreco * descontos / 100;
+                decimal totalComDesconto = (decimal)totalPreco - descontoFinal;
+            }
 
             <div class="precos">
                 <p>Descontos</p>
-                <p>R$0.00</p>
+                <p>@descontos%</p>
             </div>
 
             <div class="containerLinha">
@@ -84,11 +100,10 @@
 
             <div class="total">
                 <p>Total</p>
-                <p>R$393.90</p>
+                <p>R$@totalComDesconto.ToString("0.00")</p>
             </div>
 
             <button class="finalizarCompra">FINALIZAR COMPRA</button>
         </div>
-
     </div>
 </div>

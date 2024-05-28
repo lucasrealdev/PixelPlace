@@ -26,6 +26,8 @@ namespace ProjetoPixelPlace.Controllers
         public ActionResult Sair()
         {
             HttpContext.Session.Remove("user");
+            HttpContext.Session.Remove("adm");
+
             return RedirectToAction(nameof(Listagem));
         }
 
@@ -37,6 +39,8 @@ namespace ProjetoPixelPlace.Controllers
             //verifico se existe, caso n, devolvo null
             var user = model.ValidaUser(email, senha);
 
+            if (user == null)
+                return View();
 
             if (user.IsADM == "sim")
             {

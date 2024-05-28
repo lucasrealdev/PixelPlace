@@ -14,6 +14,10 @@ namespace ProjetoPixelPlace.Controllers
         public IActionResult Carrinho()
         {
             string userJson = HttpContext.Session.GetString("user");
+            if(userJson == null)
+            {
+                return View();
+            }
 
             Usuario u = JsonConvert.DeserializeObject<Usuario>(userJson);
 
