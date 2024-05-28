@@ -36,5 +36,17 @@ namespace ProjetoPixelPlace.Controllers
             }
             return Ok(new { u});
         }
+
+        [HttpPost]
+        public ActionResult ValidarUser([FromBody] string email, string senha)
+        {
+            var u = model.ValidaUser(email,senha);
+
+            if (u == null)
+            {
+                return BadRequest(new { mensagem = "Usuario Não foi encontrado" });
+            }
+            return Ok(new { u });
+        }
     }
 }
