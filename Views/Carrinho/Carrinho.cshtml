@@ -2,14 +2,15 @@
 
 @{
     ViewData["Title"] = "Carrinho";
+
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<link rel="stylesheet" href="~/css/carrinho.css">
+<link rel="stylesheet" href="~/css/Carrinho.css">
 
 <div class="mainBody">
     <div class="containerTittle">
-        <p class="listaDesejo">Lista de Desejo <img src="~/img/Vector.svg"></p>
+        <p class="listaDesejo">Carrinho <a href=""><img src="~/img/Vector.svg"></a></p>
     </div>
     <div class="containerCart">
         <div class="containerJogos">
@@ -50,7 +51,7 @@
                                             {
                                                 break;
                                             }
-                                            <div class="containerCategoriadois">@categoria.Trim()</div>
+                                            <div class="containerCategoriadois fontePersonalizada">@categoria.Trim()</div>
                                             categoriaCount++;
                                         }
                                     }
@@ -89,7 +90,13 @@
                                     <div class="ospreco">
                                         <p>R$@precoComDesconto.ToString("0.00")</p>
                                     </div>
-                                    <img src="~/img/lixo.svg">
+                                    
+
+                                    
+                                        <a href="@Url.Action("Delete", "Carrinho", new { idJogo =item.IdJogo})">
+                                            <img src="~/img/lixo.svg" alt="Excluir" />
+                                        </a>
+                                    
                                 </div>
                                 <p class="adicionarListaDesejo">Adicionar lista de desejo</p>
                             </div>
@@ -104,11 +111,11 @@
         <div class="ContainerComprar">
             <p>Resumo de jogos<br> e aplicativos</p>
 
-            <form asp-action="DescontarCupom" method="post">
+            <form asp-action="Carrinho" method="post" class="formCupom">
                 <div class="containerBotao">
                     <input name="NomeCupom" class="inputDesconto" placeholder="Desconto" />
-                    
-                    <input type="submit" value="Procurar Desconto"/>
+ 
+                    <input type="submit" value="Aplicar" class="botaoDesconto fontePersonalizada" />
                 </div>
             </form>
            
@@ -121,8 +128,13 @@
             @{
                 // Instância do cupom e obtenção do desconto
                 Cupom cupom = new Cupom();
-                int descontos = cupom.GetCupom("nome").PorcentagemDesconto;
-
+                int descontos = 0;
+                if (ViewData["porcentagemCupom"] != null)
+                {
+                    descontos = Convert.ToInt32(ViewData["porcentagemCupom"]);
+                }
+               
+                
                 // Calcular o valor total com desconto aplicado
                 decimal descontoFinal = (decimal)totalPreco * descontos / 100;
                 decimal totalComDesconto = (decimal)totalPreco - descontoFinal;

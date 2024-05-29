@@ -127,7 +127,7 @@
     justify-content: start;
 }
 
-.containerCategoriadois{
+.containerCategoriadois {
     border-radius: 3.12px;
     display: flex;
     flex-direction: row;
@@ -213,15 +213,28 @@
     text-wrap: wrap;
 }
 
-.containerBotao{
+.formCupom{
     width: 100%;
-    padding-top: 30px;
 }
 
-.inputDesconto{
+.containerBotao{
+    display: flex;
+    width: 100%;
+    padding-top: 30px;
+    gap: 2px;
+}
+
+.botaoDesconto {
+    padding: 2px 5px;
+    background-color: #979494;
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.inputDesconto {
     border: 1px solid rgba(255, 255, 255, 0.7);
     padding-left: 10px;
-    width: 100%;
+    flex: 1;
     border-radius: 6px;
     height: 38px;
     display: flex;

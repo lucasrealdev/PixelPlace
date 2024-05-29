@@ -109,6 +109,10 @@
       "PackagePath": "staticwebassets\\img\\hollowknight.jpg"
     },
     {
+      "Id": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\img\\image 16.svg",
+      "PackagePath": "staticwebassets\\img\\image 16.svg"
+    },
+    {
       "Id": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\img\\imagemJogo.png",
       "PackagePath": "staticwebassets\\img\\imagemJogo.png"
     },
@@ -127,6 +131,10 @@
     {
       "Id": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\img\\lista.svg",
       "PackagePath": "staticwebassets\\img\\lista.svg"
+    },
+    {
+      "Id": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\img\\lixo.svg",
+      "PackagePath": "staticwebassets\\img\\lixo.svg"
     },
     {
       "Id": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\img\\lojaBranco.svg",
@@ -149,6 +157,10 @@
       "PackagePath": "staticwebassets\\img\\search.svg"
     },
     {
+      "Id": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\img\\setaVoltar.svg",
+      "PackagePath": "staticwebassets\\img\\setaVoltar.svg"
+    },
+    {
       "Id": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\img\\starcheia.png",
       "PackagePath": "staticwebassets\\img\\starcheia.png"
     },
@@ -163,6 +175,14 @@
     {
       "Id": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\img\\vectorbaixo.svg",
       "PackagePath": "staticwebassets\\img\\vectorbaixo.svg"
+    },
+    {
+      "Id": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\img\\vectordireita.svg",
+      "PackagePath": "staticwebassets\\img\\vectordireita.svg"
+    },
+    {
+      "Id": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\img\\vectoresquerda.svg",
+      "PackagePath": "staticwebassets\\img\\vectoresquerda.svg"
     },
     {
       "Id": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\js\\script.js",

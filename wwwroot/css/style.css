@@ -15,6 +15,13 @@ a {
     color: #FEFEFE;
 }
 
+.fontePersonalizada {
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    color: #FEFEFE;
+}
+
 body {
     background-color: #3E3E3E;
     background-repeat: no-repeat;

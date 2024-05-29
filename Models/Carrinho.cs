@@ -84,12 +84,15 @@ namespace ProjetoPixelPlace.Models
 
             return carrinhos;
         }
-        public string RetirarJogoCarrinho(int id)
+        public string RetirarJogoCarrinho(int id, int idUser)
         {
             MySqlConnection mySqlConnection = abreConexao();
 
-            MySqlCommand comando = new MySqlCommand("Delete from transacao where Jogo_idJogo = @id ", mySqlConnection);
+            MySqlCommand comando = new MySqlCommand("Delete from carrinho where Jogo_idJogo = @id AND Usuario_idUsuario = @iduser ", mySqlConnection);
             comando.Parameters.AddWithValue("@id", id);
+            
+            comando.Parameters.AddWithValue("@iduser", idUser);
+
 
             try
             {
