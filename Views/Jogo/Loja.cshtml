@@ -20,6 +20,15 @@
     </div>
 </div>
 
+@foreach (var item in Model)
+{
+    if (!item.Categoria.Contains("Jogo Destaque"))
+    {
+        
+    }
+}
+
+
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const imagePoster = document.getElementById("imagePoster");
@@ -62,4 +71,3 @@
         setInterval(changeBackground, 10000);
     });
 </script>
-

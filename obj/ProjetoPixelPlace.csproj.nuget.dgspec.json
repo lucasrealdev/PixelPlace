@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aluno\\Documents\\PixelPlace\\ProjetoPixelPlace.csproj": {}
+    "C:\\Users\\aluno\\source\\repos\\PixelPlace\\ProjetoPixelPlace.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aluno\\Documents\\PixelPlace\\ProjetoPixelPlace.csproj": {
+    "C:\\Users\\aluno\\source\\repos\\PixelPlace\\ProjetoPixelPlace.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aluno\\Documents\\PixelPlace\\ProjetoPixelPlace.csproj",
+        "projectUniqueName": "C:\\Users\\aluno\\source\\repos\\PixelPlace\\ProjetoPixelPlace.csproj",
         "projectName": "ProjetoPixelPlace",
-        "projectPath": "C:\\Users\\aluno\\Documents\\PixelPlace\\ProjetoPixelPlace.csproj",
+        "projectPath": "C:\\Users\\aluno\\source\\repos\\PixelPlace\\ProjetoPixelPlace.csproj",
         "packagesPath": "C:\\Users\\aluno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aluno\\Documents\\PixelPlace\\obj\\",
+        "outputPath": "C:\\Users\\aluno\\source\\repos\\PixelPlace\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

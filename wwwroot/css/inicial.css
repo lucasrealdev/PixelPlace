@@ -1,7 +1,7 @@
 ﻿/* COMECO RENDER BODY */
 .imagePoster,
 .card1,
-.card2 {
+.card2, .ContainerCards {
     flex: 1;
     background-size: cover;
     background-position: center;
