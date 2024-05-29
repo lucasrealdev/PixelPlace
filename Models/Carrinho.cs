@@ -6,7 +6,7 @@ namespace ProjetoPixelPlace.Models
     {
         private int idUser;
         private int idJogo;
-
+        
 
         public Carrinho()
         {
@@ -20,7 +20,7 @@ namespace ProjetoPixelPlace.Models
 
         public int IdUser { get => idUser; set => idUser = value; }
         public int IdJogo { get => idJogo; set => idJogo = value; }
-
+       
 
 
         public MySqlConnection abreConexao()

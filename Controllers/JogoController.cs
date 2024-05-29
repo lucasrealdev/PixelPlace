@@ -44,7 +44,7 @@ namespace ProjetoPixelPlace.Controllers
         // GET: JogoController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(jogoModel.getJogo(id));
         }
 
         // GET: JogoController/Create

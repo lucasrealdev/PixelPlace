@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 using ProjetoPixelPlace.Entities;
 using ProjetoPixelPlace.Models;
 
@@ -9,13 +8,17 @@ namespace ProjetoPixelPlace.Controllers
     [Route("/api/[controller]")]
     public class ServicesUsuario : ControllerBase
     {
-        UsuarioModel model = new UsuarioModel();
+        private readonly UsuarioModel model;
+
+        public ServicesUsuario()
+        {
+            model = new UsuarioModel();
+        }
 
         [HttpPost]
-        public ActionResult inserirUser([FromBody] Usuario usuario)
+        public ActionResult InserirUsuario([FromBody] Usuario usuario)
         {
             var msg = model.inserirUsuario(new Usuario(null, usuario.NomeUsuario, usuario.Email, usuario.Senha, null, ""));
-
 
             if (msg != "Usuário cadastrado com sucesso")
             {
@@ -24,29 +27,16 @@ namespace ProjetoPixelPlace.Controllers
             return Ok(new { mensagem = msg });
         }
 
-        [HttpGet("{id}")]
-        public ActionResult getUser(int id)
+        [HttpGet("Login")]
+        public ActionResult ValidarUsuario([FromQuery] string email, [FromQuery] string senha)
         {
-            var u = model.getUser(id);
-
+            var u = model.ValidaUser(email, senha);
 
             if (u == null)
             {
-                return BadRequest(new { mensagem = "Usuario Não foi encontrado" });
+                return BadRequest(new { mensagem = "Usuário não foi encontrado" });
             }
-            return Ok(new { u});
-        }
-
-        [HttpPost]
-        public ActionResult ValidarUser([FromBody] string email, string senha)
-        {
-            var u = model.ValidaUser(email,senha);
-
-            if (u == null)
-            {
-                return BadRequest(new { mensagem = "Usuario Não foi encontrado" });
-            }
-            return Ok(new { u });
+            return Ok(new { usuario = u });
         }
     }
 }

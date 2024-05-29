@@ -16,32 +16,34 @@
     {
             string imagem = Convert.ToBase64String(item.Imagem);
             string formato = "data:image/jpeg;base64," + imagem;
-
-            <div class="imagePoster" style="background-image: url('@formato')">
-                <div class="containerSombra">
-                    <div>
-                        <p>@item.Nome</p>
-                    </div>
-                    <div class="containerPreco">
-                        <div class="containerCategoria">
-                            <!-- Mostrar Categorias Limita em 3 -->
-                            @{
-                                int categoriaCount = 0;
-                                foreach (var categoria in item.Categoria.Split(','))
-                                {
-                                    if (categoriaCount >= 3)
-                                    {
-                                        break;
-                                    }
-                                    <div class="cardCategoria">@categoria.Trim()</div>
-                                    categoriaCount++;
-                                }
-                            }
+            <a asp-action="Details" asp-route-id="@item.IdJogo">
+                <div class="imagePoster" style="background-image: url('@formato')">
+                    <div class="containerSombra">
+                        <div>
+                            <p>@item.Nome</p>
                         </div>
-                        <p>R$ @item.Preco</p>
+                        <div class="containerPreco">
+                            <div class="containerCategoria">
+                                <!-- Mostrar Categorias Limita em 3 -->
+                                @{
+                                    int categoriaCount = 0;
+                                    foreach (var categoria in item.Categoria.Split(','))
+                                    {
+                                        if (categoriaCount >= 3)
+                                        {
+                                            break;
+                                        }
+                                        <div class="cardCategoria">@categoria.Trim()</div>
+                                        categoriaCount++;
+                                    }
+                                }
+                            </div>
+                            <p>R$ @item.Preco</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
+           
             break;      
         }
     }

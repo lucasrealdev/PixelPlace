@@ -5,12 +5,12 @@ namespace ProjetoPixelPlace.Models
 {
     public class Cupom
     {
-        private int cupom;
+        private string cupom;
         private int porcentagem_desconto;
 
         public Cupom() { }
 
-        public int CupomId { get => cupom; set => cupom = value; }
+        public string CupomId { get => cupom; set => cupom = value; }
         public int PorcentagemDesconto { get => porcentagem_desconto; set => porcentagem_desconto = value; }
 
         public MySqlConnection AbreConexao()
@@ -31,12 +31,12 @@ namespace ProjetoPixelPlace.Models
             return conexao;
         }
 
-        public Cupom GetCupom(int idCupom)
+        public Cupom GetCupom(string nomeCupom)
         {
             MySqlConnection mySqlConnection = AbreConexao();
 
             MySqlCommand comando = new MySqlCommand("SELECT * FROM cupons_desconto WHERE cupom = @cupom", mySqlConnection);
-            comando.Parameters.AddWithValue("@cupom", idCupom);
+            comando.Parameters.AddWithValue("@cupom", nomeCupom);
 
             MySqlDataReader reader = comando.ExecuteReader();
 
@@ -46,7 +46,7 @@ namespace ProjetoPixelPlace.Models
             {
                 cupom = new Cupom
                 {
-                    CupomId = reader.GetInt32("cupom"),
+                    CupomId = reader.GetString("cupom"),
                     PorcentagemDesconto = reader.GetInt32("porcentagem_desconto")
                 };
             }

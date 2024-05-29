@@ -33,5 +33,14 @@ namespace ProjetoPixelPlace.Controllers
             
             return View(message);
         }
+        public IActionResult DescontarCupom(string NomeCupom)
+        {
+            string message = "Arrumar";
+            if (message == "Retirado do carrinho com sucesso")
+                return RedirectToAction(nameof(Carrinho));
+
+            return View(message);
+        }
+
     }
 }

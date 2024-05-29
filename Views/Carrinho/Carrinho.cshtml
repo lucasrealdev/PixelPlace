@@ -104,9 +104,14 @@
         <div class="ContainerComprar">
             <p>Resumo de jogos<br> e aplicativos</p>
 
-            <div class="containerBotao">
-                <input type="text" class="inputDesconto" placeholder="Desconto" />
-            </div>
+            <form asp-action="DescontarCupom" method="post">
+                <div class="containerBotao">
+                    <input name="NomeCupom" class="inputDesconto" placeholder="Desconto" />
+                    
+                    <input type="submit" value="Procurar Desconto"/>
+                </div>
+            </form>
+           
 
             <div class="precos">
                 <p>Preço</p>
@@ -116,7 +121,7 @@
             @{
                 // Instância do cupom e obtenção do desconto
                 Cupom cupom = new Cupom();
-                int descontos = cupom.GetCupom(1).PorcentagemDesconto;
+                int descontos = cupom.GetCupom("nome").PorcentagemDesconto;
 
                 // Calcular o valor total com desconto aplicado
                 decimal descontoFinal = (decimal)totalPreco * descontos / 100;
