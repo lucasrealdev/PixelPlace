@@ -31,7 +31,7 @@ namespace ProjetoPixelPlace.Models
             return conexao;
         }
 
-        public Cupom GetCupom(string nomeCupom)
+        public int GetCupom(string nomeCupom)
         {
             MySqlConnection mySqlConnection = AbreConexao();
 
@@ -54,7 +54,12 @@ namespace ProjetoPixelPlace.Models
             reader.Close();
             mySqlConnection.Close();
 
-            return cupom;
+            if(cupom != null )
+            {
+                return cupom.PorcentagemDesconto;
+            }
+            return 0;
+          
         }
     }
 }

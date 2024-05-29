@@ -113,7 +113,15 @@
       "PackagePath": "staticwebassets\\img\\hollowknight.jpg"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\aluno\\Source\\Repos\\PixelPlace\\wwwroot\\img\\imagemJogo.png",
+=======
+      "Id": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\img\\image 16.svg",
+      "PackagePath": "staticwebassets\\img\\image 16.svg"
+    },
+    {
+      "Id": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\img\\imagemJogo.png",
+>>>>>>> 7014a874ec61a06f82aa6c4e6fe11d12f67d5db7
       "PackagePath": "staticwebassets\\img\\imagemJogo.png"
     },
     {
@@ -133,7 +141,15 @@
       "PackagePath": "staticwebassets\\img\\lista.svg"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\aluno\\Source\\Repos\\PixelPlace\\wwwroot\\img\\lojaBranco.svg",
+=======
+      "Id": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\img\\lixo.svg",
+      "PackagePath": "staticwebassets\\img\\lixo.svg"
+    },
+    {
+      "Id": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\img\\lojaBranco.svg",
+>>>>>>> 7014a874ec61a06f82aa6c4e6fe11d12f67d5db7
       "PackagePath": "staticwebassets\\img\\lojaBranco.svg"
     },
     {
@@ -153,7 +169,15 @@
       "PackagePath": "staticwebassets\\img\\search.svg"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\aluno\\Source\\Repos\\PixelPlace\\wwwroot\\img\\starcheia.png",
+=======
+      "Id": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\img\\setaVoltar.svg",
+      "PackagePath": "staticwebassets\\img\\setaVoltar.svg"
+    },
+    {
+      "Id": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\img\\starcheia.png",
+>>>>>>> 7014a874ec61a06f82aa6c4e6fe11d12f67d5db7
       "PackagePath": "staticwebassets\\img\\starcheia.png"
     },
     {
@@ -169,7 +193,19 @@
       "PackagePath": "staticwebassets\\img\\vectorbaixo.svg"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\aluno\\Source\\Repos\\PixelPlace\\wwwroot\\js\\script.js",
+=======
+      "Id": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\img\\vectordireita.svg",
+      "PackagePath": "staticwebassets\\img\\vectordireita.svg"
+    },
+    {
+      "Id": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\img\\vectoresquerda.svg",
+      "PackagePath": "staticwebassets\\img\\vectoresquerda.svg"
+    },
+    {
+      "Id": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\js\\script.js",
+>>>>>>> 7014a874ec61a06f82aa6c4e6fe11d12f67d5db7
       "PackagePath": "staticwebassets\\js\\script.js"
     },
     {

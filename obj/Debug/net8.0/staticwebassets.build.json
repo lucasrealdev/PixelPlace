@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "5srJPOKE56gUyANCtI2vI3YFTaFak1HkBABCGWuNZLA=",
+=======
+  "Hash": "x3LLQWLmPLAMGYEaSb0442F6aEOCdwyqjMERIVGUKsk=",
+>>>>>>> 7014a874ec61a06f82aa6c4e6fe11d12f67d5db7
   "Source": "ProjetoPixelPlace",
   "BasePath": "_content/ProjetoPixelPlace",
   "Mode": "Default",
@@ -530,7 +534,30 @@
       "OriginalItemSpec": "wwwroot\\img\\hollowknight.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\aluno\\Source\\Repos\\PixelPlace\\wwwroot\\img\\imagemJogo.png",
+=======
+      "Identity": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\img\\image 16.svg",
+      "SourceId": "ProjetoPixelPlace",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\",
+      "BasePath": "_content/ProjetoPixelPlace",
+      "RelativePath": "img/image 16.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\image 16.svg"
+    },
+    {
+      "Identity": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\img\\imagemJogo.png",
+>>>>>>> 7014a874ec61a06f82aa6c4e6fe11d12f67d5db7
       "SourceId": "ProjetoPixelPlace",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\aluno\\source\\repos\\PixelPlace\\wwwroot\\",
@@ -625,7 +652,30 @@
       "OriginalItemSpec": "wwwroot\\img\\lista.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\aluno\\Source\\Repos\\PixelPlace\\wwwroot\\img\\lojaBranco.svg",
+=======
+      "Identity": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\img\\lixo.svg",
+      "SourceId": "ProjetoPixelPlace",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\",
+      "BasePath": "_content/ProjetoPixelPlace",
+      "RelativePath": "img/lixo.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\lixo.svg"
+    },
+    {
+      "Identity": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\img\\lojaBranco.svg",
+>>>>>>> 7014a874ec61a06f82aa6c4e6fe11d12f67d5db7
       "SourceId": "ProjetoPixelPlace",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\aluno\\source\\repos\\PixelPlace\\wwwroot\\",
@@ -758,7 +808,30 @@
       "OriginalItemSpec": "wwwroot\\img\\search.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\aluno\\Source\\Repos\\PixelPlace\\wwwroot\\img\\Square.svg",
+=======
+      "Identity": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\img\\setaVoltar.svg",
+      "SourceId": "ProjetoPixelPlace",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\",
+      "BasePath": "_content/ProjetoPixelPlace",
+      "RelativePath": "img/setaVoltar.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\setaVoltar.svg"
+    },
+    {
+      "Identity": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\img\\Square.svg",
+>>>>>>> 7014a874ec61a06f82aa6c4e6fe11d12f67d5db7
       "SourceId": "ProjetoPixelPlace",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\aluno\\source\\repos\\PixelPlace\\wwwroot\\",
@@ -872,7 +945,49 @@
       "OriginalItemSpec": "wwwroot\\img\\vectorbaixo.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\aluno\\Source\\Repos\\PixelPlace\\wwwroot\\js\\script.js",
+=======
+      "Identity": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\img\\vectordireita.svg",
+      "SourceId": "ProjetoPixelPlace",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\",
+      "BasePath": "_content/ProjetoPixelPlace",
+      "RelativePath": "img/vectordireita.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\vectordireita.svg"
+    },
+    {
+      "Identity": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\img\\vectoresquerda.svg",
+      "SourceId": "ProjetoPixelPlace",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\",
+      "BasePath": "_content/ProjetoPixelPlace",
+      "RelativePath": "img/vectoresquerda.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\vectoresquerda.svg"
+    },
+    {
+      "Identity": "C:\\Users\\aluno\\Documents\\PixelPlace\\wwwroot\\js\\script.js",
+>>>>>>> 7014a874ec61a06f82aa6c4e6fe11d12f67d5db7
       "SourceId": "ProjetoPixelPlace",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\aluno\\source\\repos\\PixelPlace\\wwwroot\\",
