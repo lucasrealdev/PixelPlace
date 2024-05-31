@@ -1,14 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\julin\\Documents\\PixelPlaceAtual\\PixelPlace\\",
+  "WorkspaceRootPath": "C:\\Users\\Lucas\\source\\repos\\PixelPlace2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|c:\\users\\julin\\documents\\pixelplaceatual\\pixelplace\\models\\listadesejomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|solutionrelative:models\\listadesejomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|c:\\users\\lucas\\source\\repos\\pixelplace2\\controllers\\jogocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|solutionrelative:controllers\\jogocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|c:\\users\\julin\\documents\\pixelplaceatual\\pixelplace\\controllers\\jogocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|solutionrelative:controllers\\jogocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|c:\\users\\lucas\\source\\repos\\pixelplace2\\views\\jogo\\loja.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|solutionrelative:views\\jogo\\loja.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|c:\\users\\lucas\\source\\repos\\pixelplace2\\views\\shared\\_notification.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|solutionrelative:views\\shared\\_notification.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|c:\\users\\lucas\\source\\repos\\pixelplace2\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|c:\\users\\lucas\\source\\repos\\pixelplace2\\views\\jogo\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|solutionrelative:views\\jogo\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|c:\\users\\lucas\\source\\repos\\pixelplace2\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{40F24B82-B3F1-4828-8C95-D79F60F5F651}|ProjetoPixelPlace.csproj|solutionrelative:wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,12 +34,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -38,28 +50,74 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "JogoController.cs",
-              "DocumentMoniker": "C:\\Users\\julin\\Documents\\PixelPlaceAtual\\PixelPlace\\Controllers\\JogoController.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\source\\repos\\PixelPlace2\\Controllers\\JogoController.cs",
               "RelativeDocumentMoniker": "Controllers\\JogoController.cs",
-              "ToolTip": "C:\\Users\\julin\\Documents\\PixelPlaceAtual\\PixelPlace\\Controllers\\JogoController.cs",
-              "RelativeToolTip": "Controllers\\JogoController.cs",
-              "ViewState": "AQIAAJUAAAAAAAAAAAAAAKYAAAAIAAAA",
+              "ToolTip": "C:\\Users\\Lucas\\source\\repos\\PixelPlace2\\Controllers\\JogoController.cs*",
+              "RelativeToolTip": "Controllers\\JogoController.cs*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T19:56:10.693Z",
+              "WhenOpened": "2024-05-31T20:40:03.564Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ListaDesejoModel.cs",
-              "DocumentMoniker": "C:\\Users\\julin\\Documents\\PixelPlaceAtual\\PixelPlace\\Models\\ListaDesejoModel.cs",
-              "RelativeDocumentMoniker": "Models\\ListaDesejoModel.cs",
-              "ToolTip": "C:\\Users\\julin\\Documents\\PixelPlaceAtual\\PixelPlace\\Models\\ListaDesejoModel.cs",
-              "RelativeToolTip": "Models\\ListaDesejoModel.cs",
-              "ViewState": "AQIAAD0AAAAAAAAAAAAAwD8AAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T19:56:10.703Z",
+              "DocumentIndex": 2,
+              "Title": "_Notification.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lucas\\source\\repos\\PixelPlace2\\Views\\Shared\\_Notification.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Notification.cshtml",
+              "ToolTip": "C:\\Users\\Lucas\\source\\repos\\PixelPlace2\\Views\\Shared\\_Notification.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Notification.cshtml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-31T20:36:35.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Loja.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lucas\\source\\repos\\PixelPlace2\\Views\\Jogo\\Loja.cshtml",
+              "RelativeDocumentMoniker": "Views\\Jogo\\Loja.cshtml",
+              "ToolTip": "C:\\Users\\Lucas\\source\\repos\\PixelPlace2\\Views\\Jogo\\Loja.cshtml",
+              "RelativeToolTip": "Views\\Jogo\\Loja.cshtml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-31T20:26:37.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lucas\\source\\repos\\PixelPlace2\\Views\\Jogo\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Jogo\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Lucas\\source\\repos\\PixelPlace2\\Views\\Jogo\\Index.cshtml",
+              "RelativeToolTip": "Views\\Jogo\\Index.cshtml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-31T20:16:57.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\Lucas\\source\\repos\\PixelPlace2\\wwwroot\\css\\style.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\style.css",
+              "ToolTip": "C:\\Users\\Lucas\\source\\repos\\PixelPlace2\\wwwroot\\css\\style.css",
+              "RelativeToolTip": "wwwroot\\css\\style.css",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-05-31T20:14:15.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lucas\\source\\repos\\PixelPlace2\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Lucas\\source\\repos\\PixelPlace2\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-31T20:09:28.266Z",
               "EditorCaption": ""
             }
           ]

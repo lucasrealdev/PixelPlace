@@ -32,16 +32,17 @@ namespace ProjetoPixelPlace.Controllers
             return View(jogoModel.getAllJogos());
         }
 
-        
+        [ServiceFilter(typeof(Autenticao))]
         public ActionResult Loja()
         {
-
-
             //no index retorna todos os jogos.
             return View(jogoModel.getAllJogos());
+
+            TempData["message"] = "boa karaiii";
         }
         //aqui é quando ele pesquisar algum jogo na loja pelo nome. 
         [HttpPost]
+        [ServiceFilter(typeof(Autenticao))]
         public ActionResult Loja(string NomeJogo)
         {
 
@@ -53,8 +54,8 @@ namespace ProjetoPixelPlace.Controllers
             return View(jogoModel.getAllJogos());
         }
 
-        
 
+        [ServiceFilter(typeof(Autenticao))]
         // GET: JogoController/Details/5
         public ActionResult Details(int id)
         {
