@@ -28,7 +28,7 @@ namespace ProjetoPixelPlace.Controllers
             HttpContext.Session.Remove("user");
             HttpContext.Session.Remove("adm");
 
-            return RedirectToAction(nameof(Listagem));
+            return RedirectToAction("Loja","Jogo");
         }
 
 

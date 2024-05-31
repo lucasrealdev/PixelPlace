@@ -170,7 +170,20 @@
                                 <img src="~/img/PerfilImg.png" alt="">
                                 <a asp-action="Sair" asp-controller="Usuario">Sair</a>
                             </div> *@
-                            <a href="" class="login" style="display: flex !important;">Login</a>
+                        @{
+                            string user = Context.Session.GetString("user");
+
+                            if (string.IsNullOrEmpty(user))
+                            {
+                                <a asp-action="Logar" asp-controller="Usuario" class="login" style="display: flex !important;">Login</a>
+                            }
+                            else
+                            {
+                                <a asp-action="Sair" asp-controller="Usuario" class="login" style="display: flex !important;">Sair</a>
+                            }
+
+                            }
+                            
                         </div>
                     </div>
                 </header>
