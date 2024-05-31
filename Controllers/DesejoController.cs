@@ -7,10 +7,14 @@ namespace ProjetoPixelPlace.Controllers
 {
     public class DesejoController : Controller
     {
+        
 
+        ListaDesejoModel model = new ListaDesejoModel();
+
+        [ServiceFilter(typeof(Autenticao))]
         public ActionResult Index()
         {
-            return View();
+              return View();
         }
 
 
@@ -30,6 +34,9 @@ namespace ProjetoPixelPlace.Controllers
 
             return View(nameof(Index));
         }
+
+
+
 
     }
 }

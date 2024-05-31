@@ -153,10 +153,9 @@ namespace ProjetoPixelPlace.Controllers
             {
                 u = JsonConvert.DeserializeObject<Usuario>(usuarioJson);
 
-                //uma alternativa pra pegar diretamente o valor do id, ja que ele dava erro 
-                string id = u.IdUsuario.ToString();
+               
 
-                return View(jogoModel.getListaDesejoUser(int.Parse(id)));
+                return View(listaDesejoModel.pegarTodosDesejos((int) u.IdUsuario));
             }
             return View();
         }
