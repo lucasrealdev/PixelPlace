@@ -128,6 +128,23 @@ namespace ProjetoPixelPlace.Controllers
             return View();
         }
 
+        //GET: tela da ListaDesejo
+        [ServiceFilter(typeof(Autenticao))]
+        public ActionResult ListaDesejo()
+        {
+            Usuario u;
+            string usuarioJson = HttpContext.Session.GetString("user");
+            if (!string.IsNullOrEmpty(usuarioJson))
+            {
+                u = JsonConvert.DeserializeObject<Usuario>(usuarioJson);
+
+                //uma alternativa pra pegar diretamente o valor do id, ja que ele dava erro 
+                string id = u.IdUsuario.ToString();
+
+                return View(jogoModel.getListaDesejoUser(int.Parse(id)));
+            }
+            return View();
+        }
 
         // GET: JogoController/Edit/5
         public ActionResult Comprar(int id)

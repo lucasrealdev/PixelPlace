@@ -6,6 +6,10 @@ main {
     border: 1px solid rgba(0, 0, 0, 0.09);
 }
 
+.mainBody {
+    padding-bottom: 30px !important;
+}
+
 /* COMECO RENDER BODY */
 .imagePoster {
     flex: 1;
@@ -15,14 +19,14 @@ main {
     display: flex;
     align-items: end;
     justify-content: center;
-}
-
-.imagePoster {
     height: 603px;
     background-image: url("../img/planetOfLana.jpg");
 }
 
-    .imagePoster:hover {
+    .imagePoster:hover,
+    .imageGame:hover,
+    .categoria:hover,
+    .containerCardGameVertical:hover {
         transition: 0.1s ease-in;
         scale: 1.01;
     }
@@ -78,4 +82,211 @@ main {
     font-weight: normal;
     color: #FEFEFE;
     font-size: 12.48px;
+}
+
+.tituloCategoria {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.textoCategoria {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+    .textoCategoria a {
+        display: flex;
+        margin-left: 3px;
+    }
+
+.containerBotoesSlider {
+    display: flex;
+    gap: 10px;
+}
+
+    .containerBotoesSlider a {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+.containerListGame {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.containerPrecos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+    .containerPrecos > p:nth-child(2) {
+        color: #979494;
+        text-decoration: line-through;
+        font-weight: 500;
+        font-size: 19px;
+    }
+
+    .containerPrecos > p:nth-child(3) {
+        font-weight: 500;
+        font-size: 19px;
+    }
+
+.descontoCard {
+    display: flex;
+    background-color: #2596BE;
+    border-radius: 3.12px;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    padding: 0 7px;
+}
+
+    .descontoCard p {
+        font-size: 13px;
+    }
+
+.imageGame {
+    height: 338px;
+    background-image: url("../img/planetOfLana.jpg");
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    border-radius: 9px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.categoria {
+    height: 310px;
+    flex: 1;
+    border-radius: 10.4px;
+    display: flex;
+    align-items: end;
+}
+
+.textoCategorias {
+    padding: 15px 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background: linear-gradient(0deg, rgba(0,0,0,0.96) 0%, rgba(0,0,0,0) 100%);
+    border-radius: 10px;
+}
+
+    .textoCategorias p {
+        font-size: 20px !important;
+    }
+
+.Amarelo {
+    background: linear-gradient(90deg, #998100 0%, #FFD600 100%);
+}
+
+.Vermelho {
+    background: linear-gradient(90deg, #992121 0%, #FF3737 100%);
+}
+
+.Azul {
+    background: linear-gradient(90deg, #114558 0%, #2596BE 100%);
+}
+
+.containerCardGameVertical {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 618px;
+}
+
+.imageCardVerical {
+    width: 100%;
+    background-image: url("../img/hollowknight.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 230px;
+    border-radius: 5px;
+}
+
+.web {
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    border-color: rgba(151, 148, 148, 0.5);
+    border-radius: 3.12px;
+    font-size: 12.48px;
+    margin: 10px 0;
+}
+
+.textDesenvolvedora {
+    color: #979494;
+    font-size: 15px;
+}
+
+.ContainerTitulos p {
+    font-weight: 600;
+}
+
+.containerCardGameVertical .containerPrecos p {
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 1347px) {
+    .containerListGame > .imageGame:nth-child(3) {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 697px) {
+    .containerListGame > .imageGame:nth-child(2) {
+        display: none;
+    }
+
+    .containerListGame > .containerCardGameVertical:nth-child(3) {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1070px) {
+    .Azul {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .Vermelho {
+        display: none;
+    }
+
+    .containerListGame > .containerCardGameVertical:nth-child(2) {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1411px) {
+    .containerListGame > .containerCardGameVertical:nth-child(5) {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1195px) {
+    .containerListGame > .containerCardGameVertical:nth-child(4) {
+        display: none;
+    }
 }

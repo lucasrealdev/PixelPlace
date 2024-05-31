@@ -7,7 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Jogo\Index1.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Jogo\Biblioteca - Cópia %282%29.cshtml" />
+    <Content Remove="Views\Jogo\Biblioteca - Cópia.cshtml" />
     <Content Remove="Views\Jogo\Index - Cópia.cshtml" />
+    <Content Remove="Views\Jogo\Index1.cshtml" />
     <Content Remove="Views\Jogo\Transacao.cshtml" />
     <Content Remove="Views\Usuario\Biblioteca.cshtml" />
     <Content Remove="Views\Usuario\Carrinho.cshtml" />

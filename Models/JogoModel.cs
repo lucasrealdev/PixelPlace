@@ -152,6 +152,35 @@ namespace ProjetoPixelPlace.Models
             conexaoBD.Close();
             return jogoList;
         }
+
+        public List<Jogo> getListaDesejoUser(int idUser)
+        {
+            List<int> idJogos = new List<int>();
+            List<Jogo> jogoList = new List<Jogo>();
+
+            conexaoBD = abreConexao();
+
+            MySqlCommand query = new MySqlCommand("Select Jogo_idJogo from favoritos where Usuario_idUsuario = @idUser", conexaoBD);
+            query.Parameters.AddWithValue("@idUser", idUser);
+
+            MySqlDataReader reader = query.ExecuteReader();
+
+            while (reader.Read())
+            {
+                int idJogo = int.Parse(reader["Jogo_idJogo"].ToString());
+
+                idJogos.Add(idJogo);
+            }
+
+
+            foreach (var id in idJogos)
+            {
+                jogoList.Add(getJogo(id));
+            }
+
+            conexaoBD.Close();
+            return jogoList;
+        }
     }
 }
 

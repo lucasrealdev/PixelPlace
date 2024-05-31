@@ -42,7 +42,7 @@
     flex-direction: row;
     gap: 15px;  
     padding: 20px;
-    align-items: end;
+    align-items: center;
     justify-content: center;
     border-radius: 10.4px;
     background-color: #2B2B2B;
@@ -134,10 +134,7 @@
     gap: 23px;
     padding: 11px 12px;
     background-color: #979494;
-}
-
-.containerCategoriadois p{
-    font-size: 12.48px;
+    font-size: 12px;
 }
 
 .containerPreco{
@@ -186,7 +183,6 @@
     display: flex;
     flex-direction: row;
     gap: 10px;
-    padding-left: 10px;
     align-items: center;
 }
 

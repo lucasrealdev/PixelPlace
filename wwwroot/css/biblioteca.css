@@ -37,16 +37,16 @@
     font-weight: 700;
 }
 
-
-
 .containerList {
     width: 100%;
     display: flex;
     flex-direction: row;
+    gap: 10px;
 }
 
 .posterJogo {
-    width: 216px;
+    max-width: 500px;
+    flex: 1;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -57,6 +57,11 @@
     border-color: rgba(151, 148, 148, 0.3);
     border-radius: 15px;
 }
+
+    .posterJogo > img:first-of-type {
+        width: 100%;
+        border-radius: 15px;
+    }
 
 .image {
     width: 100%;
@@ -107,7 +112,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px 7px;
+    padding: 1px 8px;
     border: 1px solid;
     border-color: rgba(151, 148, 148, 0.5);
     border-radius: 3.12px;
@@ -120,8 +125,94 @@
     display: flex;
     padding: 0px 20px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.3rem;
+    --stroke: #666;
+    --fill: #ffc73a;
+}
+
+    .rating input {
+        appearance: unset;
+    }
+
+    .rating label {
+        cursor: pointer;
+    }
+
+    .rating svg {
+        width: 2rem;
+        height: 2rem;
+        overflow: visible;
+        fill: transparent;
+        stroke: var(--stroke);
+        stroke-linejoin: bevel;
+        stroke-dasharray: 12;
+        animation: idle 4s linear infinite;
+        transition: stroke 0.2s, fill 0.5s;
+    }
+
+@keyframes idle {
+    from {
+        stroke-dashoffset: 24;
+    }
+}
+
+.rating label:hover svg {
+    stroke: var(--fill);
+}
+
+.rating input:checked ~ label svg {
+    transition: 0s;
+    animation: idle 4s linear infinite, yippee 0.75s backwards;
+    fill: var(--fill);
+    stroke: var(--fill);
+    stroke-opacity: 0;
+    stroke-dasharray: 0;
+    stroke-linejoin: miter;
+    stroke-width: 8px;
+}
+
+@keyframes yippee {
+    0% {
+        transform: scale(1);
+        fill: var(--fill);
+        fill-opacity: 0;
+        stroke-opacity: 1;
+        stroke: var(--stroke);
+        stroke-dasharray: 10;
+        stroke-width: 1px;
+        stroke-linejoin: bevel;
+    }
+
+    30% {
+        transform: scale(0);
+        fill: var(--fill);
+        fill-opacity: 0;
+        stroke-opacity: 1;
+        stroke: var(--stroke);
+        stroke-dasharray: 10;
+        stroke-width: 1px;
+        stroke-linejoin: bevel;
+    }
+
+    30.1% {
+        stroke: var(--fill);
+        stroke-dasharray: 0;
+        stroke-linejoin: miter;
+        stroke-width: 8px;
+    }
+
+    60% {
+        transform: scale(1.2);
+        fill: var(--fill);
+    }
+}
+
 
 .containerAbrir {
     background-color: #2596BE;
@@ -149,147 +240,11 @@
 }
 
 .gridJogos {
-    width: 100%;
+    flex: 1;
     display: grid;
-    flex-direction: row;
-    column-gap: 30px;
-    justify-content: baseline;
-    align-items: baseline;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     row-gap: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(216px, 1fr));
-}
-
-.containerFilter {
-    position: sticky;
-    top: 30px;
-    width: 305px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    gap: 25px;
-    padding: 0px 10px;
-}
-
-.containerTitulo {
-    width: 100%;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.filtros {
-    font-size: 28px;
-    font-weight: 700;
-}
-
-.group42 {
-    width: 87.16;
-    height: 43.15;
-    gap: 20px;
-}
-
-.frame49,
-.rectangle49 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: end;
-}
-
-.rectangle49 {
-    gap: 10px;
-}
-
-.blbIcon {
-    background-color: rgba(254, 254, 254, 0.3);
-    border-radius: 5px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 8px 8px;
-}
-
-.procurarBiblioteca {
-    width: 100%;
-    height: 46px;
-    display: flex;
-    gap: 10px;
-    padding-left: 20px;
-    align-items: center;
-    justify-content: start;
-    background-color: rgba(150, 149, 149, 0.3);
-    border-radius: 10px;
-}
-
-    .procurarBiblioteca img {
-        width: 20px;
-        height: 20px;
-    }
-
-    .procurarBiblioteca input::placeholder {
-        color: rgba(254, 254, 254, 0.7);
-    }
-
-    .procurarBiblioteca input {
-        color: white;
-        width: 80%;
-    }
-
-.tituloiblioteca {
-    font-size: 15px;
-    font-weight: 350;
-    color: white;
-    border: 0;
-    outline: none;
-    background-color: transparent;
-}
-
-.frame44 {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-top: 20px;
-    align-items: center;
-    justify-content: start;
-}
-
-.linha4 {
-    width: 100%;
-    height: 2px;
-    border-radius: 5px;
-    background-color: rgba(150, 149, 149, 0.3);
-}
-
-.containerTituloGenero {
-    width: 100%;
-    height: 44px;
-    display: flex;
-    padding-right: 5px;
-    align-items: center;
-    justify-content: start;
-    gap: 10px;
-}
-
-.genero,
-.preco {
-    font-size: 28px;
-    font-weight: 700;
-}
-
-.frame42 {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: start;
+    column-gap: 20px;
 }
 
 @media only screen and (max-width: 601px) {
@@ -297,19 +252,11 @@
         flex-direction: column-reverse;
     }
 
-    .containerFilter {
-        width: 100%;
-        position: relative;
-        margin-bottom: 70px;
-        padding: 0px;
+    .gridJogos {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
     .containerCategory {
         padding-bottom: 0px;
-    }
-
-    .gridJogos {
-        display: flex;
-        justify-content: center;
     }
 }

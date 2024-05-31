@@ -1,0 +1,112 @@
+
+.containerFilter {
+    position: sticky;
+    top: 30px;
+    width: 305px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 25px;
+    padding: 0px 10px;
+}
+
+.containerTitulo {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.filtros {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.procurarBiblioteca {
+    width: 100%;
+    height: 46px;
+    display: flex;
+    gap: 10px;
+    padding-left: 20px;
+    align-items: center;
+    justify-content: start;
+    background-color: rgba(150, 149, 149, 0.3);
+    border-radius: 10px;
+}
+
+.procurarBiblioteca img {
+    width: 20px;
+    height: 20px;
+}
+
+.procurarBiblioteca input::placeholder {
+    color: rgba(254, 254, 254, 0.7);
+}
+
+.procurarBiblioteca input{
+    color: white;
+    width: 80%;
+}
+
+.tituloiblioteca {
+    font-size: 15px;
+    font-weight: 350;
+    color: white;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+}
+
+.frame44 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 20px;
+    align-items: center;
+    justify-content: start;
+}
+
+.linha4 {
+    width: 100%;
+    height: 2px;
+    border-radius: 5px;
+    background-color: rgba(150, 149, 149, 0.3);
+}
+
+.genero,
+.preco {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.frame42 {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: start;
+}
+
+.containerTituloGenero {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    padding-right: 5px;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+
+@media only screen and (max-width: 601px) {
+    .containerFilter{
+        width: 100%;
+        position: relative;
+        margin-bottom: 70px;
+        padding: 0px;
+    }
+}

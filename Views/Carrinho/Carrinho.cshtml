@@ -84,18 +84,19 @@
                                         </div>
                                         <div class="ospreco">
                                             <p class="precoAntigo">R$@precoOriginal.ToString("0.00")</p>
+                                            <p>R$@precoComDesconto.ToString("0.00")</p>
                                         </div>
                                     }
-
-                                    <div class="ospreco">
-                                        <p>R$@precoComDesconto.ToString("0.00")</p>
-                                    </div>
+                                    else
+                                    {
+                                        <div class="ospreco">
+                                            <p>R$@precoComDesconto.ToString("0.00")</p>
+                                        </div>
+                                    }
                                     
-
-                                    
-                                        <a href="@Url.Action("Delete", "Carrinho", new { idJogo =item.IdJogo})">
-                                            <img src="~/img/lixo.svg" alt="Excluir" />
-                                        </a>
+                                    <a href="@Url.Action("Delete", "Carrinho", new { idJogo =item.IdJogo})">
+                                        <img src="~/img/lixo.svg" alt="Excluir" />
+                                    </a>
                                     
                                 </div>
                                 <p class="adicionarListaDesejo">Adicionar lista de desejo</p>

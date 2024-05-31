@@ -1,0 +1,352 @@
+﻿@model IEnumerable<ProjetoPixelPlace.Entities.Jogo>
+
+@{
+    ViewData["Title"] = "ListaDesejo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/listaDesejo.css">
+<link rel="stylesheet" href="~/css/filtros.css">
+
+<h1>Lista Desejo</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdJogo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Imagem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Categoria)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Preco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Desconto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data_lancamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Numero_avaliacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Numero_estrelas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Desenvolvedora)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdJogo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @{
+                string imagem = Convert.ToBase64String(item.Imagem);
+                string formato = "data:image/jpeg;base64," + imagem;
+                <img src="@formato" />
+                }
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Categoria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Preco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Desconto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data_lancamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero_avaliacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero_estrelas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Desenvolvedora)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<div class="containerSectionDesejo">
+    <div class="containerTittle">
+        <p class="desejo">Lista de Desejo <a href=""><img src="~/img/Vector.svg"></a></p>
+    </div>
+
+    <div class="containerList">
+        <div class="gridJogos">
+
+            <div class="posterJogo">
+                <img src="~/img/imagemJogo.png">
+                <div class="containerTexto">
+                    <div class="frame41">
+                        <p class="nomeJ">oi ana</p>
+                        <p class="nomeJ2">IO interactive</p>
+                    </div>
+                    <div class="containerCategoria">
+                        <p>WEB</p>
+                    </div>
+                    <div class="containerBotoes">
+                        <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.51108 0.213751C7.98343 0.316487 9.5175 1.00388 10.9882 2.39179C12.4604 1.00793 13.9981 0.324689 15.4738 0.224602C17.1397 0.111622 18.6114 0.750665 19.6732 1.75862C21.7618 3.74143 22.3982 7.32488 19.7638 9.78158L19.7464 9.79729L11.4968 17.0116C11.2093 17.2631 10.7653 17.2631 10.4778 17.0116L2.2282 9.79729C2.22062 9.79067 2.21321 9.78391 2.20594 9.77701C-0.390181 7.31136 0.243567 3.7279 2.32354 1.74505C3.38146 0.736527 4.84832 0.0977289 6.51108 0.213751Z" fill="#F93535" />
+                        </svg>
+                        <div class="containerAbrir">
+                            <a href=""><p>Abrir</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="posterJogo">
+                <img src="~/img/imagemJogo.png">
+                <div class="containerTexto">
+                    <div class="frame41">
+                        <p class="nomeJ">Unravel</p>
+                        <p class="nomeJ2">IO interactive</p>
+                    </div>
+                    <div class="containerCategoria">
+                        <p>WEB</p>
+                    </div>
+                    <div class="containerBotoes">
+                        <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.51108 0.213751C7.98343 0.316487 9.5175 1.00388 10.9882 2.39179C12.4604 1.00793 13.9981 0.324689 15.4738 0.224602C17.1397 0.111622 18.6114 0.750665 19.6732 1.75862C21.7618 3.74143 22.3982 7.32488 19.7638 9.78158L19.7464 9.79729L11.4968 17.0116C11.2093 17.2631 10.7653 17.2631 10.4778 17.0116L2.2282 9.79729C2.22062 9.79067 2.21321 9.78391 2.20594 9.77701C-0.390181 7.31136 0.243567 3.7279 2.32354 1.74505C3.38146 0.736527 4.84832 0.0977289 6.51108 0.213751Z" fill="#F93535" />
+                        </svg>
+                        <div class="containerAbrir">
+                            <a href=""><p>Abrir</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="posterJogo">
+                <img src="~/img/imagemJogo.png">
+                <div class="containerTexto">
+                    <div class="frame41">
+                        <p class="nomeJ">Unravel</p>
+                        <p class="nomeJ2">IO interactive</p>
+                    </div>
+                    <div class="containerCategoria">
+                        <p>WEB</p>
+                    </div>
+                    <div class="containerBotoes">
+                        <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.51108 0.213751C7.98343 0.316487 9.5175 1.00388 10.9882 2.39179C12.4604 1.00793 13.9981 0.324689 15.4738 0.224602C17.1397 0.111622 18.6114 0.750665 19.6732 1.75862C21.7618 3.74143 22.3982 7.32488 19.7638 9.78158L19.7464 9.79729L11.4968 17.0116C11.2093 17.2631 10.7653 17.2631 10.4778 17.0116L2.2282 9.79729C2.22062 9.79067 2.21321 9.78391 2.20594 9.77701C-0.390181 7.31136 0.243567 3.7279 2.32354 1.74505C3.38146 0.736527 4.84832 0.0977289 6.51108 0.213751Z" fill="#F93535" />
+                        </svg>
+                        <div class="containerAbrir">
+                            <a href=""><p>Abrir</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="posterJogo">
+                <img src="~/img/imagemJogo.png">
+                <div class="containerTexto">
+                    <div class="frame41">
+                        <p class="nomeJ">Unravel</p>
+                        <p class="nomeJ2">IO interactive</p>
+                    </div>
+                    <div class="containerCategoria">
+                        <p>WEB</p>
+                    </div>
+                    <div class="containerBotoes">
+                        <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.51108 0.213751C7.98343 0.316487 9.5175 1.00388 10.9882 2.39179C12.4604 1.00793 13.9981 0.324689 15.4738 0.224602C17.1397 0.111622 18.6114 0.750665 19.6732 1.75862C21.7618 3.74143 22.3982 7.32488 19.7638 9.78158L19.7464 9.79729L11.4968 17.0116C11.2093 17.2631 10.7653 17.2631 10.4778 17.0116L2.2282 9.79729C2.22062 9.79067 2.21321 9.78391 2.20594 9.77701C-0.390181 7.31136 0.243567 3.7279 2.32354 1.74505C3.38146 0.736527 4.84832 0.0977289 6.51108 0.213751Z" fill="#F93535" />
+                        </svg>
+                        <div class="containerAbrir">
+                            <a href=""><p>Abrir</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="posterJogo">
+                <img src="~/img/imagemJogo.png">
+                <div class="containerTexto">
+                    <div class="frame41">
+                        <p class="nomeJ">Unravel</p>
+                        <p class="nomeJ2">IO interactive</p>
+                    </div>
+                    <div class="containerCategoria">
+                        <p>WEB</p>
+                    </div>
+                    <div class="containerBotoes">
+                        <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.51108 0.213751C7.98343 0.316487 9.5175 1.00388 10.9882 2.39179C12.4604 1.00793 13.9981 0.324689 15.4738 0.224602C17.1397 0.111622 18.6114 0.750665 19.6732 1.75862C21.7618 3.74143 22.3982 7.32488 19.7638 9.78158L19.7464 9.79729L11.4968 17.0116C11.2093 17.2631 10.7653 17.2631 10.4778 17.0116L2.2282 9.79729C2.22062 9.79067 2.21321 9.78391 2.20594 9.77701C-0.390181 7.31136 0.243567 3.7279 2.32354 1.74505C3.38146 0.736527 4.84832 0.0977289 6.51108 0.213751Z" fill="#F93535" />
+                        </svg>
+                        <div class="containerAbrir">
+                            <a href=""><p>Abrir</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="posterJogo">
+                <img src="~/img/imagemJogo.png">
+                <div class="containerTexto">
+                    <div class="frame41">
+                        <p class="nomeJ">Unravel</p>
+                        <p class="nomeJ2">IO interactive</p>
+                    </div>
+                    <div class="containerCategoria">
+                        <p>WEB</p>
+                    </div>
+                    <div class="containerBotoes">
+                        <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.51108 0.213751C7.98343 0.316487 9.5175 1.00388 10.9882 2.39179C12.4604 1.00793 13.9981 0.324689 15.4738 0.224602C17.1397 0.111622 18.6114 0.750665 19.6732 1.75862C21.7618 3.74143 22.3982 7.32488 19.7638 9.78158L19.7464 9.79729L11.4968 17.0116C11.2093 17.2631 10.7653 17.2631 10.4778 17.0116L2.2282 9.79729C2.22062 9.79067 2.21321 9.78391 2.20594 9.77701C-0.390181 7.31136 0.243567 3.7279 2.32354 1.74505C3.38146 0.736527 4.84832 0.0977289 6.51108 0.213751Z" fill="#F93535" />
+                        </svg>
+                        <div class="containerAbrir">
+                            <a href=""><p>Abrir</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="posterJogo">
+                <img src="~/img/imagemJogo.png">
+                <div class="containerTexto">
+                    <div class="frame41">
+                        <p class="nomeJ">Unravel</p>
+                        <p class="nomeJ2">IO interactive</p>
+                    </div>
+                    <div class="containerCategoria">
+                        <p>WEB</p>
+                    </div>
+                    <div class="containerBotoes">
+                        <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.51108 0.213751C7.98343 0.316487 9.5175 1.00388 10.9882 2.39179C12.4604 1.00793 13.9981 0.324689 15.4738 0.224602C17.1397 0.111622 18.6114 0.750665 19.6732 1.75862C21.7618 3.74143 22.3982 7.32488 19.7638 9.78158L19.7464 9.79729L11.4968 17.0116C11.2093 17.2631 10.7653 17.2631 10.4778 17.0116L2.2282 9.79729C2.22062 9.79067 2.21321 9.78391 2.20594 9.77701C-0.390181 7.31136 0.243567 3.7279 2.32354 1.74505C3.38146 0.736527 4.84832 0.0977289 6.51108 0.213751Z" fill="#F93535" />
+                        </svg>
+                        <div class="containerAbrir">
+                            <a href=""><p>Abrir</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="posterJogo">
+                <img src="~/img/imagemJogo.png">
+                <div class="containerTexto">
+                    <div class="frame41">
+                        <p class="nomeJ">Unravel</p>
+                        <p class="nomeJ2">IO interactive</p>
+                    </div>
+                    <div class="containerCategoria">
+                        <p>WEB</p>
+                    </div>
+                    <div class="containerBotoes">
+                        <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.51108 0.213751C7.98343 0.316487 9.5175 1.00388 10.9882 2.39179C12.4604 1.00793 13.9981 0.324689 15.4738 0.224602C17.1397 0.111622 18.6114 0.750665 19.6732 1.75862C21.7618 3.74143 22.3982 7.32488 19.7638 9.78158L19.7464 9.79729L11.4968 17.0116C11.2093 17.2631 10.7653 17.2631 10.4778 17.0116L2.2282 9.79729C2.22062 9.79067 2.21321 9.78391 2.20594 9.77701C-0.390181 7.31136 0.243567 3.7279 2.32354 1.74505C3.38146 0.736527 4.84832 0.0977289 6.51108 0.213751Z" fill="#F93535" />
+                        </svg>
+                        <div class="containerAbrir">
+                            <a href=""><p>Abrir</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="posterJogo">
+                <img src="~/img/imagemJogo.png">
+                <div class="containerTexto">
+                    <div class="frame41">
+                        <p class="nomeJ">Unravel</p>
+                        <p class="nomeJ2">IO interactive</p>
+                    </div>
+                    <div class="containerCategoria">
+                        <p>WEB</p>
+                    </div>
+                    <div class="containerBotoes">
+                        <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.51108 0.213751C7.98343 0.316487 9.5175 1.00388 10.9882 2.39179C12.4604 1.00793 13.9981 0.324689 15.4738 0.224602C17.1397 0.111622 18.6114 0.750665 19.6732 1.75862C21.7618 3.74143 22.3982 7.32488 19.7638 9.78158L19.7464 9.79729L11.4968 17.0116C11.2093 17.2631 10.7653 17.2631 10.4778 17.0116L2.2282 9.79729C2.22062 9.79067 2.21321 9.78391 2.20594 9.77701C-0.390181 7.31136 0.243567 3.7279 2.32354 1.74505C3.38146 0.736527 4.84832 0.0977289 6.51108 0.213751Z" fill="#F93535" />
+                        </svg>
+                        <div class="containerAbrir">
+                            <a href=""><p>Abrir</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="posterJogo">
+                <img src="~/img/imagemJogo.png">
+                <div class="containerTexto">
+                    <div class="frame41">
+                        <p class="nomeJ">Unravel</p>
+                        <p class="nomeJ2">IO interactive</p>
+                    </div>
+                    <div class="containerCategoria">
+                        <p>WEB</p>
+                    </div>
+                    <div class="containerBotoes">
+                        <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.51108 0.213751C7.98343 0.316487 9.5175 1.00388 10.9882 2.39179C12.4604 1.00793 13.9981 0.324689 15.4738 0.224602C17.1397 0.111622 18.6114 0.750665 19.6732 1.75862C21.7618 3.74143 22.3982 7.32488 19.7638 9.78158L19.7464 9.79729L11.4968 17.0116C11.2093 17.2631 10.7653 17.2631 10.4778 17.0116L2.2282 9.79729C2.22062 9.79067 2.21321 9.78391 2.20594 9.77701C-0.390181 7.31136 0.243567 3.7279 2.32354 1.74505C3.38146 0.736527 4.84832 0.0977289 6.51108 0.213751Z" fill="#F93535" />
+                        </svg>
+                        <div class="containerAbrir">
+                            <a href=""><p>Abrir</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="containerFilter">
+            <div class="containerTitulo">
+                <p class="filtros">Filtros</p>
+            </div>
+            <div class="procurarBiblioteca">
+                <img src="~/img/search.svg">
+                <input class="tituloiblioteca" placeholder="Titulo">
+            </div>
+            <div class="frame44">
+                <div class="linha4"></div>
+            </div>
+            <div class="containerTituloGenero">
+                <p class="genero">Gêneros</p>
+                <div class="frame42">
+                    <img src="~/img/vectorbaixo.svg">
+                </div>
+            </div>
+            <div class="frame44">
+                <div class="linha4"></div>
+            </div>
+            <div class="containerTituloGenero">
+                <p class="preco">Preços</p>
+                <div class="frame42">
+                    <img src="~/img/vectorbaixo.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

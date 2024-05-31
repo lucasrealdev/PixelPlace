@@ -7550,11 +7550,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lucas\\Downloads\\luxplace\\ProjetoPixelPlace.csproj",
+      "projectUniqueName": "C:\\Users\\Lucas\\Source\\Repos\\PixelPlace\\ProjetoPixelPlace.csproj",
       "projectName": "ProjetoPixelPlace",
-      "projectPath": "C:\\Users\\Lucas\\Downloads\\luxplace\\ProjetoPixelPlace.csproj",
+      "projectPath": "C:\\Users\\Lucas\\Source\\Repos\\PixelPlace\\ProjetoPixelPlace.csproj",
       "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lucas\\Downloads\\luxplace\\obj\\",
+      "outputPath": "C:\\Users\\Lucas\\Source\\Repos\\PixelPlace\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7621,7 +7621,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300-preview.24203.14/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
