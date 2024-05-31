@@ -45,7 +45,8 @@
             </div>
             <button class="btn1"><img src="~/img/ButtonIcon.svg"></button>
             <button class="btn1"><img src="~/img/cartao.svg"></button>
-            <button class="btn1"><img src="~/img/carrinho.svg"></button>
+            <a asp-route-id="@Model.IdJogo" asp-action="InserirCarrinho" asp-controller="Carrinho"><button class="btn1"><img src="~/img/carrinho.svg"></button></a>
+
         </div>
     </div>
 </div>

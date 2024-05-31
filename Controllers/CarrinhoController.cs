@@ -27,7 +27,23 @@ namespace ProjetoPixelPlace.Controllers
             ViewData["porcentagemCupom"] = cupom.GetCupom(NomeCupom);
             return View(carrinho.CarrinhoUser());
         }
+        [ServiceFilter(typeof(Autenticao))]
+        //Aqui vou inserir no carrinho 
+        public IActionResult InserirCarrinho(int id)
+        {
+            string userJson = HttpContext.Session.GetString("user");
 
+            Usuario u = JsonConvert.DeserializeObject<Usuario>(userJson);
+
+            carrinho.IdJogo = id;
+            carrinho.IdUser = (int)u.IdUsuario;
+
+            string message = carrinho.InserirCarrinho();
+            if (message == "Inserido no carrinho com sucesso.")
+                return RedirectToAction(nameof(Carrinho));
+
+            return View(message);
+        }
         public IActionResult Delete(int idJogo)
         {
             string userJson = HttpContext.Session.GetString("user");

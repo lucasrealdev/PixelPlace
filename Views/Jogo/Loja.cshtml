@@ -8,17 +8,31 @@
 <link rel="stylesheet" href="~/css/loja.css">
 <script src="~/js/script.js"></script>
 
-<div class="imagePoster" id="imagePoster">
-    <div class="containerSombra">
-        <div>
-            <p id="NomeJogoDestaque"></p> <!-- Nome do jogo -->
-        </div>
-        <div class="containerPreco">
-            <div class="containerCategoria" id="CategoriaJogoDestaque"></div>
-        <p id="PrecoJogoDestaque"></p> <!-- Preço do jogo -->
-        </div>
-    </div>
-</div>
+@{
+
+    foreach(var jogo in Model)
+    {
+        <a asp-action="Details" asp-route-id="@jogo.IdJogo">
+
+            <div class="imagePoster" id="imagePoster">
+                <div class="containerSombra">
+                    <div>
+                        <p id="NomeJogoDestaque">
+                            @jogo.Nome
+                        </p> <!-- Nome do jogo -->
+                    </div>
+                    <div class="containerPreco">
+                        <div class="containerCategoria" id="CategoriaJogoDestaque"></div>
+                        <p id="PrecoJogoDestaque">
+                            @jogo.Preco
+                        </p> <!-- Preço do jogo -->
+                    </div>
+                </div>
+            </div>
+        </a>
+        
+    } 
+}
 
 <div class="tituloCategoria">
     <p class="textoCategoria">

@@ -1,4 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
 
 namespace ProjetoPixelPlace.Models
 {
@@ -6,11 +8,8 @@ namespace ProjetoPixelPlace.Models
     {
         private int idUser;
         private int idJogo;
-        
 
-        public Carrinho()
-        {
-        }
+        public Carrinho() { }
 
         public Carrinho(int idUser, int idJogo)
         {
@@ -20,10 +19,8 @@ namespace ProjetoPixelPlace.Models
 
         public int IdUser { get => idUser; set => idUser = value; }
         public int IdJogo { get => idJogo; set => idJogo = value; }
-       
 
-
-        public MySqlConnection abreConexao()
+        public MySqlConnection AbreConexao()
         {
             MySqlConnection conexao;
             try
@@ -36,73 +33,87 @@ namespace ProjetoPixelPlace.Models
             {
                 conexao = CriadorConexao.getConexao("casa");
                 conexao.Open();
-
+                return conexao;
             }
-
-            return conexao;
         }
 
-
-        public string inserirCarrinho()
+        public string InserirCarrinho()
         {
-            MySqlConnection mySqlConnection = abreConexao();
-
-            MySqlCommand comando = new MySqlCommand("Insert into carrinho(Usuario_idUsuario, Jogo_idJogo) values(@Usuario_idUsuario, @Jogo_idJogo)", mySqlConnection);
-            comando.Parameters.AddWithValue("@Usuario_idUsuario", IdUser);
-            comando.Parameters.AddWithValue("@Jogo_idJogo", IdJogo);
-
-            try
+            using (MySqlConnection mySqlConnection = AbreConexao())
             {
-                comando.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                return $"Não foi possivel inserir no carrinho {ex.Message}";
+                if (VerificaCarrinho())
+                    return $"Você já possui este jogo no carrinho";
+
+                MySqlCommand comando = new MySqlCommand("INSERT INTO carrinho (Usuario_idUsuario, Jogo_idJogo) VALUES (@Usuario_idUsuario, @Jogo_idJogo)", mySqlConnection);
+                comando.Parameters.AddWithValue("@Usuario_idUsuario", IdUser);
+                comando.Parameters.AddWithValue("@Jogo_idJogo", IdJogo);
+
+                try
+                {
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    return $"Não foi possível inserir no carrinho: {ex.Message}";
+                }
             }
 
             return "Inserido no carrinho com sucesso.";
+        }
+
+        public bool VerificaCarrinho()
+        {
+            using (MySqlConnection mySqlConnection = AbreConexao())
+            {
+                MySqlCommand comando = new MySqlCommand("SELECT COUNT(*) FROM carrinho WHERE Usuario_idUsuario = @idU AND Jogo_idJogo = @idJ", mySqlConnection);
+                comando.Parameters.AddWithValue("@idU", IdUser);
+                comando.Parameters.AddWithValue("@idJ", IdJogo);
+
+                int count = Convert.ToInt32(comando.ExecuteScalar());
+                return count > 0;
+            }
         }
 
         public List<Carrinho> CarrinhoUser()
         {
             List<Carrinho> carrinhos = new List<Carrinho>();
 
-            MySqlConnection mySqlConnection = abreConexao();
-
-            MySqlCommand comando = new MySqlCommand("Select * from carrinho where Usuario_idUsuario = @id ", mySqlConnection);
-            comando.Parameters.AddWithValue("@id", IdUser);
-
-            MySqlDataReader comandoDataReader = comando.ExecuteReader();
-
-            while (comandoDataReader.Read())
+            using (MySqlConnection mySqlConnection = AbreConexao())
             {
-                IdUser = comandoDataReader.GetInt32("Usuario_idUsuario");
-                IdJogo = comandoDataReader.GetInt32("Jogo_idJogo");
+                MySqlCommand comando = new MySqlCommand("SELECT * FROM carrinho WHERE Usuario_idUsuario = @id", mySqlConnection);
+                comando.Parameters.AddWithValue("@id", IdUser);
 
-                carrinhos.Add(new Carrinho(IdUser, IdJogo));
+                using (MySqlDataReader comandoDataReader = comando.ExecuteReader())
+                {
+                    while (comandoDataReader.Read())
+                    {
+                        int idUser = comandoDataReader.GetInt32("Usuario_idUsuario");
+                        int idJogo = comandoDataReader.GetInt32("Jogo_idJogo");
+
+                        carrinhos.Add(new Carrinho(idUser, idJogo));
+                    }
+                }
             }
 
             return carrinhos;
         }
+
         public string RetirarJogoCarrinho(int id, int idUser)
         {
-            MySqlConnection mySqlConnection = abreConexao();
-
-            MySqlCommand comando = new MySqlCommand("Delete from carrinho where Jogo_idJogo = @id AND Usuario_idUsuario = @iduser ", mySqlConnection);
-            comando.Parameters.AddWithValue("@id", id);
-            
-            comando.Parameters.AddWithValue("@iduser", idUser);
-
-
-            try
+            using (MySqlConnection mySqlConnection = AbreConexao())
             {
-                comando.ExecuteNonQuery();
+                MySqlCommand comando = new MySqlCommand("DELETE FROM carrinho WHERE Jogo_idJogo = @id AND Usuario_idUsuario = @iduser", mySqlConnection);
+                comando.Parameters.AddWithValue("@id", id);
+                comando.Parameters.AddWithValue("@iduser", idUser);
 
-            }
-            catch (Exception ex)
-            {
-
-                return $"Não foi possivel retirar do carrinho {ex.Message}";
+                try
+                {
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    return $"Não foi possível retirar do carrinho: {ex.Message}";
+                }
             }
 
             return "Retirado do carrinho com sucesso";
