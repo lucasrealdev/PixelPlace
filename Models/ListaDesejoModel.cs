@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using ProjetoPixelPlace.Entities;
 
 namespace ProjetoPixelPlace.Models
 {
@@ -7,6 +8,9 @@ namespace ProjetoPixelPlace.Models
 
         private int idJogo;
         private int idUser;
+
+
+        private JogoModel jogoM = new JogoModel();
 
         public ListaDesejoModel()
         {
@@ -36,6 +40,42 @@ namespace ProjetoPixelPlace.Models
             return conexao;
         }
 
+        public List<Jogo> pegarTodosDesejos(int idUser)
+        {
+            List<Jogo> jogos = new List<Jogo>();
+
+            try
+            {
+                using (MySqlConnection bd = abreConexao())
+                {
+                    string query = "SELECT idJogo FROM lista_desejo WHERE idUser = @idUser";
+                    using (MySqlCommand cmd = new MySqlCommand(query, bd))
+                    {
+                        cmd.Parameters.AddWithValue("@idUser", idUser);
+
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                int idJogo = reader.GetInt32("idJogo");
+                                Jogo jogo = jogoM.getJogo(idJogo);
+                                if (jogo != null)
+                                {
+                                    jogos.Add(jogo);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception (log it, rethrow it, or return an empty list or error message as needed)
+                Console.WriteLine("Erro: " + ex.Message);
+            }
+
+            return jogos;
+        }
 
         public string inserirDesejo(int idJogo, int idUser)
         {
