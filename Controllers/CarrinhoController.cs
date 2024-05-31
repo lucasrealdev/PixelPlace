@@ -8,24 +8,24 @@ namespace ProjetoPixelPlace.Controllers
     public class CarrinhoController : Controller
     {
 
-        Carrinho carrinho =  new Carrinho();
-        Cupom cupom = new Cupom();  
+        Carrinho carrinho = new Carrinho();
+        Cupom cupom = new Cupom();
 
         [ServiceFilter(typeof(Autenticao))]
         public IActionResult Carrinho(string NomeCupom)
         {
 
             string userJson = HttpContext.Session.GetString("user");
-            if(userJson == null)
+            if (userJson == null)
             {
                 return View();
             }
 
             Usuario u = JsonConvert.DeserializeObject<Usuario>(userJson);
 
-            carrinho.IdUser = (int) u.IdUsuario;
+            carrinho.IdUser = (int)u.IdUsuario;
             ViewData["porcentagemCupom"] = cupom.GetCupom(NomeCupom);
-            return View(carrinho.CarrinhoUser()); 
+            return View(carrinho.CarrinhoUser());
         }
 
         public IActionResult Delete(int idJogo)
@@ -35,13 +35,13 @@ namespace ProjetoPixelPlace.Controllers
             Usuario u = JsonConvert.DeserializeObject<Usuario>(userJson);
 
 
-            string message = carrinho.RetirarJogoCarrinho(idJogo,(int) u.IdUsuario);
-            if(message == "Retirado do carrinho com sucesso")
-            return RedirectToAction(nameof(Carrinho));
-            
+            string message = carrinho.RetirarJogoCarrinho(idJogo, (int)u.IdUsuario);
+            if (message == "Retirado do carrinho com sucesso")
+                return RedirectToAction(nameof(Carrinho));
+
             return View(message);
         }
-       
+
 
     }
 }

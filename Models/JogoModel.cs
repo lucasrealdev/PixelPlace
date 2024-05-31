@@ -27,6 +27,42 @@ namespace ProjetoPixelPlace.Models
             
             return conexao;
         }
+        public List<Jogo> getAllJogos(string NomeJogo)
+        {
+            List<Jogo> jogoList = new List<Jogo>();
+            byte[] imagem = null;
+            conexaoBD = abreConexao();
+
+            MySqlCommand query = new MySqlCommand("Select * from jogo where nome = @nomeJogo", conexaoBD);
+            query.Parameters.AddWithValue("@nomeJogo", NomeJogo);
+            MySqlDataReader reader = query.ExecuteReader();
+
+
+            while (reader.Read())
+            {
+
+                if (!reader.IsDBNull(reader.GetOrdinal("imagem")))
+                {
+                    imagem = (byte[])reader["imagem"];
+                }
+                Jogo jogo = new Jogo(int.Parse(reader["idJogo"].ToString()),
+                    reader["nome"].ToString(),
+                    imagem,
+                    reader["descricao"].ToString(),
+                    reader["categoria"].ToString(),
+                    Double.Parse(reader["preco"].ToString()),
+                    Double.Parse(reader["desconto"].ToString()),
+                    DateTime.Parse(reader["data_lancamento"].ToString()),
+                    int.Parse(reader["num_avaliacao"].ToString()),
+                    int.Parse(reader["num_estrelas"].ToString()),
+                    reader["desenvolvedora"].ToString());
+
+                jogoList.Add(jogo);
+
+            }
+            conexaoBD.Close();
+            return jogoList;
+        }
 
         public Jogo getJogo(int id)
         { 

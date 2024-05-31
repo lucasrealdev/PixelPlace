@@ -32,13 +32,27 @@ namespace ProjetoPixelPlace.Controllers
             return View(jogoModel.getAllJogos());
         }
 
-       
-
-            public ActionResult Loja()
+        
+        public ActionResult Loja()
         {
+
+
             //no index retorna todos os jogos.
             return View(jogoModel.getAllJogos());
         }
+        //aqui é quando ele pesquisar algum jogo na loja pelo nome. 
+        [HttpPost]
+        public ActionResult Loja(string NomeJogo)
+        {
+
+            if (!string.IsNullOrEmpty(NomeJogo))
+            {
+                return View(jogoModel.getAllJogos(NomeJogo));
+            }
+            //no index retorna todos os jogos.
+            return View(jogoModel.getAllJogos());
+        }
+
 
 
         // GET: JogoController/Details/5
