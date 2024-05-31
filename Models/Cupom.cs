@@ -26,40 +26,33 @@ namespace ProjetoPixelPlace.Models
             {
                 conexao = CriadorConexao.getConexao("casa");
                 conexao.Open();
+                return conexao;
             }
-
-            return conexao;
         }
 
         public int GetCupom(string nomeCupom)
         {
-            MySqlConnection mySqlConnection = AbreConexao();
-
-            MySqlCommand comando = new MySqlCommand("SELECT * FROM cupons_desconto WHERE cupom = @cupom", mySqlConnection);
-            comando.Parameters.AddWithValue("@cupom", nomeCupom);
-
-            MySqlDataReader reader = comando.ExecuteReader();
-
             Cupom cupom = null;
 
-            if (reader.Read())
+            using (var mySqlConnection = AbreConexao())
+            using (var comando = new MySqlCommand("SELECT * FROM cupons_desconto WHERE cupom = @cupom", mySqlConnection))
             {
-                cupom = new Cupom
+                comando.Parameters.AddWithValue("@cupom", nomeCupom);
+
+                using (var reader = comando.ExecuteReader())
                 {
-                    CupomId = reader.GetString("cupom"),
-                    PorcentagemDesconto = reader.GetInt32("porcentagem_desconto")
-                };
+                    if (reader.Read())
+                    {
+                        cupom = new Cupom
+                        {
+                            CupomId = reader.GetString("cupom"),
+                            PorcentagemDesconto = reader.GetInt32("porcentagem_desconto")
+                        };
+                    }
+                }
             }
 
-            reader.Close();
-            mySqlConnection.Close();
-
-            if(cupom != null )
-            {
-                return cupom.PorcentagemDesconto;
-            }
-            return 0;
-          
+            return cupom?.PorcentagemDesconto ?? 0;
         }
     }
 }

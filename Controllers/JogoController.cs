@@ -12,7 +12,7 @@ namespace ProjetoPixelPlace.Controllers
 
         //injecao da classe model
         private JogoModel jogoModel = new JogoModel();
-        
+        private ListaDesejoModel listaDesejoModel = new ListaDesejoModel();
 
         [ServiceFilter(typeof(Autenticao))]
         public ActionResult IndexADM()
@@ -53,7 +53,7 @@ namespace ProjetoPixelPlace.Controllers
             return View(jogoModel.getAllJogos());
         }
 
-
+        
 
         // GET: JogoController/Details/5
         public ActionResult Details(int id)
@@ -144,6 +144,7 @@ namespace ProjetoPixelPlace.Controllers
 
         //GET: tela da ListaDesejo
         [ServiceFilter(typeof(Autenticao))]
+
         public ActionResult ListaDesejo()
         {
             Usuario u;
@@ -159,6 +160,24 @@ namespace ProjetoPixelPlace.Controllers
             }
             return View();
         }
+
+        [ServiceFilter(typeof(Autenticao))]
+        //aqui eu passo o id do jogo 
+        public ActionResult Adicionar(int id)
+        {
+
+            string userJson = HttpContext.Session.GetString("user");
+
+
+            Usuario user = JsonConvert.DeserializeObject<Usuario>(userJson);
+
+            int idUser = (int)user.IdUsuario;
+
+            listaDesejoModel.inserirDesejo(id, idUser);
+            
+            return View(nameof(ListaDesejo));
+        }
+
 
         // GET: JogoController/Edit/5
         public ActionResult Comprar(int id)

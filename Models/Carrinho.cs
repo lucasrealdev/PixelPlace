@@ -29,7 +29,7 @@ namespace ProjetoPixelPlace.Models
                 conexao.Open();
                 return conexao;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 conexao = CriadorConexao.getConexao("casa");
                 conexao.Open();
@@ -42,7 +42,7 @@ namespace ProjetoPixelPlace.Models
             using (MySqlConnection mySqlConnection = AbreConexao())
             {
                 if (VerificaCarrinho())
-                    return $"Você já possui este jogo no carrinho";
+                    return "Você já possui este jogo no carrinho";
 
                 MySqlCommand comando = new MySqlCommand("INSERT INTO carrinho (Usuario_idUsuario, Jogo_idJogo) VALUES (@Usuario_idUsuario, @Jogo_idJogo)", mySqlConnection);
                 comando.Parameters.AddWithValue("@Usuario_idUsuario", IdUser);
