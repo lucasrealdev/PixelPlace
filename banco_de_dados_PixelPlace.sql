@@ -49,7 +49,19 @@ CREATE TABLE IF NOT EXISTS `pixelplace_01`.`Jogo` (
   `desenvolvedora` varchar(45) NOT NULL,
   PRIMARY KEY (`idJogo`)
 )ENGINE = InnoDB;
-
+-- -------------
+-- LISTA DE DESEJOO 
+-- ------------------
+CREATE TABLE `lista_desejo` (
+  `idlista_desejo` int NOT NULL AUTO_INCREMENT,
+  `idJogo` int NOT NULL,
+  `idUser` int NOT NULL,
+  PRIMARY KEY (`idlista_desejo`),
+  KEY `idUser_idx` (`idUser`),
+  KEY `idJogo_idx` (`idJogo`),
+  CONSTRAINT `idJogo` FOREIGN KEY (`idJogo`) REFERENCES `jogo` (`idJogo`),
+  CONSTRAINT `idUsuario` FOREIGN KEY (`idUser`) REFERENCES `usuario` (`idUsuario`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 
 -- -----------------------------------------------------
 -- Table `mydb`.`Biblioteca`
