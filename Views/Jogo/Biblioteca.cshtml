@@ -8,100 +8,7 @@
 <link rel="stylesheet" href="~/css/biblioteca.css">
 <link rel="stylesheet" href="~/css/filtros.css">
 
-<h1>Biblioteca</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.IdJogo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Imagem)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Descricao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Categoria)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Preco)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Desconto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Data_lancamento)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Numero_avaliacao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Numero_estrelas)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Desenvolvedora)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdJogo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @{
-                string imagem = Convert.ToBase64String(item.Imagem);
-                string formato = "data:image/jpeg;base64," + imagem;
-                <img src="@formato" />
-                }
-
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Descricao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Categoria)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Preco)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Desconto)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Data_lancamento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Numero_avaliacao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Numero_estrelas)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Desenvolvedora)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
 
 <div class="containerSectionBiblioteca">
     <div class="containerTittle">
@@ -116,204 +23,61 @@
     <div class="containerList">
         <div class="gridJogos">
 
+            @{
 
-            <div class="posterJogo">
-                <img src="~/img/jogoalgum.png">
-                <div class="containerTexto">
-                    <div class="frame41">
-                        <p class="nomeJ">Unravel</p>
-                        <p class="nomeJ2">IO interactive</p>
-                    </div>
-                    <div class="containerCategoria">
-                        <p>WEB</p>
-                    </div>
-                    <div class="containerEstrela">
+                foreach(var item in Model)
+                {
+                    
+                    string imagem = Convert.ToBase64String(item.Imagem);
+                    string formato = "data:image/jpeg;base64," + imagem;
 
-                        <div class="rating">
-                            <input type="radio" id="star-1" name="star-radio" value="star-1">
-                            <label for="star-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
-                            </label>
-                            <input type="radio" id="star-2" name="star-radio" value="star-1">
-                            <label for="star-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
-                            </label>
-                            <input type="radio" id="star-3" name="star-radio" value="star-1">
-                            <label for="star-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
-                            </label>
-                            <input type="radio" id="star-4" name="star-radio" value="star-1">
-                            <label for="star-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
-                            </label>
-                            <input type="radio" id="star-5" name="star-radio" value="star-1">
-                            <label for="star-5">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
-                            </label>
+                      
+                    <div class="posterJogo">
+                        <img src="@formato">
+                        <div class="containerTexto">
+                            <div class="frame41">
+                                <p class="nomeJ">@item.Nome</p>
+                                <p class="nomeJ2">@item.Desenvolvedora</p>
+                            </div>
+                            <div class="containerCategoria">
+                                <p>WEB</p>
+                            </div>
+                            <div class="containerEstrela">
+
+                                <div class="rating">
+                                    <input type="radio" id="star-1" name="star-radio" value="star-1">
+                                    <label for="star-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
+                                    </label>
+                                    <input type="radio" id="star-2" name="star-radio" value="star-1">
+                                    <label for="star-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
+                                    </label>
+                                    <input type="radio" id="star-3" name="star-radio" value="star-1">
+                                    <label for="star-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
+                                    </label>
+                                    <input type="radio" id="star-4" name="star-radio" value="star-1">
+                                    <label for="star-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
+                                    </label>
+                                    <input type="radio" id="star-5" name="star-radio" value="star-1">
+                                    <label for="star-5">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div class="containerAbrir">
+                                <p><a href="#">Abrir</a></p>
+                            </div>
                         </div>
-
                     </div>
-                    <div class="containerAbrir">
-                        <p><a href="#">Abrir</a></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="posterJogo">
-                <img src="~/img/jogoalgum.png">
-                <div class="containerTexto">
-                    <div class="frame41">
-                        <p class="nomeJ">Unravel</p>
-                        <p class="nomeJ2">IO interactive</p>
-                    </div>
-                    <div class="containerCategoria">
-                        <p>WEB</p>
-                    </div>
-                    <div class="containerEstrela">
-
-                        <div class="rating">
-                            <input type="radio" id="star-1" name="star-radio" value="star-1">
-                            <label for="star-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
-                            </label>
-                            <input type="radio" id="star-2" name="star-radio" value="star-1">
-                            <label for="star-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
-                            </label>
-                            <input type="radio" id="star-3" name="star-radio" value="star-1">
-                            <label for="star-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
-                            </label>
-                            <input type="radio" id="star-4" name="star-radio" value="star-1">
-                            <label for="star-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
-                            </label>
-                            <input type="radio" id="star-5" name="star-radio" value="star-1">
-                            <label for="star-5">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
-                            </label>
-                        </div>
-
-                    </div>
-                    <div class="containerAbrir">
-                        <p><a href="#">Abrir</a></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="posterJogo">
-                <img src="~/img/jogoalgum.png">
-                <div class="containerTexto">
-                    <div class="frame41">
-                        <p class="nomeJ">Unravel</p>
-                        <p class="nomeJ2">IO interactive</p>
-                    </div>
-                    <div class="containerCategoria">
-                        <p>WEB</p>
-                    </div>
-                    <div class="containerEstrela">
-
-                        <div class="rating">
-                            <input type="radio" id="star-1" name="star-radio" value="star-1">
-                            <label for="star-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
-                            </label>
-                            <input type="radio" id="star-2" name="star-radio" value="star-1">
-                            <label for="star-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
-                            </label>
-                            <input type="radio" id="star-3" name="star-radio" value="star-1">
-                            <label for="star-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
-                            </label>
-                            <input type="radio" id="star-4" name="star-radio" value="star-1">
-                            <label for="star-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
-                            </label>
-                            <input type="radio" id="star-5" name="star-radio" value="star-1">
-                            <label for="star-5">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
-                            </label>
-                        </div>
-
-                    </div>
-                    <div class="containerAbrir">
-                        <p><a href="#">Abrir</a></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="posterJogo">
-                <img src="~/img/jogoalgum.png">
-                <div class="containerTexto">
-                    <div class="frame41">
-                        <p class="nomeJ">Unravel</p>
-                        <p class="nomeJ2">IO interactive</p>
-                    </div>
-                    <div class="containerCategoria">
-                        <p>WEB</p>
-                    </div>
-                    <div class="containerEstrela">
-
-                        <div class="rating">
-                            <input type="radio" id="star-1" name="star-radio" value="star-1">
-                            <label for="star-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
-                            </label>
-                            <input type="radio" id="star-2" name="star-radio" value="star-1">
-                            <label for="star-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
-                            </label>
-                            <input type="radio" id="star-3" name="star-radio" value="star-1">
-                            <label for="star-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
-                            </label>
-                            <input type="radio" id="star-4" name="star-radio" value="star-1">
-                            <label for="star-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
-                            </label>
-                            <input type="radio" id="star-5" name="star-radio" value="star-1">
-                            <label for="star-5">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
-                            </label>
-                        </div>
-
-                    </div>
-                    <div class="containerAbrir">
-                        <p><a href="#">Abrir</a></p>
-                    </div>
-                </div>
-            </div>
-
+                }
+            }
         </div>
 
-        <div class="containerFilter">
-            <div class="containerTitulo">
-                <p class="filtros">Filtros</p>
-            </div>
-            <div class="procurarBiblioteca">
-                <img src="~/img/search.svg">
-                <input class="tituloiblioteca" placeholder="Titulo">
-            </div>
-            <div class="frame44">
-                <div class="linha4"></div>
-            </div>
-            <div class="containerTituloGenero">
-                <p class="genero">Gêneros</p>
-                <div class="frame42">
-                    <img src="~/img/vectorbaixo.svg">
-                </div>
-            </div>
-            <div class="frame44">
-                <div class="linha4"></div>
-            </div>
-            <div class="containerTituloGenero">
-                <p class="preco">Preços</p>
-                <div class="frame42">
-                    <img src="~/img/vectorbaixo.svg">
-                </div>
-            </div>
-        </div>
+       
 
     </div>
 </div>

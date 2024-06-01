@@ -93,6 +93,38 @@ namespace ProjetoPixelPlace.Models
                 }
             }
 
+
+            return jogo;
+        }
+        public Jogo getJogo(string nomeJogo)
+        {
+            Jogo jogo = null;
+
+            using (var conexaoBD = abreConexao())
+            using (var query = new MySqlCommand("SELECT * FROM jogo WHERE nome = @nomeJogo", conexaoBD))
+            {
+                query.Parameters.AddWithValue("@nomeJogo", nomeJogo);
+                using (var reader = query.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        jogo = new Jogo(
+                            idJogo: Convert.ToInt32(reader["idJogo"]),
+                            nome: reader["nome"].ToString(),
+                            imagem: (byte[])reader["imagem"],
+                            descricao: reader["descricao"].ToString(),
+                            categoria: reader["categoria"].ToString(),
+                            preco: Convert.ToDouble(reader["preco"]),
+                            desconto: Convert.ToDouble(reader["desconto"]),
+                            data_lancamento: Convert.ToDateTime(reader["data_lancamento"]),
+                            numero_avaliacao: Convert.ToInt32(reader["num_avaliacao"]),
+                            numero_estrelas: Convert.ToInt32(reader["num_estrelas"]),
+                            desenvolvedora: reader["desenvolvedora"].ToString()
+                        );
+                    }
+                }
+            }
+
             return jogo;
         }
 
@@ -182,6 +214,33 @@ namespace ProjetoPixelPlace.Models
             }
 
             return jogoList;
+        }
+        public string InserirJogoNaBiblioteca(int idUsuario, int idJogo)
+        {
+            try
+            {
+                using (var conexaoBD = abreConexao())
+                using (var comando = new MySqlCommand("INSERT INTO Biblioteca (Usuario_idUsuario, Jogo_idJogo) VALUES (@idUsuario, @idJogo)", conexaoBD))
+                {
+                    comando.Parameters.AddWithValue("@idUsuario", idUsuario);
+                    comando.Parameters.AddWithValue("@idJogo", idJogo);
+
+                    int linhasAfetadas = comando.ExecuteNonQuery();
+
+                    if (linhasAfetadas > 0)
+                    {
+                        return "Jogo adicionado à biblioteca com sucesso!";
+                    }
+                    else
+                    {
+                        return "Falha ao adicionar jogo à biblioteca.";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return "Erro ao inserir jogo na biblioteca: " + ex.Message;
+            }
         }
 
         public List<Jogo> getListaDesejoUser(int idUser)

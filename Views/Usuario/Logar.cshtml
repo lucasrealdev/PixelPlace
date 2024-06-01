@@ -8,6 +8,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,12 +17,26 @@
     <link rel="stylesheet" href="~/css/style.css">
     <link rel="stylesheet" href="~/css/cadastro.css">
     <script src="~/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
+
 </head>
 
 <body>
     <main>
 
-
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <script type="text/javascript">
+                toastr.success('@TempData["SuccessMessage"]');
+            </script>
+        }
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <script type="text/javascript">
+                toastr.error('@TempData["ErrorMessage"]');
+            </script>
+        }
         <div class="mainBody">
             <div class="containerCadastro">
                 <form asp-action="Logar" class="containerItens">

@@ -6,7 +6,7 @@ namespace ProjetoPixelPlace.Entities
     public class Transacao
     {
         private int  user_id;
-        private int jogo_id;
+        private string jogo_id;
         private DateTime data_venda;
         private decimal valor_total;
         private string metodo_pagamento;
@@ -16,7 +16,7 @@ namespace ProjetoPixelPlace.Entities
         {
 
         }
-        public Transacao(int user_id, int jogo_id, DateTime data_venda, decimal valor_total, string metodo_pagamento, string tipo_compra)
+        public Transacao(int user_id, string jogo_id, DateTime data_venda, decimal valor_total, string metodo_pagamento, string tipo_compra)
         {
             this.user_id = user_id;
             this.jogo_id = jogo_id;
@@ -27,7 +27,7 @@ namespace ProjetoPixelPlace.Entities
         }
         
         public int User_id { get => user_id; set => user_id = value; }
-        public int Jogo_id { get => jogo_id; set => jogo_id = value; }
+        public string Jogo_id { get => jogo_id; set => jogo_id = value; }
         public DateTime Data_venda { get => data_venda; set => data_venda = value; }
         public decimal Valor_total { get => valor_total; set => valor_total = value; }
         public string Metodo_pagamento { get => metodo_pagamento; set => metodo_pagamento = value; }
@@ -53,75 +53,97 @@ namespace ProjetoPixelPlace.Entities
         }
 
 
-        public string inserirTransacao()
+        public string inserirTransacao(int usuarioId, string jogoId, DateTime dataTransacao, decimal valorTotal, string metodoPagamento, string tipoCompra)
         {
-            MySqlConnection mySqlConnection = abreConexao();
-
-            MySqlCommand comando = new MySqlCommand("Insert into transacao(Usuario_idUsuario, Jogo_idJogo, data_transacao, valor_total, metodo_pagamento, tipo_compra) values(@Usuario_idUsuario, @Jogo_idJogo, @data_transacao, @valor_total, @metodo_pagamento, @tipo_compra)", mySqlConnection);
-            comando.Parameters.AddWithValue("@Usuario_idUsuario", User_id);
-            comando.Parameters.AddWithValue("@Jogo_idJogo", Jogo_id);
-            
-
-            comando.Parameters.AddWithValue("@data_transacao", Data_venda.ToString("yyyy-MM-dd"));
-            comando.Parameters.AddWithValue("@valor_total", Valor_total);
-            comando.Parameters.AddWithValue("@metodo_pagamento", Metodo_pagamento);
-            comando.Parameters.AddWithValue("@tipo_compra", Tipo_compra);
             try
             {
-                comando.ExecuteNonQuery();
-            }
-            catch(Exception ex) {
-                return $"Erro ao inserir no banco de dados, erro : {ex.ToString}";
-            }
+                using (MySqlConnection bd = abreConexao())
+                {
+                    string query = @"INSERT INTO transacao 
+                             (Usuario_idUsuario, Jogo_idJogo, data_transacao, valor_total, metodo_pagamento, tipo_compra) 
+                             VALUES 
+                             (@Usuario_idUsuario, @Jogo_idJogo, @data_transacao, @valor_total, @metodo_pagamento, @tipo_compra)";
 
-            return "Transação salva com sucesso!";
+                    using (MySqlCommand cmd = new MySqlCommand(query, bd))
+                    {
+                        cmd.Parameters.AddWithValue("@Usuario_idUsuario", usuarioId);
+                        cmd.Parameters.AddWithValue("@Jogo_idJogo",jogoId);
+                        cmd.Parameters.AddWithValue("@data_transacao", dataTransacao.ToString("yyyy-MM-dd HH:mm"));
+                        cmd.Parameters.AddWithValue("@valor_total", valorTotal);
+                        cmd.Parameters.AddWithValue("@metodo_pagamento", metodoPagamento);
+                        cmd.Parameters.AddWithValue("@tipo_compra", tipoCompra);
+
+                        int result = cmd.ExecuteNonQuery();
+
+                        if (result > 0)
+                        {
+                            return "Transação inserida com sucesso!";
+                        }
+                        else
+                        {
+                            return "Falha ao inserir transação.";
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return "Erro: " + ex.Message;
+            }
         }
         public List<Transacao> getAllTransacao()
         {
+            List<Transacao> transacoes = new List<Transacao>();
 
-            List<Transacao> transacaoes = new List<Transacao>();
-
-            MySqlConnection mySqlConnection = abreConexao();
-
-            MySqlCommand comando = new MySqlCommand("Select * from transacao", mySqlConnection);
-
-            MySqlDataReader comandoDataReader = comando.ExecuteReader();
-            while(comandoDataReader.Read())
+            using (MySqlConnection mySqlConnection = abreConexao())
             {
-                User_id = comandoDataReader.GetInt32("Usuario_idUsuario");
-                Jogo_id = comandoDataReader.GetInt32("Jogo_idJogo");
-                Data_venda= comandoDataReader.GetDateTime("data_transacao");
-                Valor_total = comandoDataReader.GetDecimal("valor_total");
-                Metodo_pagamento = comandoDataReader.GetString("metodo_pagamento");
-                Tipo_compra = comandoDataReader.GetString("tipo_compra");
+                MySqlCommand comando = new MySqlCommand("SELECT * FROM transacao", mySqlConnection);
 
-                transacaoes.Add(new Transacao(User_id, Jogo_id, Data_venda, Valor_total, Metodo_pagamento, Tipo_compra));
+                using (MySqlDataReader comandoDataReader = comando.ExecuteReader())
+                {
+                    while (comandoDataReader.Read())
+                    {
+                        int userId = comandoDataReader.GetInt32("Usuario_idUsuario");
+                        string jogoId = comandoDataReader.GetString("Jogo_idJogo");
+                        DateTime dataVenda = comandoDataReader.GetDateTime("data_transacao");
+                        decimal valorTotal = comandoDataReader.GetDecimal("valor_total");
+                        string metodoPagamento = comandoDataReader.GetString("metodo_pagamento");
+                        string tipoCompra = comandoDataReader.GetString("tipo_compra");
+
+                        transacoes.Add(new Transacao(userId, jogoId, dataVenda, valorTotal, metodoPagamento, tipoCompra));
+                    }
+                }
             }
-            return transacaoes;
+
+            return transacoes;
         }
+
         public List<Transacao> getAllTransacaoOfUser()
         {
+            List<Transacao> transacoes = new List<Transacao>();
 
-            List<Transacao> transacaoes = new List<Transacao>();
-
-            MySqlConnection mySqlConnection = abreConexao();
-
-            MySqlCommand comando = new MySqlCommand("Select * from transacao where Usuario_idUsuario = @id ", mySqlConnection);
-            comando.Parameters.AddWithValue("@id", User_id);
-
-            MySqlDataReader comandoDataReader = comando.ExecuteReader();
-            while (comandoDataReader.Read())
+            using (MySqlConnection mySqlConnection = abreConexao())
             {
-                User_id = comandoDataReader.GetInt32("Usuario_idUsuario");
-                Jogo_id = comandoDataReader.GetInt32("Jogo_idJogo");
-                Data_venda = comandoDataReader.GetDateTime("data_transacao");
-                Valor_total = comandoDataReader.GetDecimal("valor_total");
-                Metodo_pagamento = comandoDataReader.GetString("metodo_pagamento");
-                Tipo_compra = comandoDataReader.GetString("tipo_compra");
+                MySqlCommand comando = new MySqlCommand("SELECT * FROM transacao WHERE Usuario_idUsuario = @id", mySqlConnection);
+                comando.Parameters.AddWithValue("@id", User_id);
 
-                transacaoes.Add(new Transacao(User_id, Jogo_id, Data_venda, Valor_total, Metodo_pagamento, Tipo_compra));
+                using (MySqlDataReader comandoDataReader = comando.ExecuteReader())
+                {
+                    while (comandoDataReader.Read())
+                    {
+                        int userId = comandoDataReader.GetInt32("Usuario_idUsuario");
+                        string jogoId = comandoDataReader.GetString("Jogo_idJogo");
+                        DateTime dataVenda = comandoDataReader.GetDateTime("data_transacao");
+                        decimal valorTotal = comandoDataReader.GetDecimal("valor_total");
+                        string metodoPagamento = comandoDataReader.GetString("metodo_pagamento");
+                        string tipoCompra = comandoDataReader.GetString("tipo_compra");
+
+                        transacoes.Add(new Transacao(userId, jogoId, dataVenda, valorTotal, metodoPagamento, tipoCompra));
+                    }
+                }
             }
-            return transacaoes;
+
+            return transacoes;
         }
 
 

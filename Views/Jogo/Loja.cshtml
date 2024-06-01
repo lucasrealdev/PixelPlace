@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="~/css/loja.css">
 <script src="~/js/script.js"></script>
 
+<!-- gerar notificacao -->
+<partial name="_Notification" />
+<script type="text/javascript">
+    toastr.success('Logado com Sucesso');
+</script>
 @{
 
     foreach(var jogo in Model)

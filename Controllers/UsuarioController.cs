@@ -20,6 +20,7 @@ namespace ProjetoPixelPlace.Controllers
 
         public ActionResult Logar()
         {
+            TempData["SuccessMessage"] = "Logado com Sucesso";
             return View();
         }
 
@@ -28,6 +29,7 @@ namespace ProjetoPixelPlace.Controllers
             HttpContext.Session.Remove("user");
             HttpContext.Session.Remove("adm");
 
+            TempData["SuccessMessage"] = "Logado com Sucesso";
             return RedirectToAction("Loja","Jogo");
         }
 
@@ -40,17 +42,24 @@ namespace ProjetoPixelPlace.Controllers
             var user = model.ValidaUser(email, senha);
 
             if (user == null)
+            {
+                TempData["ErrorMessage"] = "Falha no login. Verifique suas credenciais.";
                 return View();
+            }
+               
 
             if (user.IsADM == "sim")
             {
                 //caso tiver eu coloco na session
+                TempData["SuccessMessage"] = "Logado com Sucesso";
                 HttpContext.Session.SetString("adm", JsonConvert.SerializeObject(user));
 
                 return RedirectToAction(nameof(ListagemADM));
             }
             else
             {
+                TempData["SuccessMessage"] = "Logado com Sucesso";
+
                 HttpContext.Session.SetString("user", JsonConvert.SerializeObject(user));
 
                 return RedirectToAction("Listagem");
