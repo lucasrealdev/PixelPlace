@@ -18,6 +18,14 @@
     color: #FEFEFE;
 }
 
+#searchForm {
+    height: 43px;
+    flex: 1;
+    max-width: 564.72px;
+    display: flex;
+    align-items: center;
+}
+
 p,
 a {
     text-decoration: none;
