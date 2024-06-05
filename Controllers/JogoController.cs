@@ -38,7 +38,7 @@ namespace ProjetoPixelPlace.Controllers
             //no index retorna todos os jogos.
             return View(jogoModel.getAllJogos());
 
-            TempData["message"] = "boa karaiii";
+            
         }
         //aqui é quando ele pesquisar algum jogo na loja pelo nome. 
         [HttpPost]
@@ -143,7 +143,7 @@ namespace ProjetoPixelPlace.Controllers
             return View();
         }
 
-        //GET: tela da ListaDesejo
+       
         [ServiceFilter(typeof(Autenticao))]
 
         public ActionResult ListaDesejo()
@@ -154,16 +154,16 @@ namespace ProjetoPixelPlace.Controllers
             {
                 u = JsonConvert.DeserializeObject<Usuario>(usuarioJson);
 
-               
+                var listaDoUsuario = listaDesejoModel.pegarTodosDesejos((int)u.IdUsuario);
 
-                return View(listaDesejoModel.pegarTodosDesejos((int) u.IdUsuario));
+                return View(listaDoUsuario);
             }
             return View();
         }
 
         [ServiceFilter(typeof(Autenticao))]
         //aqui eu passo o id do jogo 
-        public ActionResult Adicionar(int id)
+        public ActionResult AdicionarListaDesejo(int id)
         {
 
             string userJson = HttpContext.Session.GetString("user");
@@ -174,8 +174,9 @@ namespace ProjetoPixelPlace.Controllers
             int idUser = (int)user.IdUsuario;
 
             listaDesejoModel.inserirDesejo(id, idUser);
+            //mostrar uma notificacao que nao deu certo. ou se deu certo
             
-            return View(nameof(ListaDesejo));
+            return RedirectToAction(nameof(ListaDesejo));
         }
 
 

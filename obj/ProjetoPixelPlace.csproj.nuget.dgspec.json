@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\julin\\Documents\\PixelPlaceAtual\\PixelPlace\\ProjetoPixelPlace.csproj": {}
+    "C:\\Users\\Administrador\\source\\repos\\PixelPlace\\ProjetoPixelPlace.csproj": {}
   },
   "projects": {
-    "C:\\Users\\julin\\Documents\\PixelPlaceAtual\\PixelPlace\\ProjetoPixelPlace.csproj": {
+    "C:\\Users\\Administrador\\source\\repos\\PixelPlace\\ProjetoPixelPlace.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\julin\\Documents\\PixelPlaceAtual\\PixelPlace\\ProjetoPixelPlace.csproj",
+        "projectUniqueName": "C:\\Users\\Administrador\\source\\repos\\PixelPlace\\ProjetoPixelPlace.csproj",
         "projectName": "ProjetoPixelPlace",
-        "projectPath": "C:\\Users\\julin\\Documents\\PixelPlaceAtual\\PixelPlace\\ProjetoPixelPlace.csproj",
-        "packagesPath": "C:\\Users\\julin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\julin\\Documents\\PixelPlaceAtual\\PixelPlace\\obj\\",
+        "projectPath": "C:\\Users\\Administrador\\source\\repos\\PixelPlace\\ProjetoPixelPlace.csproj",
+        "packagesPath": "C:\\Users\\Administrador\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Administrador\\source\\repos\\PixelPlace\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\julin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrador\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -77,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
