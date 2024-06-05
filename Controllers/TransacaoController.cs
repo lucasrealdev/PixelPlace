@@ -24,7 +24,7 @@ namespace ProjetoPixelPlace.Controllers
 
         [ServiceFilter(typeof(Autenticao))]
         [HttpPost]
-        public ActionResult InserirTransacao(List<int> idJogos, string jogoId, decimal valorTotal, string metodoPagamento, string tipoCompra)
+        public ActionResult InserirTransacao(List<int> idjogos, string itens, decimal valorTotal, string metodoPagamento, string tipoCompra)
         {
             // Recuperar o usuário da sessão
             string userJson = HttpContext.Session.GetString("user");
@@ -35,7 +35,7 @@ namespace ProjetoPixelPlace.Controllers
             Transacao transacao = new Transacao
             {
                 User_id = (int)u.IdUsuario,
-                Jogo_id = string.Join(",", jogoId),
+                Itens = itens,
                 Data_venda = DateTime.Now,
                 Valor_total = valorTotal,
                 Metodo_pagamento = metodoPagamento,
@@ -43,19 +43,19 @@ namespace ProjetoPixelPlace.Controllers
             };
 
             // Chamar o método inserirTransacao e capturar o resultado
-            string resultado = transacao.inserirTransacao(transacao.User_id, transacao.Jogo_id, transacao.Data_venda, transacao.Valor_total, transacao.Metodo_pagamento, transacao.Tipo_compra);
+            string resultado = transacao.inserirTransacao(transacao.User_id, transacao.Itens, transacao.Data_venda, transacao.Valor_total, transacao.Metodo_pagamento, transacao.Tipo_compra);
 
             // Verificar o resultado e retornar a view apropriada
             if (resultado == "Transação inserida com sucesso!")
             {
-                Carrinho carrinho = new Carrinho(); 
-                foreach (var c in idJogos)
+                Carrinho carrinho = new Carrinho();
+
+                foreach (var c in idjogos)
                 {
-                    
+
                     carrinho.RetirarJogoCarrinho(c, transacao.User_id);
                     jogoModel.InserirJogoNaBiblioteca(transacao.User_id, c);
                 }
-              
                 return RedirectToAction(nameof(Transacao)); // Retorna uma view de sucesso
             }
             else

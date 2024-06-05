@@ -15,9 +15,11 @@
 </script>
 
 @{
-
+    int i = 0;
     foreach(var jogo in Model)
     {
+        if (i == 1)
+            break;
         <a asp-action="Details" asp-route-id="@jogo.IdJogo">
 
             <div class="imagePoster" id="imagePoster">
@@ -36,6 +38,7 @@
                 </div>
             </div>
         </a>
+        i++
         
     } 
 }

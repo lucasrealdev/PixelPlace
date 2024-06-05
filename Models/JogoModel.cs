@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
 using ProjetoPixelPlace.Entities;
 using System;
 using System.Collections.Generic;
@@ -219,6 +220,8 @@ namespace ProjetoPixelPlace.Models
         {
             try
             {
+                    
+
                 using (var conexaoBD = abreConexao())
                 using (var comando = new MySqlCommand("INSERT INTO Biblioteca (Usuario_idUsuario, Jogo_idJogo) VALUES (@idUsuario, @idJogo)", conexaoBD))
                 {

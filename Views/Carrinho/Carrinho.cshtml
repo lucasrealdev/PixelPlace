@@ -15,7 +15,7 @@
     <div class="containerCart">
         <div class="containerJogos">
             @{
-
+                Carrinho carrinho = new();
                 double totalPreco = 0;
                 JogoModel repository = new JogoModel();
                 foreach (var item in Model)
@@ -113,53 +113,78 @@
         </div>
 
         <!-- RESUMO DE JOGOS -->
-        <div class="ContainerComprar">
-            <p>Resumo de jogos<br> e aplicativos</p>
 
-            <form asp-action="Carrinho" method="post" class="formCupom">
-                <div class="containerBotao">
-                    <input name="NomeCupom" class="inputDesconto" placeholder="Desconto" />
- 
-                    <input type="submit" value="Aplicar" class="botaoDesconto fontePersonalizada" />
+
+        <form asp-action="InserirTransacao" asp-controller ="Transacao" method="post">
+            <div class="ContainerComprar">
+                <p>Resumo de jogos<br> e aplicativos</p>
+
+                <form asp-action="Carrinho" method="post" class="formCupom">
+                    <div class="containerBotao">
+                        <input name="NomeCupom" class="inputDesconto" placeholder="Desconto" />
+
+                        <input type="submit" value="Aplicar" class="botaoDesconto fontePersonalizada" />
+                    </div>
+                </form>
+
+
+                <div class="precos">
+                    <p>Preço</p>
+                    <p>R$@totalPreco.ToString("0.00")</p>
                 </div>
-            </form>
-           
 
-            <div class="precos">
-                <p>Preço</p>
-                <p>R$@totalPreco.ToString("0.00")</p>
-            </div>
+                @{
+                    // Instância do cupom e obtenção do desconto
+                    Cupom cupom = new Cupom();
+                    int descontos = 0;
+                    if (ViewData["porcentagemCupom"] != null)
+                    {
+                        descontos = Convert.ToInt32(ViewData["porcentagemCupom"]);
+                    }
 
-            @{
-                // Instância do cupom e obtenção do desconto
-                Cupom cupom = new Cupom();
-                int descontos = 0;
-                if (ViewData["porcentagemCupom"] != null)
-                {
-                    descontos = Convert.ToInt32(ViewData["porcentagemCupom"]);
+
+                    // Calcular o valor total com desconto aplicado
+                    decimal descontoFinal = (decimal)totalPreco * descontos / 100;
+                    decimal totalComDesconto = (decimal)totalPreco - descontoFinal;
                 }
-               
+
+                @{
+                    string jogos = "";
+
+                    JogoModel modelJogo = new JogoModel();
+                }
+
+                @foreach (var jogo in Model)
+                {
+                    jogos += modelJogo.getJogo(jogo.IdJogo).Nome;
+                    carrinho.RetirarJogoCarrinho(jogo.IdJogo, 1);
+                    repository.InserirJogoNaBiblioteca(1, jogo.IdJogo);
+                }
+                <input type="hidden" name="idjogos" value="@string.Join(",", jogos)" />
+                <input type="hidden" name="itens" value="@jogos" />
+                <input type="hidden" name="valorTotal" value="@totalComDesconto.ToString("0.00")" />
+                <input type="hidden" name="metodoPagamento" value="cartao_credito" />
+                <input type="hidden" name="tipoCompra" value="Compra de Jogo" />
+
                 
-                // Calcular o valor total com desconto aplicado
-                decimal descontoFinal = (decimal)totalPreco * descontos / 100;
-                decimal totalComDesconto = (decimal)totalPreco - descontoFinal;
-            }
+                <div class="precos">
+                    <p>Descontos</p>
+                    <p>@descontos%</p>
+                </div>
 
-            <div class="precos">
-                <p>Descontos</p>
-                <p>@descontos%</p>
+                <div class="containerLinha">
+                    <div class="linha"></div>
+                </div>
+
+                <div class="total">
+                    <p>Total</p>
+                    <p>R$@totalComDesconto.ToString("0.00")</p>
+                </div>
+
+                <input type ="submit"class="finalizarCompra" value="FINALIZAR COMPRA"/>
             </div>
-
-            <div class="containerLinha">
-                <div class="linha"></div>
-            </div>
-
-            <div class="total">
-                <p>Total</p>
-                <p>R$@totalComDesconto.ToString("0.00")</p>
-            </div>
-
-            <button class="finalizarCompra">FINALIZAR COMPRA</button>
-        </div>
+        
+        </form>
+        
     </div>
 </div>
