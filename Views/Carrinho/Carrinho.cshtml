@@ -113,6 +113,8 @@
         </div>
 
         <!-- RESUMO DE JOGOS -->
+
+
             <div class="ContainerComprar">
                 <p>Resumo de jogos<br> e aplicativos</p>
 
@@ -163,8 +165,8 @@
                 <input type="hidden" name="metodoPagamento" value="cartao_credito" />
                 <input type="hidden" name="tipoCompra" value="Compra de Jogo" />
 
-                <form asp-action="InserirTransacao" asp-controller ="Transacao" method="post" style="width: 100%;">
-                
+                <form asp-action="InserirTransacao" asp-controller ="Transacao" method="post" style="width: 100%">
+
                     <div class="precos">
                         <p>Descontos</p>
                         <p>@descontos%</p>
@@ -179,7 +181,7 @@
                         <p>R$@totalComDesconto.ToString("0.00")</p>
                     </div>
 
-                    <input type="submit"class="finalizarCompra" value="FINALIZAR COMPRA"/>
+                    <input type ="submit"class="finalizarCompra" value="FINALIZAR COMPRA"/>
                 </form>
             </div>
         

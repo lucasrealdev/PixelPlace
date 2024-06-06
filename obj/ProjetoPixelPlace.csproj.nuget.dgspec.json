@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Aluno\\source\\repos\\Pixel\\ProjetoPixelPlace.csproj": {}
+    "C:\\Users\\aluno\\Source\\Repos\\PixelPlace\\ProjetoPixelPlace.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Aluno\\source\\repos\\Pixel\\ProjetoPixelPlace.csproj": {
+    "C:\\Users\\aluno\\Source\\Repos\\PixelPlace\\ProjetoPixelPlace.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aluno\\source\\repos\\Pixel\\ProjetoPixelPlace.csproj",
+        "projectUniqueName": "C:\\Users\\aluno\\Source\\Repos\\PixelPlace\\ProjetoPixelPlace.csproj",
         "projectName": "ProjetoPixelPlace",
-        "projectPath": "C:\\Users\\Aluno\\source\\repos\\Pixel\\ProjetoPixelPlace.csproj",
-        "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aluno\\source\\repos\\Pixel\\obj\\",
+        "projectPath": "C:\\Users\\aluno\\Source\\Repos\\PixelPlace\\ProjetoPixelPlace.csproj",
+        "packagesPath": "C:\\Users\\aluno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aluno\\Source\\Repos\\PixelPlace\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
