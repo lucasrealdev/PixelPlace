@@ -69,8 +69,7 @@
                     break;
                 }
                 contador++;
-                <a asp-action="Details" asp-route-id="@item.IdJogo"> 
-                <div class="card1" style="background-image: url('@formato')">
+                <a asp-action="Details" asp-route-id="@item.IdJogo" class="card1" style="background-image: url('@formato')">
                     <div class="containerSombra">
                         <div>
                             <p>@item.Nome</p>
@@ -94,8 +93,7 @@
                             <p>R$ @item.Preco</p>
                         </div>
                     </div>
-                </div>
-                    </a>
+                </a>
             }
         }
     }

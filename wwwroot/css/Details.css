@@ -16,7 +16,7 @@
 /* COMEÇO ESTILIZAÇÃO BANNER COM INFORMAÇÕES DO JOGO */
 .jogoPrincipal {
     width: 100%;
-    min-height: 600px;
+    min-height: 800px;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
