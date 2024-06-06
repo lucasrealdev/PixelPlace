@@ -153,19 +153,21 @@
                     JogoModel modelJogo = new JogoModel();
                 }
 
+                <form asp-action="InserirTransacao" asp-controller ="Transacao" method="post" style="width: 100%">
+
                 @foreach (var jogo in Model)
                 {
+
                     jogos += modelJogo.getJogo(jogo.IdJogo).Nome;
                     carrinho.RetirarJogoCarrinho(jogo.IdJogo, 1);
                     repository.InserirJogoNaBiblioteca(1, jogo.IdJogo);
                 }
-                <input type="hidden" name="idjogos" value="@string.Join(",", jogos)" />
-                <input type="hidden" name="itens" value="@jogos" />
-                <input type="hidden" name="valorTotal" value="@totalComDesconto.ToString("0.00")" />
-                <input type="hidden" name="metodoPagamento" value="cartao_credito" />
-                <input type="hidden" name="tipoCompra" value="Compra de Jogo" />
 
-                <form asp-action="InserirTransacao" asp-controller ="Transacao" method="post" style="width: 100%">
+                    <input type="hidden" name="idjogos" value="11" />
+                    <input type="hidden" name="itens" value="@jogos" />
+                    <input type="hidden" name="valorTotal" value="@totalComDesconto.ToString("0.00")" />
+                    <input type="hidden" name="metodoPagamento" value="cartao_credito" />
+                    <input type="hidden" name="tipoCompra" value="Compra de Jogo" />
 
                     <div class="precos">
                         <p>Descontos</p>

@@ -24,7 +24,7 @@ namespace ProjetoPixelPlace.Controllers
 
         [ServiceFilter(typeof(Autenticao))]
         [HttpPost]
-        public ActionResult InserirTransacao(List<int> idjogos, string itens, decimal valorTotal, string metodoPagamento, string tipoCompra)
+        public ActionResult InserirTransacao(int idjogos, string itens, decimal valorTotal, string metodoPagamento, string tipoCompra)
         {
             // Recuperar o usuário da sessão
             string userJson = HttpContext.Session.GetString("user");
@@ -50,12 +50,8 @@ namespace ProjetoPixelPlace.Controllers
             {
                 Carrinho carrinho = new Carrinho();
 
-                foreach (var c in idjogos)
-                {
-
-                    carrinho.RetirarJogoCarrinho(c, transacao.User_id);
-                    jogoModel.InserirJogoNaBiblioteca(transacao.User_id, c);
-                }
+                carrinho.RetirarJogoCarrinho(idjogos, transacao.User_id);
+                jogoModel.InserirJogoNaBiblioteca(transacao.User_id, idjogos);
                 return RedirectToAction(nameof(Transacao)); // Retorna uma view de sucesso
             }
             else
