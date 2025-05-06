@@ -25,6 +25,14 @@ O projeto PixelPlace utiliza as seguintes tecnologias e bibliotecas:
 * **Visual Studio**: Ambiente de Desenvolvimento Integrado (IDE).
 * **HTML, CSS, JavaScript**: Tecnologias para desenvolvimento web.
 
+## Imagens
+
+![TelaBiblioteca](https://github.com/user-attachments/assets/53805938-f9a9-49f1-ac09-d5246a03358b)
+![TelaLoja](https://github.com/user-attachments/assets/b9395856-8bd6-4e14-a8a2-54ede6725e31)
+![Contas](https://github.com/user-attachments/assets/4a664786-15ae-4317-85cc-b4a3691d96a2)
+![TelaCarrinho](https://github.com/user-attachments/assets/30bc8ed6-26e1-40bf-a281-1d4586849b49)
+![Login](https://github.com/user-attachments/assets/e56a0f92-ef73-474e-8d7c-b08bc2d8249e)
+
 ## Contribuições
 
 Este é um projeto de código aberto, e você é bem-vindo(a) a contribuir. Sinta-se à vontade para fazer melhorias, corrigir problemas ou adicionar novos recursos.
